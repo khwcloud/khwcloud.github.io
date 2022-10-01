@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>huaweicloud,day7,容灾 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="本地容灾，同城容灾，异地容灾规划。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/huaweicloudday7%E5%AE%B9%E7%81%BE/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="huaweicloud,day7,容灾" />
+<meta property="og:description" content="本地容灾，同城容灾，异地容灾规划。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/huaweicloudday7%E5%AE%B9%E7%81%BE/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-11-14T11:06:25+08:00" />
+<meta property="article:modified_time" content="2020-11-14T11:06:25+08:00" />
+
+<meta itemprop="name" content="huaweicloud,day7,容灾">
+<meta itemprop="description" content="本地容灾，同城容灾，异地容灾规划。"><meta itemprop="datePublished" content="2020-11-14T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2020-11-14T11:06:25+08:00" />
+<meta itemprop="wordCount" content="507">
+<meta itemprop="keywords" content="容灾," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="huaweicloud,day7,容灾"/>
+<meta name="twitter:description" content="本地容灾，同城容灾，异地容灾规划。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">huaweicloud,day7,容灾</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-11-14 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%91/"> 云 </a>
+            </div>
+          <span class="more-meta"> 507 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#容灾">容灾</a>
+          <ul>
+            <li><a href="#容灾全景图"><strong>容灾全景图</strong></a></li>
+            <li><a href="#虚拟化容灾方案"><strong>虚拟化容灾方案</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>本地容灾，同城容灾，异地容灾规划。</p>
+<h2 id="容灾">容灾</h2>
+<h3 id="容灾全景图"><strong>容灾全景图</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">本地容灾：本地高可用，主备容灾
+</span></span><span class="line"><span class="cl">同城容灾：同城双活，主备容灾，虚拟网关复制
+</span></span><span class="line"><span class="cl">异地容灾：两地三中心，主备容灾，虚拟网关复制
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">双活数据中心规划：存储层主机层，应用层，网络层，传输层，安全层
+</span></span><span class="line"><span class="cl">双活数据中心和本地高可用对比：场景，成本，层数，技术
+</span></span><span class="line"><span class="cl">两地三中心：级联，并练，双活加远程复制，多对一，3d环形
+</span></span><span class="line"><span class="cl">云数据中心：建立一个数据中心，存储集中化计算集中化，然后将其他的数据中心容灾到这个数据中心里
+</span></span><span class="line"><span class="cl">双活数据中心和主备的对比：一个两端都可以提供业务，故障切换双活可以自动切换，主备需要人工的手动拉起，RPO RTO
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="虚拟化容灾方案"><strong>虚拟化容灾方案</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">主机层的虚拟网关复制，存储层的主备容灾
+</span></span><span class="line"><span class="cl">主机层的规划：bcm的规划（部署 带宽），VRG的规划（网卡，带宽，规格）
+</span></span><span class="line"><span class="cl">原理：通过iomirro技术和占位虚拟机来实现
+</span></span><span class="line"><span class="cl">存储层的规划：网络平面（管理网络，io网络），带宽，存储，高级特性
+</span></span><span class="line"><span class="cl">主机层和存储层的对比：场景、主机压力，技术，rpo rrto，最小保护单位，同步异步
+</span></span><span class="line"><span class="cl">虚拟化容灾和云容灾的区别：对外体现不同，虚拟化容灾可以主机层 云容灾不行
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">桌面云容灾：客户端，gslb业务容灾，gslb+nas
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-11-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%AE%B9%E7%81%BE/">容灾</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday1%E6%96%87%E4%BB%B6/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day1,文件</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/huaweicloudday6%E8%BF%81%E7%A7%BB/">
+            <span class="next-text nav-default">huaweicloud,day6,Rainbow</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

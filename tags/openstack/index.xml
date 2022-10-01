@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openstack on blog</title>
+    <link>http://localhost:1313/tags/openstack/</link>
+    <description>Recent content in openstack on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Oct 2020 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>huaweicloud,day4,openstack</title>
+      <link>http://localhost:1313/post/huaweicloudday4openstack/</link>
+      <pubDate>Sun, 04 Oct 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday4openstack/</guid>
+      <description>&lt;p&gt;OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>cloud,day3,nginx - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/cloudday3nginx/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="cloud,day3,nginx" />
+<meta property="og:description" content="Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/cloudday3nginx/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-28T11:06:25+08:00" />
+<meta property="article:modified_time" content="2022-09-28T11:06:25+08:00" />
+
+<meta itemprop="name" content="cloud,day3,nginx">
+<meta itemprop="description" content="Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。"><meta itemprop="datePublished" content="2022-09-28T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2022-09-28T11:06:25+08:00" />
+<meta itemprop="wordCount" content="4287">
+<meta itemprop="keywords" content="nginx," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cloud,day3,nginx"/>
+<meta name="twitter:description" content="Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">cloud,day3,nginx</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-09-28 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%91/"> 云 </a>
+            </div>
+          <span class="more-meta"> 4287 words </span>
+          <span class="more-meta"> 9 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#nginx基础篇">Nginx基础篇</a>
+      <ul>
+        <li><a href="#1-nginx介绍">1 nginx介绍</a></li>
+        <li><a href="#2-nginx安装">2 nginx安装</a>
+          <ul>
+            <li><a href="#21-nginx开源版安装">2.1 nginx开源版安装</a></li>
+            <li><a href="#22-安装成系统服务">2.2 安装成系统服务</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-nginx基础介绍">3 nginx基础介绍</a>
+          <ul>
+            <li><a href="#31-nginx目录介绍">3.1 nginx目录介绍</a></li>
+            <li><a href="#32-nginx工作流程">3.2 nginx工作流程</a></li>
+            <li><a href="#33-nginx基础配置">3.3 nginx基础配置</a></li>
+            <li><a href="#34-虚拟主机原理">3.4 虚拟主机原理</a></li>
+          </ul>
+        </li>
+        <li><a href="#4-nginx基础配置">4 nginx基础配置</a>
+          <ul>
+            <li><a href="#41-nginx主机域名配置">4.1 nginx主机域名配置</a></li>
+            <li><a href="#42-servername的多种配置">4.2 servername的多种配置</a></li>
+            <li><a href="#43-反向代理实战">4.3 反向代理实战</a></li>
+            <li><a href="#44-负载均衡">4.4 负载均衡</a></li>
+            <li><a href="#45-nginx动静分离">4.5 nginx动静分离</a></li>
+            <li><a href="#46-urlrewrite">4.6 URLRewrite</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><em>Nginx</em> (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。</p>
+<h1 id="nginx基础篇">Nginx基础篇</h1>
+<h2 id="1-nginx介绍">1 nginx介绍</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 开源，高性能，高并发，高可靠，www服务和代理服务软件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 应用场景
+</span></span><span class="line"><span class="cl">	一、作为web服务软件
+</span></span><span class="line"><span class="cl">        1、Nginx是一个静态的web服务软件
+</span></span><span class="line"><span class="cl">        2、支持动静分离(静态服务自己解析，动态的服务就抛给对应服务解析)
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    二、支持动态web服务扩展
+</span></span><span class="line"><span class="cl">            PHP(fastcgi_pass)
+</span></span><span class="line"><span class="cl">            JAVA(proxy_pass)
+</span></span><span class="line"><span class="cl">            Python(uwsgi_pass)	
+</span></span><span class="line"><span class="cl">            例：nginx结合uwsgi_pass，将程序抛给python  
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">	三、作为反向代理或负载均衡服务软件
+</span></span><span class="line"><span class="cl">		1、反向代理于负载均衡区别
+</span></span><span class="line"><span class="cl">			正向代理：由内向外，代替局域网pc，请求外部应用服务
+</span></span><span class="line"><span class="cl">				假如100m的带宽，可能需要20m就够了，应为数据会缓存在代理服务器
+</span></span><span class="line"><span class="cl">			反向代理：由外向内，代替外部的用户请求内部的应用服务器
+</span></span><span class="line"><span class="cl">			负载均衡：后抛请求，返回请求就不管了，而代理来回都要管
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		2、负载均衡同类软件
+</span></span><span class="line"><span class="cl">			haproxy，lvs，硬件:F5，netscaler
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">		3、nginx，haproxy，lvs区别
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	四、缓存服务器
+</span></span><span class="line"><span class="cl">		在web缓存服务方面，nginx可通过自身的proxy_cache模块实现类Squid等专业缓存软件的功能
+</span></span><span class="line"><span class="cl">		常见的缓存软件
+</span></span><span class="line"><span class="cl">			squid，varnish，nginx，ats
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">	五、支持安全的web服务(https)
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## nginx四大版本
+</span></span><span class="line"><span class="cl">Nginx开源版（官方免费开源版本）
+</span></span><span class="line"><span class="cl">http://nginx.org/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Nginx plus 商业版（付费版，在上版本基础上加了一些功能）
+</span></span><span class="line"><span class="cl">https://www.nginx.com
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">openresty（nginx+lua完美整合）
+</span></span><span class="line"><span class="cl">http://openresty.org/cn/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Tengine（淘宝网公布发行版本，免费开源）
+</span></span><span class="line"><span class="cl">http://tengine.taobao.org
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-nginx安装">2 nginx安装</h2>
+<h3 id="21-nginx开源版安装">2.1 nginx开源版安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## nginx开源版安装
+</span></span><span class="line"><span class="cl">https://www.runoob.com/linux/nginx-install-setup.html
+</span></span><span class="line"><span class="cl">    /usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件
+</span></span><span class="line"><span class="cl">    /usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx
+</span></span><span class="line"><span class="cl">    /usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	启动防火墙
+</span></span><span class="line"><span class="cl">	systemctl start firewalld.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    关闭防火墙
+</span></span><span class="line"><span class="cl">    systemctl stop firewalld.service
+</span></span><span class="line"><span class="cl">    systemctl disable firewalld.service
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    放行端口
+</span></span><span class="line"><span class="cl">    firewall-cmd --zone=public --add-port=80/tcp --permanent
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    添加可信任ip
+</span></span><span class="line"><span class="cl">    firewall-cmd --permanent --add-rich-rule=&#34;rule family=&#34;ipv4&#34; source address=&#34;192.168.101.42/32&#34; port protocol=&#34;tcp&#34; port=&#34;80&#34; accept&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	移除规则
+</span></span><span class="line"><span class="cl">	firewall-cmd --permanent --remove-rich-rule=&#34;rule family=&#34;ipv4&#34; source address=&#34;192.168.101.42/32&#34; port protocol=&#34;tcp&#34; port=&#34;80&#34; accept&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    重载防火墙
+</span></span><span class="line"><span class="cl">    firewall-cmd --reload
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    查看规则
+</span></span><span class="line"><span class="cl">    firewall-cmd --list-all
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="22-安装成系统服务">2.2 安装成系统服务</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 1、创建服务脚本
+</span></span><span class="line"><span class="cl">[root@localhost ~]# vim /usr/lib/systemd/system/nginx.service
+</span></span><span class="line"><span class="cl">[Unit]
+</span></span><span class="line"><span class="cl">Description=nginx - high performance web server
+</span></span><span class="line"><span class="cl">Documentation=http://nginx.org/en/docs/
+</span></span><span class="line"><span class="cl">After=network.target remote-fs.target nss-lookup.target
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[Service]
+</span></span><span class="line"><span class="cl">Type=forking
+</span></span><span class="line"><span class="cl">PIDFile=/usr/local/webserver/nginx/nginx.pid
+</span></span><span class="line"><span class="cl">ExecStartPre=/usr/local/webserver/nginx/sbin/nginx -t -c /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">ExecStart=/usr/local/webserver/nginx/sbin/nginx -c /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">ExecReload=/bin/kill -s HUP $MAINPID
+</span></span><span class="line"><span class="cl">ExecStop=/bin/kill -s QUIT $MAINPID
+</span></span><span class="line"><span class="cl">PrivateTmp=true
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[Install]
+</span></span><span class="line"><span class="cl">WantedBy=multi-user.target
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 2、重新加载服务
+</span></span><span class="line"><span class="cl">systemctl daemon-reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 3、启动服务
+</span></span><span class="line"><span class="cl">systemctl start nginx.service
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">## 4、开机启动
+</span></span><span class="line"><span class="cl">systemctl enable nginx.service
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps: 遇到systemctl start nginx.service卡住问题
+</span></span><span class="line"><span class="cl">修改nginx.conf，设置pid路径，路径自己定义即可。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="3-nginx基础介绍">3 nginx基础介绍</h2>
+<h3 id="31-nginx目录介绍">3.1 nginx目录介绍</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nginx/
+</span></span><span class="line"><span class="cl">├── client_body_temp
+</span></span><span class="line"><span class="cl">├── conf		## nginx核心配置文件
+</span></span><span class="line"><span class="cl">│   ├── fastcgi.conf
+</span></span><span class="line"><span class="cl">│   ├── fastcgi.conf.default
+</span></span><span class="line"><span class="cl">│   ├── fastcgi_params
+</span></span><span class="line"><span class="cl">│   ├── fastcgi_params.default
+</span></span><span class="line"><span class="cl">│   ├── koi-utf
+</span></span><span class="line"><span class="cl">│   ├── koi-win
+</span></span><span class="line"><span class="cl">│   ├── mime.types
+</span></span><span class="line"><span class="cl">│   ├── mime.types.default
+</span></span><span class="line"><span class="cl">│   ├── nginx.conf
+</span></span><span class="line"><span class="cl">│   ├── nginx.conf.default
+</span></span><span class="line"><span class="cl">│   ├── scgi_params
+</span></span><span class="line"><span class="cl">│   ├── scgi_params.default
+</span></span><span class="line"><span class="cl">│   ├── uwsgi_params
+</span></span><span class="line"><span class="cl">│   ├── uwsgi_params.default
+</span></span><span class="line"><span class="cl">│   └── win-utf
+</span></span><span class="line"><span class="cl">├── fastcgi_temp
+</span></span><span class="line"><span class="cl">├── html		## 静态的资源放在这
+</span></span><span class="line"><span class="cl">│   ├── 50x.html
+</span></span><span class="line"><span class="cl">│   └── index.html
+</span></span><span class="line"><span class="cl">├── logs
+</span></span><span class="line"><span class="cl">│   ├── access.log
+</span></span><span class="line"><span class="cl">│   └── error.log
+</span></span><span class="line"><span class="cl">├── nginx.pid	## 记录nginx主进程号
+</span></span><span class="line"><span class="cl">├── proxy_temp
+</span></span><span class="line"><span class="cl">├── sbin	## nginx 主进程文件
+</span></span><span class="line"><span class="cl">│   └── nginx
+</span></span><span class="line"><span class="cl">├── scgi_temp
+</span></span><span class="line"><span class="cl">└── uwsgi_temp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="32-nginx工作流程">3.2 nginx工作流程</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">首先请求来了，/sbin/nginx跑起来之后，会开启一个master的主进程，该主进程去读nginx.config文件并校验有无错误，没有错误就生成多个worker进程，worker进程会读取nginx.conf配置文件来进行请求转发.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">主进程master负责协调子进程(worker),如果nginx.config更新了，master会通知worker完成当前任务后结束，然后生成新的worker进程并读取nginx.config配置文件.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="33-nginx基础配置">3.3 nginx基础配置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">worker_processes  # 启动的worker数量
+</span></span><span class="line"><span class="cl">include	# 导入配置文件
+</span></span><span class="line"><span class="cl">sendfile # 数据零拷贝
+</span></span><span class="line"><span class="cl">keepalive_timeout
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 虚拟主机vhost
+</span></span><span class="line"><span class="cl">server{
+</span></span><span class="line"><span class="cl">	listen  80 ;
+</span></span><span class="line"><span class="cl">	server_name  localhost;		# 当前的主机或主机名，域名、主机明
+</span></span><span class="line"><span class="cl">	location / {	# 域名后面跟的uri
+</span></span><span class="line"><span class="cl">            root   html;	# nginx主目录下的html
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;	# html下的默认主页
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">error_page   500 502 503 504  /50x.html;  出现这些错误就跳转/50x.html
+</span></span><span class="line"><span class="cl"> location = /50x.html {		# 一旦用户访问/50x.html的时候会把目录指向nginx root目录下的html里面找50x.html
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="34-虚拟主机原理">3.4 虚拟主机原理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 虚拟主机原理
+</span></span><span class="line"><span class="cl">我多个域名绑定到这台服务器，然后由server来进行判断，那个域名对应那个站点，这样来进行数据的转发
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="4-nginx基础配置">4 nginx基础配置</h2>
+<h3 id="41-nginx主机域名配置">4.1 nginx主机域名配置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##  我多个域名绑定到这台服务器，然后由server来进行判断，那个域名对应那个站点，这样来进行数据的转发，这样的话两台虚拟主机监听的端口号要相同
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建两个站点
+</span></span><span class="line"><span class="cl">[root@localhost /]# mkdir www
+</span></span><span class="line"><span class="cl">[root@localhost /]# cd www/
+</span></span><span class="line"><span class="cl">[root@localhost www]# mkdir site1 site2
+</span></span><span class="line"><span class="cl">[root@localhost site1]# vim index.html
+</span></span><span class="line"><span class="cl">this is site 1
+</span></span><span class="line"><span class="cl">[root@localhost site2]# vim index.html
+</span></span><span class="line"><span class="cl">this is site 2
+</span></span><span class="line"><span class="cl">[root@localhost site2]# pwd
+</span></span><span class="line"><span class="cl">/www/site2
+</span></span><span class="line"><span class="cl">[root@localhost site1]# pwd
+</span></span><span class="line"><span class="cl">/www/site1
+</span></span><span class="line"><span class="cl">s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 修改配置文件
+</span></span><span class="line"><span class="cl">[root@localhost nginx]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com;   # 填写域名
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            root   /www/site1;     ## 站点1的绝对路径
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;		# 监听端口
+</span></span><span class="line"><span class="cl">        server_name  test2.com;		# 填写域名
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            root   /www/site2;     ## 站点2的绝对路径
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">[root@localhost nginx]# systemctl reload nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="42-servername的多种配置">4.2 servername的多种配置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">##  servername的多种配置
+</span></span><span class="line"><span class="cl">	1、可以在同一servername中匹配多个域名    server_name  test.com,test2.com;
+</span></span><span class="line"><span class="cl">    2、通配符匹配     server_name  *.test.com;  
+</span></span><span class="line"><span class="cl">    	ps：前提是能域名解析，例如我拿asd.test.com，我要能解析它的地址才会被该通配符匹配
+</span></span><span class="line"><span class="cl">    3、通配符结束匹配     server_name   www.test.*;
+</span></span><span class="line"><span class="cl">    4、正则匹配    server_name   ~^[0-9]+\.test\.com$;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 测试主机host文件
+</span></span><span class="line"><span class="cl">192.168.101.42     test.com
+</span></span><span class="line"><span class="cl">192.168.101.42     test2.com
+</span></span><span class="line"><span class="cl">192.168.101.42     www.test.xxx    # 测试通配符结束匹配
+</span></span><span class="line"><span class="cl">192.168.101.42     asd.test.com		# 测试通配符匹配
+</span></span><span class="line"><span class="cl">192.168.101.42     666.test2.com	# 测试正则
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost nginx]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com,test2.com;   # 配置多个域名
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            root   /www/site1;     ## 站点1的绝对路径
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;		# 监听端口
+</span></span><span class="line"><span class="cl">        server_name  *.test.com;		# 配置通配符域名
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            root   /www/site2;     ## 站点2的绝对路径
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">[root@localhost nginx]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="43-反向代理实战">4.3 反向代理实战</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 由外向内，代替外部的用户请求对应的应用服务器
+</span></span><span class="line"><span class="cl">ps：对应的应用服务器可以是内网的也可以是外网的
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com;
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            proxy_pass http://www.atguigu.com	# 将请求代理到atguigu上
+</span></span><span class="line"><span class="cl">            #root   /www/site2;    	# 上面写了反向代理，则下面的主页就不用写了
+</span></span><span class="line"><span class="cl">            #index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">[root@localhost nginx]# systemctl reload nginx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="44-负载均衡">4.4 负载均衡</h3>
+<h4 id="441-轮询">4.4.1 轮询</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 负载均衡，请求来了打到这台服务器上，这台服务器将其转发到对应的的两台服务器上
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">upstream fuzaijunhen {	##  负载均衡的服务器列表
+</span></span><span class="line"><span class="cl">	server 192.168.101.43:80;
+</span></span><span class="line"><span class="cl">	server 192.168.101.44:80;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com;
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            proxy_pass http://fuzaijunhen	# 将请求代理到负载均衡列表里
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="442-权重">4.4.2 权重</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># weight权重案例如下，每十次请求8次达到192.168.101.43，2次打到192.168.101.44
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">upstream fuzaijunhen {	##  负载均衡的服务器列表
+</span></span><span class="line"><span class="cl">	server 192.168.101.43:80 weight=8;
+</span></span><span class="line"><span class="cl">	server 192.168.101.44:80 weight=2;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com;
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            proxy_pass http://fuzaijunhen	# 将请求代理到负载均衡列表里
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="443-down">4.4.3 down</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 该字段表示不参与负载均衡
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">upstream fuzaijunhen {	##  负载均衡的服务器列表
+</span></span><span class="line"><span class="cl">	server 192.168.101.43:80 weight=8 down;   # 不参与负载均衡
+</span></span><span class="line"><span class="cl">	server 192.168.101.44:80 weight=2;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com;
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            proxy_pass http://fuzaijunhen	# 将请求代理到负载均衡列表里
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="444-backup">4.4.4 backup</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 备用服务器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">upstream fuzaijunhen {	##  负载均衡的服务器列表
+</span></span><span class="line"><span class="cl">	server 192.168.101.43:80 weight=8 backup;  # 备用服务器
+</span></span><span class="line"><span class="cl">	server 192.168.101.44:80 weight=2;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">        listen       80;
+</span></span><span class="line"><span class="cl">        server_name  test.com;
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            proxy_pass http://fuzaijunhen	# 将请求代理到负载均衡列表里
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        error_page   500 502 503 504  /50x.html;
+</span></span><span class="line"><span class="cl">        location = /50x.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        }
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="45-nginx动静分离">4.5 nginx动静分离</h3>
+<h4 id="451-动静分离基础配置">4.5.1 动静分离基础配置</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 例如：把静态资源放在nginx里面，把动态的请求打到tomcat上，这样一来我每次访问静态资源的时候就不需要再去请求tomcat了，直接在nginx里面取，而动态资源在请求tomcat这样效率会高
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建两个目录，www接收动态请求，image为静态资源
+</span></span><span class="line"><span class="cl">[root@localhost /]# cd data/
+</span></span><span class="line"><span class="cl">[root@localhost data]# mkdir www  image
+</span></span><span class="line"><span class="cl">[root@localhost data]# ls
+</span></span><span class="line"><span class="cl">image  www
+</span></span><span class="line"><span class="cl">[root@localhost data]#
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 配置配置文件
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">		location /www {
+</span></span><span class="line"><span class="cl">			# ps: 这里可以使用proxy_pass将动态资源代理到tomcat服务器上
+</span></span><span class="line"><span class="cl">			# 为了方便就使用本地目录左测试
+</span></span><span class="line"><span class="cl">            root   /data/;	# 表示找www的时候以data为根目录
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        location /image {
+</span></span><span class="line"><span class="cl">            root   /data/;		
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 重载nginx
+</span></span><span class="line"><span class="cl">[root@localhost /]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 访问测试
+</span></span><span class="line"><span class="cl">http://192.168.101.42/image/1.PNG		# 静态资源
+</span></span><span class="line"><span class="cl">http://192.168.101.42/www/index.html	# 动态资源
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="451-动静分离正则">4.5.1 动静分离正则</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 原配置文件
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">location /www {
+</span></span><span class="line"><span class="cl">            root   /data/;	# 表示找www的时候以data为根目录
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        location /image {
+</span></span><span class="line"><span class="cl">            root   /data/;		
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 正则简化后
+</span></span><span class="line"><span class="cl"># ~*：~表示开始正则，*表示不区分大小写
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">		location ~*/(www|image) {
+</span></span><span class="line"><span class="cl">            root   /data/;	# 表示找www的时候以data为根目录
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 重载配置文件
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 测试
+</span></span><span class="line"><span class="cl">http://192.168.101.42/image/1.PNG		# 静态资源
+</span></span><span class="line"><span class="cl">http://192.168.101.42/www/index.html	# 动态资源
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="46-urlrewrite">4.6 URLRewrite</h3>
+<h4 id="461-基础配置">4.6.1 基础配置</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 可以隐藏后端服务器的真实地址
+</span></span><span class="line"><span class="cl">	例：http://192.168.101.42/index.jsp?pageNum=2
+</span></span><span class="line"><span class="cl">		隐藏为：http://192.168.101.42/2.html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 1 flag标记说明：
+</span></span><span class="line"><span class="cl">	last	本地规则匹配完成后，继续向下匹配新的location url规则
+</span></span><span class="line"><span class="cl">	break	本条规则匹配完成后终止，不在匹配下面的规则
+</span></span><span class="line"><span class="cl">	redirect	返回302临时重定向，浏览器会显示跳转后真实的url地址
+</span></span><span class="line"><span class="cl">	permanent	返回301永久重定向，浏览器会显示跳转后真实的url地址
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	ps：例如 2.html给它跳转到/index.jsp?pageNum=2，则浏览器就显示跳转后/index.jsp?pageNum=2的地址
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 2 配置
+</span></span><span class="line"><span class="cl"># ^$:这两个符号中间写正则，最后在后边写想要转变的地址
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">location / {
+</span></span><span class="line"><span class="cl">			# 表示访问2.html给它跳转到/index.jsp?pageNum=2
+</span></span><span class="line"><span class="cl">			# rewrite ^/2.html$	/index.jsp?pageNum=2  break;
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			# $1表示第一个匹配的数字
+</span></span><span class="line"><span class="cl">			rewrite ^/[0-9]+.html$	/index.jsp?pageNum=$1  break;
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"># 3 重载配置
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 4 测试
+</span></span><span class="line"><span class="cl">http://192.168.101.42/2.html
+</span></span><span class="line"><span class="cl">http://192.168.101.42/66546.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="462-反向代理负载均衡urlrewrite">4.6.2 反向代理+负载均衡+URLRewrite</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 请求通过互联网打到nginx服务器上，再由nginx反向代理到内网的tomcat服务器
+</span></span><span class="line"><span class="cl">	互联网 --》nginx服务器(存放静态资源) --》内网的tomcat服务器(动态资源)
+</span></span><span class="line"><span class="cl">## 负载均衡+URLRewrite+反向代理
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 1、tomcat服务器开启防火墙添加信任ip(模拟内网环境)
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl start firewalld.service
+</span></span><span class="line"><span class="cl">[root@localhost ~]# firewall-cmd --permanent --add-rich-rule=&#34;rule family=&#34;ipv4&#34; source address=&#34;192.168.101.42/32&#34; port protocol=&#34;tcp&#34; port=&#34;80&#34; accept&#34;
+</span></span><span class="line"><span class="cl">[root@localhost ~]# firewall-cmd --reload
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 2、nginx服务访问内网tomcat
+</span></span><span class="line"><span class="cl">[root@localhost ~]# curl http://192.168.101.186
+</span></span><span class="line"><span class="cl">192.168.101.186-tomcat
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 3、nginx配置负载均衡+反向代理+URLRewrite
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[root@localhost /]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">upstream fuzaijunhen {        ##  负载均衡的服务器列表
+</span></span><span class="line"><span class="cl">	server 192.168.101.187:80;
+</span></span><span class="line"><span class="cl">	server 192.168.101.188:80;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">location / {
+</span></span><span class="line"><span class="cl">	rewrite ^/[0-9]+.html$	/test.html  redirect;
+</span></span><span class="line"><span class="cl">    proxy_pass http://fuzaijunhen
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"># 4 重载配置
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 4、测试
+</span></span><span class="line"><span class="cl">http://192.168.101.42/	正常访问主页
+</span></span><span class="line"><span class="cl">http://192.168.101.186/  没有代理访问不了
+</span></span><span class="line"><span class="cl">http://192.168.101.42/2.html   会跳转到 http://192.168.101.42/test.html
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-09-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/nginx/">nginx</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/cloudday2k8s/">
+            <span class="next-text nav-default">cloud,day2,k8s</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

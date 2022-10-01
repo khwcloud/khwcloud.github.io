@@ -1,0 +1,368 @@
+<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://localhost:1313/about/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/cloudday3nginx/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/nginx/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/%E4%BA%91/</loc>
+    <lastmod>2022-09-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/cloudday2k8s/</loc>
+    <lastmod>2022-05-15T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/k8s/</loc>
+    <lastmod>2022-05-15T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/cloudday1docker/</loc>
+    <lastmod>2022-05-01T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/docker/</loc>
+    <lastmod>2022-05-01T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/python/</loc>
+    <lastmod>2022-04-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/python/</loc>
+    <lastmod>2022-04-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday14%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</loc>
+    <lastmod>2022-04-28T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/cmdb/</loc>
+    <lastmod>2022-04-13T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday13cmdb/</loc>
+    <lastmod>2022-04-13T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday12%E8%B7%AF%E9%A3%9E%E9%A1%B9%E7%9B%AE/</loc>
+    <lastmod>2022-03-25T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/django/</loc>
+    <lastmod>2022-01-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday11django/</loc>
+    <lastmod>2022-01-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/git/</loc>
+    <lastmod>2021-11-04T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday10git/</loc>
+    <lastmod>2021-11-04T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday9%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-10-30T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-10-30T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday8%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2021-10-23T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday7%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2021-10-15T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday6%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2021-10-02T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2021-09-30T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/</loc>
+    <lastmod>2021-09-25T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/</loc>
+    <lastmod>2021-09-20T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday2%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2021-09-14T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/pythonday1%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2021-09-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday7%E5%AE%B9%E7%81%BE/</loc>
+    <lastmod>2020-11-14T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E5%AE%B9%E7%81%BE/</loc>
+    <lastmod>2020-11-14T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday6%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2020-11-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2020-11-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday5ebackup/</loc>
+    <lastmod>2020-10-15T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E5%A4%87%E4%BB%BD/</loc>
+    <lastmod>2020-10-15T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday4openstack/</loc>
+    <lastmod>2020-10-04T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/openstack/</loc>
+    <lastmod>2020-10-04T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday3fsuionstorage/</loc>
+    <lastmod>2020-09-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2020-09-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday2fusionaccess/</loc>
+    <lastmod>2020-08-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E6%A1%8C%E9%9D%A2%E4%BA%91/</loc>
+    <lastmod>2020-08-07T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/huaweicloudday1fusioncompute/</loc>
+    <lastmod>2020-07-01T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/</loc>
+    <lastmod>2020-07-01T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2020-04-02T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2020-04-02T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2020-03-01T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/linux%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-03-01T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/</loc>
+    <lastmod>2019-07-11T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/</loc>
+    <lastmod>2019-07-11T11:06:25+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

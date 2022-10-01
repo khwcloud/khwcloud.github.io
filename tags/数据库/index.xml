@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on blog</title>
+    <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Oct 2021 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python,day9,数据库</title>
+      <link>http://localhost:1313/post/pythonday9%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Sat, 30 Oct 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday9%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>&lt;p&gt;数据库的常用操作。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

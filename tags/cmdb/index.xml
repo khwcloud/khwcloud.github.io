@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cmdb on blog</title>
+    <link>http://localhost:1313/tags/cmdb/</link>
+    <description>Recent content in cmdb on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 13 Apr 2022 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/cmdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python,day13,cmdb</title>
+      <link>http://localhost:1313/post/pythonday13cmdb/</link>
+      <pubDate>Wed, 13 Apr 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday13cmdb/</guid>
+      <description>&lt;p&gt;cmdb资产管理系统&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

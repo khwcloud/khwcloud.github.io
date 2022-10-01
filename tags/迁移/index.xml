@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>迁移 on blog</title>
+    <link>http://localhost:1313/tags/%E8%BF%81%E7%A7%BB/</link>
+    <description>Recent content in 迁移 on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Nov 2020 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E8%BF%81%E7%A7%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>huaweicloud,day6,Rainbow</title>
+      <link>http://localhost:1313/post/huaweicloudday6%E8%BF%81%E7%A7%BB/</link>
+      <pubDate>Sat, 07 Nov 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday6%E8%BF%81%E7%A7%BB/</guid>
+      <description>&lt;p&gt;华为云迁移，将x86架构的物理机或者虚拟机迁移到华为的私有云上或者虚拟化平台上。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

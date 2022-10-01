@@ -1,0 +1,3299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>cloud,day1,docker - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/cloudday1docker/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="cloud,day1,docker" />
+<meta property="og:description" content="Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/cloudday1docker/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-05-01T11:06:25+08:00" />
+<meta property="article:modified_time" content="2022-05-01T11:06:25+08:00" />
+
+<meta itemprop="name" content="cloud,day1,docker">
+<meta itemprop="description" content="Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。"><meta itemprop="datePublished" content="2022-05-01T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2022-05-01T11:06:25+08:00" />
+<meta itemprop="wordCount" content="11213">
+<meta itemprop="keywords" content="docker," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cloud,day1,docker"/>
+<meta name="twitter:description" content="Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">cloud,day1,docker</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-05-01 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%91/"> 云 </a>
+            </div>
+          <span class="more-meta"> 11213 words </span>
+          <span class="more-meta"> 23 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1-docker安装">1 docker安装</a></li>
+            <li><a href="#2-docker基础">2 docker基础</a></li>
+            <li><a href="#3-docker镜像制作">3 docker镜像制作</a></li>
+            <li><a href="#4-docker仓库harbor">4 docker仓库harbor</a></li>
+            <li><a href="#5-docker数据管理">5 docker数据管理</a></li>
+            <li><a href="#6-docker网络">6 docker网络</a></li>
+            <li><a href="#7-docker资源限制">7 docker资源限制</a></li>
+            <li><a href="#8-docker-swarm">8 docker swarm</a></li>
+            <li><a href="#9-docker-compose-容器编排">9 docker compose 容器编排</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。</p>
+<h3 id="1-docker安装">1 docker安装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、环境：Ubuntu 18.04
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、安装需要的包
+</span></span><span class="line"><span class="cl">    $ sudo apt-get update
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、安装 apt 依赖包，用于通过HTTPS来获取仓库
+</span></span><span class="line"><span class="cl">    $ sudo apt-get install \
+</span></span><span class="line"><span class="cl">       apt-transport-https \
+</span></span><span class="line"><span class="cl">       ca-certificates \
+</span></span><span class="line"><span class="cl">       curl \
+</span></span><span class="line"><span class="cl">       gnupg-agent \
+</span></span><span class="line"><span class="cl">       software-properties-common
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、添加 Docker 的官方 GPG 密钥
+</span></span><span class="line"><span class="cl">	$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">5、设置稳定版仓库
+</span></span><span class="line"><span class="cl">    $ sudo add-apt-repository \
+</span></span><span class="line"><span class="cl">       &#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+</span></span><span class="line"><span class="cl">      $(lsb_release -cs) \
+</span></span><span class="line"><span class="cl">      stable&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6、安装 Docker-ce
+</span></span><span class="line"><span class="cl">    $ sudo apt-get update
+</span></span><span class="line"><span class="cl">    $ sudo apt-get install docker-ce docker-ce-cli containerd.io
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7、设置开机自启动并启动 Docker-ce
+</span></span><span class="line"><span class="cl">	安装成功后默认开启，可忽略该步骤
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">8、测试运行
+</span></span><span class="line"><span class="cl">	sudo docker run hello-world
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2-docker基础">2 docker基础</h3>
+<h4 id="21-namespace和cgroups和存储引擎">2.1 Namespace和Cgroups和存储引擎</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">namespace实现了容器的资源隔离
+</span></span><span class="line"><span class="cl">cgroups实现了容器的资源限制
+</span></span><span class="line"><span class="cl">docker存储引擎默认是overlay2
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="22-docker镜像基本操作">2.2 docker镜像基本操作</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 查看文件夹大小
+</span></span><span class="line"><span class="cl">du -sh /var/lib/docker/*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看网桥的链接信息
+</span></span><span class="line"><span class="cl">apt install bridge-utils
+</span></span><span class="line"><span class="cl">brctl show
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看宿主机的进程树
+</span></span><span class="line"><span class="cl">pstree -p 1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看所有容器状态
+</span></span><span class="line"><span class="cl">docker stats
+</span></span><span class="line"><span class="cl">docker info : 显示 Docker 系统信息，包括镜像和容器数
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 搜索镜像官方仓库的镜像(既有官方又有个人做的)
+</span></span><span class="line"><span class="cl">docker search nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 导出镜像
+</span></span><span class="line"><span class="cl">	- 方式一
+</span></span><span class="line"><span class="cl">    	docker save -o /opt/tamcat-new.tar.gz tomcat:latest
+</span></span><span class="line"><span class="cl">	- 方式二
+</span></span><span class="line"><span class="cl">    	docker save 镜像名 &gt; 保存地址
+</span></span><span class="line"><span class="cl">    	docker save tomcat:latest &gt; /opt/tomcat-new.tar.gz
+</span></span><span class="line"><span class="cl">	scp /opt/tomcat-new.tar.gz 192.168.1.1:/opt/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 导入镜像
+</span></span><span class="line"><span class="cl">	- 方式一
+</span></span><span class="line"><span class="cl">		docker load &lt; /opt/tomcat-new.tar.gz
+</span></span><span class="line"><span class="cl">	- 方式二
+</span></span><span class="line"><span class="cl">		docker load -i /opt/tomcat-new.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 运行容器
+</span></span><span class="line"><span class="cl">docker run -it -d --name 新容器名称  -p 本地端口:容器端口 镜像名称  shell命令
+</span></span><span class="line"><span class="cl">i表示标准输入，t表示tty终端，就是分配一个终端的意思
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 进入容器
+</span></span><span class="line"><span class="cl">docker exec -it 容器名 bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 删除镜像和容器
+</span></span><span class="line"><span class="cl">	- 删除镜像
+</span></span><span class="line"><span class="cl">		docker rmi hello-world:latest
+</span></span><span class="line"><span class="cl">	- 删除容器
+</span></span><span class="line"><span class="cl">		docker rm -fv 953254365a
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="23-docker容器的基本操作">2.3 docker容器的基本操作</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 查看容器
+</span></span><span class="line"><span class="cl">	docker ps -a
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># docker拷贝文件
+</span></span><span class="line"><span class="cl">将容器的nginx拷贝到opt目录下
+</span></span><span class="line"><span class="cl">docker cp 容器id:/etc/nginx/nginx.conf   /opt/
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># docker传递环境变量
+</span></span><span class="line"><span class="cl">docker run -it -p 3306:3306 --env MYSQL_ROOT_PASSWORD=&#34;123&#34; mysql:5.6.44
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 查看正在运行的容器id
+</span></span><span class="line"><span class="cl">docker ps -q
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 批量删除已经退出的容器
+</span></span><span class="line"><span class="cl">	- 方式一
+</span></span><span class="line"><span class="cl">	docker rm -f $(docker ps -a |grep &#34;Exited&#34; |awk &#39;{print $1}&#39;)
+</span></span><span class="line"><span class="cl">	- 方式二
+</span></span><span class="line"><span class="cl">	docker rm -f $(docker ps -aq -f status=exited)
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看docker日志,看最后二十行
+</span></span><span class="line"><span class="cl">docker logs --tail 20  容器id
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看docker映射的端口
+</span></span><span class="line"><span class="cl">docker port 容器id
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 停止容器
+</span></span><span class="line"><span class="cl">docker stop 容器id
+</span></span><span class="line"><span class="cl">docker stop &#39;docker ps -q&#39;	# 批量停止正在运行的容器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 启动容器
+</span></span><span class="line"><span class="cl">docker start 容器id
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看docker详细信息
+</span></span><span class="line"><span class="cl">docker inspect 容器id
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看容器实时的事件
+</span></span><span class="line"><span class="cl">docker events
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看容器状态码
+</span></span><span class="line"><span class="cl">docker wait 容器id
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-docker镜像制作">3 docker镜像制作</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、熟练掌握Dockerfile的指令使用
+</span></span><span class="line"><span class="cl">2、熟练通过Dockerfile制作镜像的各种方式(yum安装服务、编译安装)
+</span></span><span class="line"><span class="cl">	nginx -编译
+</span></span><span class="line"><span class="cl">	nginx -yum安装
+</span></span><span class="line"><span class="cl">3、镜像的分层构建
+</span></span><span class="line"><span class="cl">4、CMD和ENTRYPOINT区别及使用
+</span></span><span class="line"><span class="cl">	举个例子
+</span></span><span class="line"><span class="cl">		# ENTRYPOINT会将整个cmd的内容以参数的形式接收，然后执行
+</span></span><span class="line"><span class="cl">		ENTRYPOINT [&#34;/apps/nginx/sbin/nginx&#34;]
+</span></span><span class="line"><span class="cl">		CMD [&#34;-g&#34;,&#34;daemon off;&#34;]
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		# 上两条等效于
+</span></span><span class="line"><span class="cl">		CMD  [&#34;/apps/nginx/sbin/nginx&#34;,&#34;-g&#34;,&#34;daemon off;&#34;]
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">扩展：
+</span></span><span class="line"><span class="cl">	1、构建haproxy + tomcat的小型站点的全部镜像
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="31-dockerfile参数">3.1 dockerfile参数</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">配置参数
+</span></span><span class="line"><span class="cl">	FROM centos:7.6.1810	# 在整个dockfile除了注释之外的第一行，用于指定父镜像
+</span></span><span class="line"><span class="cl">	ADD		# 用于添加宿主机本地的文件、目录、压缩等资源到镜像里面去，他还会自动解压tar.gz这种格式的压缩包，不会解压zip
+</span></span><span class="line"><span class="cl">	COPY	# 用于添加宿主机本地的文件、目录、压缩等资源到镜像里面去,不会解压任何压缩包
+</span></span><span class="line"><span class="cl">	MAINTAINER		# (镜像的作者信息等等)
+</span></span><span class="line"><span class="cl">	LABEL	# 设置镜像的属性标签
+</span></span><span class="line"><span class="cl">	ENV		# 设置容器环境变量
+</span></span><span class="line"><span class="cl">	USER	# 指定运行操作的用户，一般用root
+</span></span><span class="line"><span class="cl">	RUN	yum install vim unzip -y	# 用于执行shell命令，但是一定要以非交互式方式执行
+</span></span><span class="line"><span class="cl">	VOLUME		# 定义volume，不定义也没关系
+</span></span><span class="line"><span class="cl">	WORKDIR		# 定义工作目录，一般直接在RUN里面用cd操作，这个用的少
+</span></span><span class="line"><span class="cl">	EXPOSE 80	# 声明要把容器的某些端口映射到宿主机
+</span></span><span class="line"><span class="cl">	CMD			# 镜像启动一个容器时候的默认命令或脚本
+</span></span><span class="line"><span class="cl">	ENTRYPOINT	# 通常和cmd结合用于执行更复杂的指令，两者结合，cmd的参值会作为参数传给ENTRYPOINT
+</span></span><span class="line"><span class="cl">	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="32-dockerfile制作nginx镜像">3.2 dockerfile制作nginx镜像</h4>
+<h5 id="321-基于centos制作nginx镜像">3.2.1 基于centos制作nginx镜像</h5>
+<p>下载镜像并初始化系统</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull	centos:7.8.2003
+</span></span><span class="line"><span class="cl">docker run -it docker.io/centos /bin/bash
+</span></span><span class="line"><span class="cl">cd /opt/		# 创建目录环境
+</span></span><span class="line"><span class="cl">mkdir dockerfile/{web/{nginx,tomcat,jdk,apache},system/{centos,ubuntu,redhat}} -pv
+</span></span><span class="line"><span class="cl"># 目录结构按照业务类型，系统类型等方式划分，方便后期镜像比较多的时候进行分类
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># base image for m43 nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FROM centos:7.8.2003
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MAINTAINER  &#34;hongwei 1066411@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN yum install -y vim wget tree  lrzsz iproute  gcc gcc-c++  pcre pcre-devel zlib zlib-devel openssl openssl-devel \
+</span></span><span class="line"><span class="cl">    &amp;&amp; yum clean all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># copy这种方式默认不解压,ADD默认解压
+</span></span><span class="line"><span class="cl"># COPY  nginx-1.16.1.tar.gz /usr/local/src/
+</span></span><span class="line"><span class="cl">ADD nginx-1.16.1.tar.gz /usr/local/src/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 编译安装nginx
+</span></span><span class="line"><span class="cl">RUN cd /usr/local/src/nginx-1.16.1 &amp;&amp; ./configure --prefix=/apps/nginx --with-http_sub_module &amp;&amp; make &amp;&amp; make install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建nginx所需要的用户
+</span></span><span class="line"><span class="cl">RUN useradd nginx -u 2022
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 将修改后的nginx配置文件和代码cp到容器中
+</span></span><span class="line"><span class="cl">ADD nginx.conf /apps/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">ADD code.tar.gz /data/nginx/html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 提交脚本
+</span></span><span class="line"><span class="cl"># ADD run_nginx.sh /apps/ngin/sbin/run_nginx.sh
+</span></span><span class="line"><span class="cl"># RUN chmod a+x /apps/ngin/sbin/run_nginx.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 声明要把容器的某些端口映射到宿主机
+</span></span><span class="line"><span class="cl">EXPOSE 80 443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#  -g daemon off; 把nginx的后台进程关了让nginx的进程在终端前台执行，把nginx的主进程初始化为pid为
+</span></span><span class="line"><span class="cl">一的进程
+</span></span><span class="line"><span class="cl">CMD [&#34;/apps/nginx/sbin/nginx&#34;,&#34;-g&#34;,&#34;daemon off;&#34;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 也可以通过脚本来
+</span></span><span class="line"><span class="cl"># CMD [&#34;/apps/ngin/sbin/run_nginx.sh&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>提交镜像</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 将容器里的nginx配置文件cp出来修改
+</span></span><span class="line"><span class="cl">docker cp c8211431c12b:/apps/nginx/conf/nginx.conf . 
+</span></span><span class="line"><span class="cl">nginx.config:
+</span></span><span class="line"><span class="cl">    user nginx;
+</span></span><span class="line"><span class="cl">    worker_processes  auto;
+</span></span><span class="line"><span class="cl">    location / {
+</span></span><span class="line"><span class="cl">        root   /data/nginx/html;
+</span></span><span class="line"><span class="cl">        index  index.html index.htm;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建一个测试代码
+</span></span><span class="line"><span class="cl">mkdir code
+</span></span><span class="line"><span class="cl">vim code/index.html 
+</span></span><span class="line"><span class="cl">cd code/
+</span></span><span class="line"><span class="cl">tar czvf code1.tar.gz ./
+</span></span><span class="line"><span class="cl">cd .. 
+</span></span><span class="line"><span class="cl">mv code/code1.tar.gz .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 最后面的点代表在当前路径下找Dockerfile
+</span></span><span class="line"><span class="cl">docker build -t nginx-web1:1.16.1 .		
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 进入容器查看环境
+</span></span><span class="line"><span class="cl">docker run  -it --rm -p 8088:80 nginx-web1:1.16.1	
+</span></span><span class="line"><span class="cl">docker exec -it 6ddba85b512d bash	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps：在一个容器里，要有一个能在容器tty的前端执行的进程
+</span></span><span class="line"><span class="cl">	命令：
+</span></span><span class="line"><span class="cl">		tail -f
+</span></span><span class="line"><span class="cl">			tail -f	 /etc/hosts
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	服务进程：
+</span></span><span class="line"><span class="cl">		nginx
+</span></span><span class="line"><span class="cl">			CMD [&#34;/apps/nginx/sbin/nginx&#34;,&#34;-g&#34;,&#34;daemon off;&#34;]
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">	脚本：
+</span></span><span class="line"><span class="cl">		# 提交脚本
+</span></span><span class="line"><span class="cl">        # ADD run_nginx.sh /apps/ngin/sbin/run_nginx.sh
+</span></span><span class="line"><span class="cl">        # RUN chmod a+x /apps/ngin/sbin/run_nginx.sh
+</span></span><span class="line"><span class="cl">		# CMD [&#34;/apps/ngin/sbin/run_nginx.sh&#34;]
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="322-基于alpine制作nginx镜像">3.2.2 基于alpine制作nginx镜像</h5>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 提前把alpine的
+</span></span><span class="line"><span class="cl">FROM alpine
+</span></span><span class="line"><span class="cl">maintainer khw &#34;123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 这是配置alpine的源
+</span></span><span class="line"><span class="cl">COPY repsoitories /etc/apk/repositories
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN apk update &amp;&amp; apk add iotop gcc libgcc libc-dev libcurl libc-utils pcre-dev zlib-dev libnfs make pcre pcre2 zip unzip net-tools pstree wget libevent libevent-dev iproute2 openssl openssl-dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD nginx-1.18.0.tar.gz /opt/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN addgroup -g 2021 -S khw &amp;&amp; adduser -s /sbin/nologin -S -D -u 2022 -G khw khw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># nginx配置可以参考centos制作nginx镜像的配置
+</span></span><span class="line"><span class="cl">COPY nginx.conf /apps/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">ADD static.tar.gc /data/nginx/html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN chown nginx.nginx /data/nginx/ /apps/nginx/ -R
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">EXPOSE 80 443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD [&#34;nginx&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/alpine-nginx:v1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker push 192.168.101.110:80/khw/alpine-nginx:v1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bash build-command.sh
+</span></span><span class="line"><span class="cl">docker run -it --rm -name alpine-nginx -p 8080:80 khw/alpine-nginx:v1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="323-基于ubuntu制作nginx镜像">3.2.3 基于ubuntu制作nginx镜像</h5>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM ubuntu:18.04
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">maintainer khw &#34;123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">COPY sources.list /etc/apt/sources.list
+</span></span><span class="line"><span class="cl">RUN apt update &amp;&amp; apt install -y iproute2 ntpdate tcpdump telnet traceroute nfs-kernel-server nfs-common lrzsz tree openssl libssl-dev libpcre3 libpcre-dev zlib1g-dev gcc openssh-server lrzsz tree opelssl libssl-dev libpcre3 libpcre3-dev zlib1g-dev ntpdate tcpdump telnet tracerout iotop unzip zip make &amp;&amp; touch /tmp/linux.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD nginx-1.18.0.tar.gz /usr/local/src
+</span></span><span class="line"><span class="cl">RUN cd /usr/local/src/nginx-1.18.0 &amp;&amp; ./configure --prefix=/apps/nginx &amp;&amp; make &amp;&amp; make install &amp;&amp; ln -sv /apps/nginx/sbin/nginx /usr/bin &amp;&amp; rm -rf /usr/local/src/nginx-1.18.0 &amp;&amp; rm -rf /usr/local/src/nginx-1.18.0.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD nginx.conf /apps/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD static.tar.gz /data/nginx/html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN groupadd -g 2022 khw%% useradd -g khw -s /usr/sbin/nologin -u 2019 nginx &amp;&amp; chown -R nginx.nginx /apps/nginx /data/nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">EXPOSE 80 443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD [&#34;nginx&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>sources.list是apt的国内源，内容如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal universe
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates universe
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security universe
+</span></span><span class="line"><span class="cl">deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security multiverse
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/ubuntu-nginx:v1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 上传到镜像仓库</span>
+</span></span><span class="line"><span class="cl">docker push 192.168.101.110:80/khw/ubuntu-nginx:v1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="33-镜像分层构建">3.3 镜像分层构建</h4>
+<h5 id="331-拉取centos官方基础镜像">3.3.1 拉取centos官方基础镜像</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker pull	centos:7.8.2003
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="332-配置centos基础镜像">3.3.2 配置centos基础镜像</h5>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM centos:7.8.2003
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;khw 123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN yum install -y vim wget tree  lrzsz iproute  gcc gcc-c++  pcre pcre-devel zlib zlib-devel openssl openssl-devel \
+</span></span><span class="line"><span class="cl">    &amp;&amp; yum clean all &amp;&amp; groupadd khw -g 2022 &amp;&amp; useradd khw -u 2022 -g khw
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">TAG</span><span class="o">=</span><span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker build -t khw/centos-base:<span class="si">${</span><span class="nv">TAG</span><span class="si">}</span> .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>运行测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">bash build-command.sh 2022-04-23_20-22-30
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="333-基于centos基础镜像配置java基础镜像">3.3.3 基于centos基础镜像配置java基础镜像</h5>
+<p>Dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM khw/centos-base:7.8.2003
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;khw 123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD jdk-8u212-linux-x64.tar.gz /usr/local/src
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN ln -sv /usr/local/src/jdk1.8.0_212 /usr/local/jdk
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD profile /etc/profile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 声明环境变量,声明后容器的env里可以看到name=khw
+</span></span><span class="line"><span class="cl">ENV name khw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 在容器中切普通用户会有java的环境变量
+</span></span><span class="line"><span class="cl"># 因为切用户的时候去读了profile文件
+</span></span><span class="line"><span class="cl"># 而root不回去度profile文件，所以他没有java环境变量，需要在这里配置
+</span></span><span class="line"><span class="cl">ENV JAVA_HOME /usr/local/jdk
+</span></span><span class="line"><span class="cl">ENV JRE_HOME $JAVA_HOME/jre
+</span></span><span class="line"><span class="cl">ENV CLASSPATH $JAVA_HOME/lib/:$JRE_HOME/lib/
+</span></span><span class="line"><span class="cl">ENV PATH $PATH:$JAVA_HOME/bin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>/etc/profile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 配置容器里的java环境变量
+</span></span><span class="line"><span class="cl">export JAVA_HOME=/usr/local/jdk
+</span></span><span class="line"><span class="cl">export TOMACT_HOME=/apps/tomcat
+</span></span><span class="line"><span class="cl">export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$TOMCAT_HOME/bin:$PATH
+</span></span><span class="line"><span class="cl">export CLASSPATH=.$CLASSPATH:$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 容器运行脚本</span>
+</span></span><span class="line"><span class="cl">docker build -t khw/centos-jdk-base:8u212 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="334-基于java基础镜像构建tomcat镜像">3.3.4 基于java基础镜像构建tomcat镜像</h5>
+<p>Dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># tomcat base image
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FROM khw/centos-jdk-base:8u212
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD apache-tomcat-8.5.78.tar.gz /apps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN ln -sv /apps/apache-tomcat-8.5.78 /apps/tomcat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/centos-tomcat-base:v8.5.78 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>构建镜像并测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> bash  build-command.sh
+</span></span><span class="line"><span class="cl"> docker run -it --rm -p 8080:8080 022f7e4100b4
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># 启动tomcat服务，这一步可以在dockerfile中配置
+</span></span><span class="line"><span class="cl"> /apps/tomcat/bin/catalina.sh start
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># 查看监听端口
+</span></span><span class="line"><span class="cl">ss -tnl 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 浏览器访问本机ip+端口即可看到tomcat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="335-基于tomcat镜像构建业务镜像">3.3.5 基于tomcat镜像构建业务镜像</h5>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># tomcat 的业务镜像
+</span></span><span class="line"><span class="cl">FROM  khw/centos-tomcat-base:v8.5.78
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;khw 123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD run_tomcat.sh /apps/tomcat/bin/run_tomcat.sh
+</span></span><span class="line"><span class="cl">ADD server.xml   /apps/tomcat/conf/server.xml
+</span></span><span class="line"><span class="cl">ADD myapp.tar.gz /data/tomcat/webapps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN chown khw.khw /data /apps -R
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">EXPOSE 8080 8443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD [&#34;/apps/tomcat/bin/run_tomcat.sh&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改tomcat配置文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/apps/tomcat/conf/server.xml
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">151       &lt;Host name=&#34;localhost&#34;  appBase=&#34;/data/tomcat/webapps&#34;
+</span></span><span class="line"><span class="cl">152             unpackWARs=&#34;false&#34; autoDeploy=&#34;false&#34;&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>run_tomcat.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl">su - khw -c <span class="s2">&#34;/apps/tomcat/bin/catalina.sh start&#34;</span>
+</span></span><span class="line"><span class="cl">tail -f /etc/hosts
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/centos-tomcat-app:app01 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>构建镜像并测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">tar czvf myapp.tar.tg myapp/	# 这个目录下就随便写了个jsp文件
+</span></span><span class="line"><span class="cl">chmod a+x run_tomcat.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run  -it --rm -p 8080:8080 khw/centos-tomcat-app:app01
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker exec -it khw/centos-tomcat-app:app01 bash	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">分层构建镜像后
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="336-构建其他相同业务镜像">3.3.6 构建其他相同业务镜像</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 后续构建其他相同业务镜像就只需要cp就好了，然后修改下build-command.sh文件
+</span></span><span class="line"><span class="cl">cp tomcat-app1/ tomcat-app2/ -r
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">build-command.sh
+</span></span><span class="line"><span class="cl">    #!/bin/bash
+</span></span><span class="line"><span class="cl">    docker build -t khw/centos-tomcat-app:app02 .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">bash build-command.sh
+</span></span><span class="line"><span class="cl">docker run -it --rm -p 8089:8080 khw/centos-tomcat-app:app02
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 浏览器访问，则可看到部署代码
+</span></span><span class="line"><span class="cl">http://192.168.101.110:8089/myapp/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="337-docker-cp镜像">3.3.7 docker cp镜像</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 在别的服务器上只要有docker就可以用复制过来的镜像
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker save  khw/centos-tomcat-app:app02 &gt; /opt/tomcat-app2-image.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scp /opt/tomcat-app2-image.tar.gz  x.x.x.x:/opt/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 在对应服务器上导入docker进行
+</span></span><span class="line"><span class="cl">docker load -i /opt/tomcat-app2-image.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">docker run -it -d -p 8080:8080 khw/centos-tomcat-app:app02
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 浏览器访问：
+</span></span><span class="line"><span class="cl">x.x.x.x:8080/myapp/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="34-构建haproxy镜像">3.4 构建haproxy镜像</h4>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM khw/centos-base:7.8.2003
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;khw 123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN yum install libtermcap-devel ncurses-devel libevent-devel readine-devel gcc gcc-c++ glibc glibc-devel pcre pcre-devel openssl openss1-devel systemd-devel net-too1s vim iotop bc zip unzip zlib-devel 1rzsz tree screen 1sof tcpdump wget ntpdate -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 写到这就先构建一下
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD haproy-2.2.11.tar.gz /usr/local/src
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN cd/usr/local/src/haproxy-2.2.11 &amp;&amp; make ARCH=x86_64 TARGET=linux-glibc USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1 USE_SYSTEMD=1  USE_CPU_AFFINITY=1 PREFIX=/apps/haproxy &amp;&amp; make install PREFIX=/apps/haproxy &amp;&amp; cp haproxy /usr/sbin/ &amp;&amp; mkdir /apps/haproxy/run
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 到这在构建一下
+</span></span><span class="line"><span class="cl">ADD run_haproxy.sh /apps/haproxy/bin/run_haproxy.sh
+</span></span><span class="line"><span class="cl">ADD haproxy.cfg /etc/haproxy/haproxy.cfg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">EXPOSE 80 9999
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD [&#34;/apps/haproxy/bin/run_haproxy.sh&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>run_haproxy.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>/apps/haproxy/sbin/haproxy	-f /etc/haproxy/haproxy.cfg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tail -f /etc/hosts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里要加上权限，可以在宿主机上加，也可以在dockerfile上加</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/haproxy:v2.2.11 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>haproxy.cfg</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">global
+</span></span><span class="line"><span class="cl">chroot /apps/haproxy
+</span></span><span class="line"><span class="cl">uid 99
+</span></span><span class="line"><span class="cl">gid 99 
+</span></span><span class="line"><span class="cl">daemon
+</span></span><span class="line"><span class="cl">nbproc 1
+</span></span><span class="line"><span class="cl">pidfile /apps/haproxy/run/haproxy.pid
+</span></span><span class="line"><span class="cl">log 127.0.0.1 local3 info 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">defaults
+</span></span><span class="line"><span class="cl">option http-keep-alive
+</span></span><span class="line"><span class="cl">option fowardfor
+</span></span><span class="line"><span class="cl">mode http
+</span></span><span class="line"><span class="cl">timeout connect 300000ms
+</span></span><span class="line"><span class="cl">timeout client 300000ms
+</span></span><span class="line"><span class="cl">timeout server 300000ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">listen stats
+</span></span><span class="line"><span class="cl"> mode http
+</span></span><span class="line"><span class="cl"> bind 0.0.0.0:9999
+</span></span><span class="line"><span class="cl"> stats enable
+</span></span><span class="line"><span class="cl"> log global
+</span></span><span class="line"><span class="cl"> stats uri /haproxy-status
+</span></span><span class="line"><span class="cl"> stats auth haadmin:123456
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">listen web_port
+</span></span><span class="line"><span class="cl">	bind 0.0.0.0:80
+</span></span><span class="line"><span class="cl">	mode http
+</span></span><span class="line"><span class="cl">	log global
+</span></span><span class="line"><span class="cl">	balance rundrobin
+</span></span><span class="line"><span class="cl">	server web1 192.168.7.101:8080 check inter 3000 fall 2 rise 5
+</span></span><span class="line"><span class="cl">	server web1 192.168.7.102:8080 check inter 3000 fall 2 rise 5
+</span></span><span class="line"><span class="cl">	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>测试环境</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -it --rm -p 80:80 -P 9999:99 khw/haproxy:v2.2.11
+</span></span><span class="line"><span class="cl">docker exec -it khw/haproxy:v2.2.11 bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps -ef |grep haproxy
+</span></span><span class="line"><span class="cl">ss -tnl
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4-docker仓库harbor">4 docker仓库harbor</h3>
+<h4 id="41-安装harbor">4.1 安装harbor</h4>
+<p>安装docker</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:~# curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+</span></span><span class="line"><span class="cl">root@hello:~#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置Docker Compose</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:~# sudo curl -L &#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+</span></span><span class="line"><span class="cl">                                 Dload  Upload   Total   Spent    Left  Speed
+</span></span><span class="line"><span class="cl">100   633  100   633    0     0   2444      0 --:--:-- --:--:-- --:--:--  2444
+</span></span><span class="line"><span class="cl">100 12.1M  100 12.1M    0     0  10.2M      0  0:00:01  0:00:01 --:--:-- 26.2M
+</span></span><span class="line"><span class="cl">root@hello:~#  sudo chmod +x /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl">root@hello:~# sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</span></span><span class="line"><span class="cl">root@hello:~# docker-compose --version
+</span></span><span class="line"><span class="cl">docker-compose version 1.29.2, build 5becea4c
+</span></span><span class="line"><span class="cl">root@hello:~#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>下载Docker Harbor安装包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:~# wget https://github.com/goharbor/harbor/releases/download/v2.3.2/harbor-offline-installer-v2.3.2.tgz
+</span></span><span class="line"><span class="cl">root@hello:~#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>解压安装包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:~# tar xvf harbor-offline-installer-v2.3.2.tgz  -C /usr/local/ 
+</span></span><span class="line"><span class="cl">harbor/harbor.v2.3.2.tar.gz
+</span></span><span class="line"><span class="cl">harbor/prepare
+</span></span><span class="line"><span class="cl">harbor/LICENSE
+</span></span><span class="line"><span class="cl">harbor/install.sh
+</span></span><span class="line"><span class="cl">harbor/common.sh
+</span></span><span class="line"><span class="cl">harbor/harbor.yml.tmpl
+</span></span><span class="line"><span class="cl">root@hello:~# cd /usr/local/harbor/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置证书</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:/usr/local/harbor# mkdir ca
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor# cd ca/
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# pwd
+</span></span><span class="line"><span class="cl">/usr/local/harbor/ca
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# openssl genrsa -des3 -out server.key 2048
+</span></span><span class="line"><span class="cl">Generating RSA private key, 2048 bit long modulus (2 primes)
+</span></span><span class="line"><span class="cl">......................................+++++
+</span></span><span class="line"><span class="cl">...................................................................................................................................................+++++
+</span></span><span class="line"><span class="cl">e is 65537 (0x010001)
+</span></span><span class="line"><span class="cl">Enter pass phrase for server.key:
+</span></span><span class="line"><span class="cl">Verifying - Enter pass phrase for server.key:
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# 
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# 
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# openssl req -new -key server.key -out server.csr
+</span></span><span class="line"><span class="cl">Enter pass phrase for server.key:
+</span></span><span class="line"><span class="cl">You are about to be asked to enter information that will be incorporated
+</span></span><span class="line"><span class="cl">into your certificate request.
+</span></span><span class="line"><span class="cl">What you are about to enter is what is called a Distinguished Name or a DN.
+</span></span><span class="line"><span class="cl">There are quite a few fields but you can leave some blank
+</span></span><span class="line"><span class="cl">For some fields there will be a default value,
+</span></span><span class="line"><span class="cl">If you enter &#39;.&#39;, the field will be left blank.
+</span></span><span class="line"><span class="cl">-----
+</span></span><span class="line"><span class="cl">Country Name (2 letter code) [AU]:
+</span></span><span class="line"><span class="cl">State or Province Name (full name) [Some-State]:
+</span></span><span class="line"><span class="cl">Locality Name (eg, city) []:
+</span></span><span class="line"><span class="cl">Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+</span></span><span class="line"><span class="cl">Organizational Unit Name (eg, section) []:
+</span></span><span class="line"><span class="cl">Common Name (e.g. server FQDN or YOUR name) []:
+</span></span><span class="line"><span class="cl">Email Address []:
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">Please enter the following &#39;extra&#39; attributes
+</span></span><span class="line"><span class="cl">to be sent with your certificate request
+</span></span><span class="line"><span class="cl">A challenge password []:
+</span></span><span class="line"><span class="cl">An optional company name []:
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# 
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# cp server.key server.key.org
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# openssl rsa -in server.key.org -out server.key
+</span></span><span class="line"><span class="cl">Enter pass phrase for server.key.org:
+</span></span><span class="line"><span class="cl">writing RSA key
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca# openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+</span></span><span class="line"><span class="cl">Signature ok
+</span></span><span class="line"><span class="cl">subject=C = AU, ST = Some-State, O = Internet Widgits Pty Ltd
+</span></span><span class="line"><span class="cl">Getting Private key
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor/ca#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改配置文件(修改hostname和证书路径即可)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:/usr/local/harbor# cp harbor.yml.tmpl harbor.yml
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor# 
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor# vim harbor.yml
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor# cat harbor.yml
+</span></span><span class="line"><span class="cl"># Configuration file of Harbor
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">hostname: harbor.chenby.cn
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># http related config
+</span></span><span class="line"><span class="cl">http:
+</span></span><span class="line"><span class="cl">  # port for http, default is 80. If https enabled, this port will redirect to https port
+</span></span><span class="line"><span class="cl">  port: 80
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># https related config
+</span></span><span class="line"><span class="cl">https:
+</span></span><span class="line"><span class="cl">  # https port for harbor, default is 443
+</span></span><span class="line"><span class="cl">  port: 443
+</span></span><span class="line"><span class="cl">  # The path of cert and key files for nginx
+</span></span><span class="line"><span class="cl">  certificate: /usr/local/harbor/ca/server.crt
+</span></span><span class="line"><span class="cl">  private_key: /usr/local/harbor/ca/server.key
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">harbor_admin_password: Harbor12345
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">----略----
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">root@hello:/usr/local/harbor#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:/usr/local/harbor# ./install.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 安装完后登录
+</span></span><span class="line"><span class="cl">默认账号：admin
+</span></span><span class="line"><span class="cl">默认密码：Harbor12345
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果机器重启需要手动启动Harbor</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> docker-compose up -d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="42-上传下载镜像">4.2 上传下载镜像</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 修改tag
+</span></span><span class="line"><span class="cl">docker tag hello-world:latest 192.168.101.110:80/hello/hello-world
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 添加信任
+</span></span><span class="line"><span class="cl">vim /lib/systemd/system/docker.service
+</span></span><span class="line"><span class="cl">ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --insecure-registry 192.168.101.110:80
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 重启docker和启动harbor
+</span></span><span class="line"><span class="cl">systemctl daemon-reload
+</span></span><span class="line"><span class="cl">systemctl restart docker
+</span></span><span class="line"><span class="cl">docker-compose up -d
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># 登录
+</span></span><span class="line"><span class="cl">docker login 192.168.101.110:80
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 上传
+</span></span><span class="line"><span class="cl">docker push 192.168.101.110:80/hello/hello-world
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 下载
+</span></span><span class="line"><span class="cl">docker pull 192.168.101.110:80/hello/hello-world:latest
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="43-harbor高可用">4.3 harbor高可用</h4>
+<h5 id="431-基于共享存储">4.3.1 基于共享存储</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 准备多台台harbor服务器，并且都安装好harbor
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># harbor前面挂着一个负载均衡器，然后多态harbor服务器都连着共享存储
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 这样一个请求来了就由负载均衡器转给对应harbor，harbor在对共享存储进行数据的上传下载
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 这样即使挂了一个harbor也没关系，数据都在共享存储上，其他harbor也可以获取数据
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="432-无共享存储情况">4.3.2 无共享存储情况</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 基于harbor内部的同步策略对镜像进行同步
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># harbor前面挂着一个负载均衡器，无论是下载还是上传都通过负载均衡服务器转发给harbor服务器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 然后harbor服务器再进行同步
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps：同步机制有两种，第一种harbor服务器每收到一个新的镜像就将其同步给对方harbor，第二种是从对面harbor拉去镜像进行同步，通常使用第一种方式
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-docker数据管理">5 docker数据管理</h3>
+<h4 id="51-数据卷">5.1 数据卷</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker的镜像是分层设计的，镜像层是只读的，通过镜像启动的容器添加了一层可读写的文件系统，用户写入的数据都保存在这一层中。
+</span></span><span class="line"><span class="cl"># 如果要将写入到容器的数据永久保存，则需要将容器中的数据保存到宿主机的指定目录
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 什么是数据卷？
+</span></span><span class="line"><span class="cl">	数据卷是宿主机上的目录或者文件，可以直接mount到容器中使用
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 例如：起一个mysql的容器，将本机的/data/mysql 映射给容器的/var/lib/mysql
+</span></span><span class="line"><span class="cl">    docker run -it -p 3306:3306 -e MYSQL_ROOT_PASSWORD=&#34;123456&#34;  -v /data/mysql:/var/lib/mysql mysql:5.6.44
+</span></span><span class="line"><span class="cl">	这样即使容器删除，容器的数据也能保存在数据卷中
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 数据卷挂载伴随的权限问题
+</span></span><span class="line"><span class="cl">	可能本机的目录的权限是a用户，而挂载到容器中，容器中没有a用户，则会出问题，所以需要自己配置权限
+</span></span><span class="line"><span class="cl">	例：
+</span></span><span class="line"><span class="cl">		可以先进容器看一下挂载的目录的权限用户是谁，例如用户是www，则继续看它的id是啥
+</span></span><span class="line"><span class="cl">			id www
+</span></span><span class="line"><span class="cl">			uid-2022(www) gid=2022(www) groups=2022(www)
+</span></span><span class="line"><span class="cl">		然后再到宿主机去，把目录的权限改为2022
+</span></span><span class="line"><span class="cl">			chown 2022.2022 /data/tomcat/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps: 一份宿主机的数据可以被多个容器同时挂载，而且多个容器挂载的时候没有指定权限，他就是可读可写的 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="52-docker镜像详情信息">5.2 docker镜像详情信息</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker inspect  mysql:5.6.44	# 查看容器的详细信息
+</span></span><span class="line"><span class="cl">	lower Dir: image镜像层(镜像本身，只读)，镜像有很多层，里面会有很多leye
+</span></span><span class="line"><span class="cl">	Upper Dir：容器的上层(读写)
+</span></span><span class="line"><span class="cl">	Merged Dir：容器的文件系统，使用UnionFS(联合文件系统)将lowerdir和upperdir合并给容器使用
+</span></span><span class="line"><span class="cl">	Work Dir：容器在宿主机工作的目录
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            &#34;Data&#34;: {
+</span></span><span class="line"><span class="cl">                &#34;LowerDir&#34;: &#34;/var/lib/docker/overlay2/7daff825c42150f251ec2a588e33a8abacccdc06c5d7556c067733272943ae3da8fc34/diff&#34;,
+</span></span><span class="line"><span class="cl">                &#34;MergedDir&#34;: &#34;/var/lib/docker/overlay2/2e2a5fc30c761a8034022be27f3c8dd121126806a6397c0afb59ffc2e9cfbc86/merged&#34;,
+</span></span><span class="line"><span class="cl">                &#34;UpperDir&#34;: &#34;/var/lib/docker/overlay2/2e2a5fc30c761a8034022be27f3c8dd121126806a6397c0afb59ffc2e9cfbc86/diff&#34;,
+</span></span><span class="line"><span class="cl">                &#34;WorkDir&#34;: 	&#34;/var/lib/docker/overlay2/2e2a5fc30c761a8034022be27f3c8dd121126806a6397c0afb59ffc2e9cfbc86/work&#34;
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps：如果把对应容器删除，这里面的数据会全部清除，所以应该做持久化存储
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="53-容器数据卷">5.3 容器数据卷</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 是什么？
+</span></span><span class="line"><span class="cl">	将宿主机的volume挂载给一个容器，这个容器就是卷server
+</span></span><span class="line"><span class="cl">	然后其他的容器可以继承这个卷server的挂载信息
+</span></span><span class="line"><span class="cl">	用的比较少，了解即可
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建卷server
+</span></span><span class="line"><span class="cl">docker run -it --rm --name volume-server -v /data/myapp:/data/tomcat/webapps/myapp/ \
+</span></span><span class="line"><span class="cl">-v /data/tomcat/conf/server.xml:/apps/tomcat/conf/server.xml:ro \
+</span></span><span class="line"><span class="cl">-v /data/tomcat/static:/data/tomcat/webapps/static \
+</span></span><span class="line"><span class="cl">khw/centos-tomcat-app:app01
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 继承容器数据卷
+</span></span><span class="line"><span class="cl">docker run -d --name web1 -p 8801:8080 --volumes-from volume-server khw/centos-tomcat-app:app01
+</span></span><span class="line"><span class="cl">docker run -d --name web2 -p 8802:8080 --volumes-from volume-server khw/centos-tomcat-app:app02
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 停止卷server
+</span></span><span class="line"><span class="cl">	1、不影响当前已经创建好的容器的运行
+</span></span><span class="line"><span class="cl">	2、而且也不影响新容器的创建
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 删除卷server:
+</span></span><span class="line"><span class="cl">	1、不影响当前已经创建好的容器的运行
+</span></span><span class="line"><span class="cl">	2、但无法继续创建对应的继承卷的容器
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6-docker网络">6 docker网络</h3>
+<h4 id="61-网络类型">6.1 网络类型</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># docker 网络使用docker network ls 可以看到默认三种类型，创建容器不指定默认bridge
+</span></span><span class="line"><span class="cl">    - 1 Host模式：容器不会创建网络信息，而是直接使用宿主机的网络堆栈进行通信
+</span></span><span class="line"><span class="cl">    		- 优点：
+</span></span><span class="line"><span class="cl">    			不需要docker0网桥进行报文转发所以性能好
+</span></span><span class="line"><span class="cl">    			通常用于对网络性能比较高的业务，比如 mysql/kafka/redis等容器业务
+</span></span><span class="line"><span class="cl">    		- 缺点：
+</span></span><span class="line"><span class="cl">    			会在宿主机直接监听端口，可能会出现端口冲突等问题
+</span></span><span class="line"><span class="cl">    		- 使用：
+</span></span><span class="line"><span class="cl">    			使用参数 --net=host指定
+</span></span><span class="line"><span class="cl">    			docker run  -it --net=host  --rm -p 80:80  nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    			
+</span></span><span class="line"><span class="cl">    		
+</span></span><span class="line"><span class="cl">    - 2 bridge模式：由docker网桥(docker0)自动分配地址
+</span></span><span class="line"><span class="cl">    		 - 查看网桥的链接信息
+</span></span><span class="line"><span class="cl">                 apt install bridge-utils
+</span></span><span class="line"><span class="cl">                 brctl show
+</span></span><span class="line"><span class="cl">                 
+</span></span><span class="line"><span class="cl">    		 - 查看容器网络详细信息
+</span></span><span class="line"><span class="cl">    		 	docker network show 
+</span></span><span class="line"><span class="cl">    			docker inspect 网络id
+</span></span><span class="line"><span class="cl">    			 
+</span></span><span class="line"><span class="cl">    		 - 原理：
+</span></span><span class="line"><span class="cl">    		 	容器里的eth0和docker0中的veth相连
+</span></span><span class="line"><span class="cl">    		 	容器将报文通过veth转发到docker0，
+</span></span><span class="line"><span class="cl">    		 	docker0在通过iptables转发给物理机网卡(iptables -vnL -t nat)
+</span></span><span class="line"><span class="cl">    		 	
+</span></span><span class="line"><span class="cl">    		 	docker0(网桥)上的容器之间使用arp，二层通信
+</span></span><span class="line"><span class="cl">    			 
+</span></span><span class="line"><span class="cl">    		 - 使用: 
+</span></span><span class="line"><span class="cl">    		 	是用参数  --net=bridge
+</span></span><span class="line"><span class="cl">    			docker run  -it --net=bridge  --rm -p 80:80  nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    		 
+</span></span><span class="line"><span class="cl">    - 3 none模式：使用这种模式，容器不会进行仍和网络配置，没有ip 路由，默认无法与外界通信，需要手动配置网络
+</span></span><span class="line"><span class="cl">    		- 使用： 
+</span></span><span class="line"><span class="cl">    			使用参数 --net=none
+</span></span><span class="line"><span class="cl">    			docker run  -it --net=none  --rm -p 80:80  nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    			
+</span></span><span class="line"><span class="cl">    			
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    - 4 container模式：指定和一个已经存在的容器共享一个网络，因此两个容器之间的端口不能冲突，两个容器的进程是可以通过回环网卡和容器id通信	
+</span></span><span class="line"><span class="cl">    		- 使用：
+</span></span><span class="line"><span class="cl">    			使用参数 --net=container
+</span></span><span class="line"><span class="cl">    			docker run  -it --net=container:目标容器名或id --rm -p 80:80  nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    - 5 overlay模式：叠加网络，借助docker swarm服务实现高级叠加网络模型；
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    - 6 macvlan模式：允许在主机的一个网络接口上配置多个虚拟的网络接口，这些网络 interface 有自己独立的 mac 地址，也可以配置上 ip 地址进行通信。macvlan 下的虚拟机或者容器网络和主机在同一个网段中，共享同一个广播域。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="62-通过容器名称互联">6.2 通过容器名称互联</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 先起一个容器
+</span></span><span class="line"><span class="cl">docker run -it -d --name tomcat-web1 -p 8801:8080 khw/centos-tomcat-app:app01
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    -然后进入容器，查看当前host文件内容
+</span></span><span class="line"><span class="cl">    docker exec -it tomcat-web1 bash
+</span></span><span class="line"><span class="cl">    cat /etc/hosts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建第二个容器
+</span></span><span class="line"><span class="cl">docker run -it -d -p 80:80 --name khw-nginx-web1 --link tomcat-web1 nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">	- 然后进入第二个容器查看host文件发现会有容器一的host
+</span></span><span class="line"><span class="cl">    docker exec -it khw-nginx-web1 bash
+</span></span><span class="line"><span class="cl">    cat /etc/hosts  // 172.17.0.2  tomcat-web1 441c0fe6923b
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	- 测试
+</span></span><span class="line"><span class="cl">    [root@9dcc1e916249 /]# ping tomcat-web1
+</span></span><span class="line"><span class="cl">    PING tomcat-web1 (172.17.0.2) 56(84) bytes of data.
+</span></span><span class="line"><span class="cl">    64 bytes from tomcat-web1 (172.17.0.2): icmp_seq=1 ttl=64 time=0.116 ms
+</span></span><span class="line"><span class="cl">    64 bytes from tomcat-web1 (172.17.0.2): icmp_seq=2 ttl=64 time=0.052 ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 在上述步骤里，自定义的容器名称可能后期会变化，一旦发生变化，程序之间的调用也要随之发生变化，为了避免这种情况可以通过起别名来实现
+</span></span><span class="line"><span class="cl">	命令格式
+</span></span><span class="line"><span class="cl">		docker run -d --name 新容器名称 --link 目标容器名称:自定义的名称 -p 本地端口:容器端口 镜像名称  shell命令
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl"># 启动第三个容器
+</span></span><span class="line"><span class="cl">docker run -d --name nginx-web1 --link tomcat-web1:zdy -p 80:80  nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	- 进入容器
+</span></span><span class="line"><span class="cl">	docker exec -it nginx-web1 bash
+</span></span><span class="line"><span class="cl">	- 查看host
+</span></span><span class="line"><span class="cl">	cat /etc/hosts  // 172.17.0.2      zdy 441c0fe6923b tomcat-web1
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	- 测试别名zdy
+</span></span><span class="line"><span class="cl">	[root@fd0485d13664 /]# ping zdy
+</span></span><span class="line"><span class="cl">    PING zdy (172.17.0.2) 56(84) bytes of data.
+</span></span><span class="line"><span class="cl">    64 bytes from zdy (172.17.0.2): icmp_seq=1 ttl=64 time=0.064 ms
+</span></span><span class="line"><span class="cl">    64 bytes from zdy (172.17.0.2): icmp_seq=2 ttl=64 time=0.055 ms
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="63-同主机上容器通信">6.3 同主机上容器通信</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 同主机上的容器如果网络类型是bridge模式，则其是通过docker0进行二层通信
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="64-不同主机间容器通信">6.4 不同主机间容器通信</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 不同主机间容器通信，如果网络类型是bridge模式，且两台主机的docker0要是不同网段，并且两台主机能通(可以通过静态路由)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 修改docker0网段
+</span></span><span class="line"><span class="cl">    vim /lib/systemd/system/docker.service
+</span></span><span class="line"><span class="cl">    ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --bip 10.10.10.1/24 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    ps：这里pid的地址不能是网络地址，得是一个可用ip地址，应为其指定的是网桥的ip地址
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    systemctl daemon-reload
+</span></span><span class="line"><span class="cl">    systemctl  restart docker
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    # 这个时候进入容器查看路由可看到网关是已修改的网桥地址
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    docker exec -it 38bb807a1872 bash
+</span></span><span class="line"><span class="cl">    [root@38bb807a1872 /]# route -n
+</span></span><span class="line"><span class="cl">    Kernel IP routing table
+</span></span><span class="line"><span class="cl">    Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+</span></span><span class="line"><span class="cl">    0.0.0.0         10.10.10.1      0.0.0.0         UG    0      0        0 eth0
+</span></span><span class="line"><span class="cl">    10.10.10.0      0.0.0.0         255.255.255.0   U     0      0        0 eth0
+</span></span><span class="line"><span class="cl">    [root@38bb807a1872 /]#
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"># 配置静态路由
+</span></span><span class="line"><span class="cl">	route add -net 目的网段 gw 目的主机网卡地址
+</span></span><span class="line"><span class="cl">	iptables -A FORWARD -s 宿主机网段 -j ACCEPT
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 抓包分析
+</span></span><span class="line"><span class="cl">	tcpdump -i eth0 -vnn icmp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="65-docker自定义网络">6.5 docker自定义网络</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 查看参数
+</span></span><span class="line"><span class="cl">	docker network create --help
+</span></span><span class="line"><span class="cl">	- 必须参数
+</span></span><span class="line"><span class="cl">		--driver bridge 	网络驱动模式，默认&#34;bridge&#34;
+</span></span><span class="line"><span class="cl">		--geteway 172.28.0.1	 网关
+</span></span><span class="line"><span class="cl">		--ip-range 172.28.0.2-172.28.0.254	 地址范围
+</span></span><span class="line"><span class="cl">		--subnet 172.28.0.0/24	 子网 
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl"># 创建名位khw-net的网络
+</span></span><span class="line"><span class="cl">    docker network create -d bridge --subnet 172.28.0.0/24 --gateway 172.28.0.1 khw-net
+</span></span><span class="line"><span class="cl">    docker network list 	# 查看
+</span></span><span class="line"><span class="cl">    docker network rm 		# 删除
+</span></span><span class="line"><span class="cl">    docker inspect khw-net	# 查看网络详细信息
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 使用创建的网络
+</span></span><span class="line"><span class="cl">	docker run -it --rm --net=khw-net  -p 8808:8080  khw/centos-tomcat-app:app01
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 验证
+</span></span><span class="line"><span class="cl">	root@khw-virtual-machine:~# docker exec -it a56882f8fd8c bash
+</span></span><span class="line"><span class="cl">	[root@a56882f8fd8c /]# ip a
+</span></span><span class="line"><span class="cl">	1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+</span></span><span class="line"><span class="cl">    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span></span><span class="line"><span class="cl">    inet 127.0.0.1/8 scope host lo
+</span></span><span class="line"><span class="cl">    valid_lft forever preferred_lft forever
+</span></span><span class="line"><span class="cl">    59: eth0@if60: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
+</span></span><span class="line"><span class="cl">    link/ether 02:42:ac:1c:00:02 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+</span></span><span class="line"><span class="cl">    inet 172.28.0.2/24 brd 172.28.0.255 scope global eth0
+</span></span><span class="line"><span class="cl">    valid_lft forever preferred_lft forever
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 要点：使用docker自定义网桥的容器无法与使用docker0网桥的容器通信，以及其他自定义的网络之间都无法通信
+</span></span><span class="line"><span class="cl">	- 如何解决？
+</span></span><span class="line"><span class="cl">		iptables-save	查看
+</span></span><span class="line"><span class="cl">		# 可以看到这个自定义的网络被DROP掉了
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        -A DOCKER-ISOLATION-STAGE-2 -o br-26c92c466138 -j DROP
+</span></span><span class="line"><span class="cl">        -A DOCKER-ISOLATION-STAGE-2 -o docker0 -j DROP
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		iptables-save &gt; iptables-backup.sh	# 先导出
+</span></span><span class="line"><span class="cl">		vim iptables-backup.sh		# 把上面两条规则注释掉
+</span></span><span class="line"><span class="cl">		iptables-restore &lt; iptables-backup.sh	# 导入
+</span></span><span class="line"><span class="cl">		问题解决，同一个服务器的不同docker网络之间可以通信了
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">ps:网络创建好了之后，宿主机会自动添加iptables,就像docker0一样
+</span></span><span class="line"><span class="cl">	使用 iptables -vnL -t nat 查看规则
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="7-docker资源限制">7 docker资源限制</h3>
+<h4 id="71-内存限制">7.1 内存限制</h4>
+<p>OOM(内存溢出，内存泄露，内存异常)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">如果系统内存溢出之后，内核会把当前服务器上的一个评分比较高的进程给kill
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># OOM优先机制
+</span></span><span class="line"><span class="cl">	linux会为每个进程算一个分，最终将分数最高的kill
+</span></span><span class="line"><span class="cl">	/proc/进程pid/oom_score_adj	# 范围-1000到1000，值越高越容易kill，如果值位-1000则永远不会被kill
+</span></span><span class="line"><span class="cl">	/proc/进程pid/oom_adj		# 范围-17到+15，取值越高越容易kill，-17则永远不会被kill，该参数一般旧版本再用
+</span></span><span class="line"><span class="cl">	/proc/进程pid/oom_score	# 这是系统综合进程所占资源计算得分，消耗内存越多得分越高，越容易被kill	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>内存限制参数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-m or --memory # 容器可以使用的最大内存，如果设置此选项，则允许的最小内存值为4m
+</span></span><span class="line"><span class="cl">--memory-reservation 128m	# 内存的软限制，及到了最大限制后还可以再超128m
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--memory-swap	# 容器可以使用的交换分区大小，必须要再设置了物理内存限制的前提才能设置交换分区的限制，并且交换分区的限制值要比物理内存限制的值大，其真实的值为设置的值减去物理内存限制的值
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--oom_score_adj -1000	# 表示把值设为-1000，系统永远不会kill，不推荐设置该参数
+</span></span><span class="line"><span class="cl">--oom-kill-disable		# 该参数可以禁止oom发生在指定的容器上(不会被系统kill)，该参数仅在设置 -m or --memory选项的容器上使用，如果未配置-m，产生oom时还是会被kill
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>实操验证</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 创建容器设置内存限制
+</span></span><span class="line"><span class="cl">docker run -it --rm -d --memory 300m nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看容器的内存限制(默认单位字节要乘两次1024才为m)
+</span></span><span class="line"><span class="cl">cat /sys/fs/cgroup/memory/docker/容器id/memory.limit_in_bytes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 修改内存限制200m
+</span></span><span class="line"><span class="cl">200*1024*1024 = 209715200
+</span></span><span class="line"><span class="cl">echo 209715200 &gt; /sys/fs/cgroup/memory/docker/容器id/memory.limit_in_bytes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>swpa交换分区</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 什么是swap交换分区？
+</span></span><span class="line"><span class="cl">	就是当内存不足的时候，把一部分硬盘空间虚拟成内存使用
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 解决不支持swap限制警告
+</span></span><span class="line"><span class="cl">	- 编辑配置文件
+</span></span><span class="line"><span class="cl">    vim /etc/default/grub文件
+</span></span><span class="line"><span class="cl">    GRUB_CMDLINE_LINUX=&#34; cgroup_enable=memory swapaccount=1&#34;	# 修改这一行
+</span></span><span class="line"><span class="cl">	- 更新配置文件并重启
+</span></span><span class="line"><span class="cl">	update-grub
+</span></span><span class="line"><span class="cl">	reboot
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="72-cpu限制">7.2 cpu限制</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># cpu密集型：特点是要进行大量计算，消耗cpu资源，例如数据处理，视频高清解码等
+</span></span><span class="line"><span class="cl"># io密集型场景：特点是cpu消耗很少，但大部分都在等待io操作完成，比如web应用，高并发，数据量大的动态网站来说，数据库应该为io密集型
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>参数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--cpus=1.5	# 例如主机有两个cpu，则该配置容器可以使用1.5个cpu，这里不能超过宿主机的cpu个数
+</span></span><span class="line"><span class="cl">--cpuset-mem	# 设置使用那个cpu内存，仅对非统一内存访问(numa)架构有效
+</span></span><span class="line"><span class="cl">--cpu-shares 	# 设置cpu的分配权重，当资源抢占式按此参数分配cpu资源
+</span></span><span class="line"><span class="cl">					例如：--cpu-shares 1000 和 --cpu-shares 500
+</span></span><span class="line"><span class="cl">					当上面两个发生资源抢占时，第一个能比第二个多一般的cpu资源
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>实操验证</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 配置限制1.5个cpu
+</span></span><span class="line"><span class="cl">docker run -it --rm --cpus=1.5 -p 99:80 nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 查看cpu资源限制，-1为不限制
+</span></span><span class="line"><span class="cl">	cat /sys/fs/cgroup/cpu,cpuacct/docker/容器id/cpu.cfs_quota_us
+</span></span><span class="line"><span class="cl">	每核心cpu会按照1000为单位转换成百分比进行资源划分，2个核心的cpu就是20000/1000=200%,4个核心40000/1000=400%，以此类推
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 在线修改资源限制,修改为1个cpu，100000/1000=100%
+</span></span><span class="line"><span class="cl">echo &#34;100000&#34; &gt; /sys/fs/cgroup/cpu,cpuacct/docker/容器id/cpu.cfs_quota_us
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="8-docker-swarm">8 docker swarm</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker官方自带的编排服务，主要适合比较小型的编排环境，可以实现容器高可用，可以将容器跑到swarm集群上
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 1、初始化
+</span></span><span class="line"><span class="cl">	root@master1:~# docker swarm init --advertise-addr 172.31.7.101		# 初始化manager,那个服务器初始化就写那个服务器的
+</span></span><span class="line"><span class="cl">	root@master1:~# docker swarm join-token worker	# 获取token
+</span></span><span class="line"><span class="cl">	root@master1:~# docker node ls		# 列出swarm集群的节点
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 2、添加节点
+</span></span><span class="line"><span class="cl">	root@master2:~# docker swarm join --token xxxxxxxx
+</span></span><span class="line"><span class="cl">	root@master3:~# docker swarm join --token xxxxxxxx
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 3、添加label，给主机打标签
+</span></span><span class="line"><span class="cl">	root@master1:~# docker node update --label name=标签名	 主机名
+</span></span><span class="line"><span class="cl">    root@master1:~# docker node update --label name=swarm-master1	 master1
+</span></span><span class="line"><span class="cl">    root@master1:~# docker node update --label name=swarm-master2	 master2
+</span></span><span class="line"><span class="cl">    root@master1:~# docker node update --label name=swarm-master3	 master3
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"># 4、将其他节点提升为manager角色以实现高可用
+</span></span><span class="line"><span class="cl">	- 把节点2和节点3提升为备份角色，一旦leader挂了他们可以被选举为新leader
+</span></span><span class="line"><span class="cl">	root@master1:~# docker node promote  name=swarm-master2
+</span></span><span class="line"><span class="cl">	root@master1:~# docker node promote  name=swarm-master3
+</span></span><span class="line"><span class="cl">	root@master1:~# docker node ls
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 5、查看node信息
+</span></span><span class="line"><span class="cl">	- 查看master3的信息
+</span></span><span class="line"><span class="cl">	root@master1:~# docker node inspect master3
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 6、创建网络，创建的网络不能和宿主机冲突，该网络类型要为overlay
+</span></span><span class="line"><span class="cl">	root@master1:~# docker network --help
+</span></span><span class="line"><span class="cl">	root@master1:~# docker network create -d overlay --subnet 172.28.0.0/24 --gateway 172.28.0.1 khw-net
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 7、创建容器测试,创建一个两副本的容器
+</span></span><span class="line"><span class="cl">	root@master1:~# docker service create --replicas 2 -p 8808:80 --network khw-net --name nginx nginx:1.18-alpine
+</span></span><span class="line"><span class="cl">	root@master1:~# docker service ls		# 查看容器
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="9-docker-compose-容器编排">9 docker compose 容器编排</h3>
+<h4 id="91-docker-compose安装">9.1 docker compose安装</h4>
+<p>安装docker</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:~# curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+</span></span><span class="line"><span class="cl">root@hello:~#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装Docker Compose</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root@hello:~# sudo curl -L &#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+</span></span><span class="line"><span class="cl">                                 Dload  Upload   Total   Spent    Left  Speed
+</span></span><span class="line"><span class="cl">100   633  100   633    0     0   2444      0 --:--:-- --:--:-- --:--:--  2444
+</span></span><span class="line"><span class="cl">100 12.1M  100 12.1M    0     0  10.2M      0  0:00:01  0:00:01 --:--:-- 26.2M
+</span></span><span class="line"><span class="cl">root@hello:~#  sudo chmod +x /usr/local/bin/docker-compose
+</span></span><span class="line"><span class="cl">root@hello:~# sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+</span></span><span class="line"><span class="cl">root@hello:~# docker-compose --version
+</span></span><span class="line"><span class="cl">docker-compose version 1.29.2, build 5becea4c
+</span></span><span class="line"><span class="cl">root@hello:~#
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="92-docker-compose命令参数">9.2 docker-compose命令参数</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">create		# 创建容器后退出
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">down		# 停止和删除所有容器、网络、镜像和卷等资源
+</span></span><span class="line"><span class="cl">	- docker-compose down
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">events		# 从容器接收实时事件，可以指定json格式
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">exec		# 进入指定容器进项操作
+</span></span><span class="line"><span class="cl">	- docker-compose ps --service
+</span></span><span class="line"><span class="cl">	- docker-compose exec  nginx-server bash
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">stop		# 如果不加server名称的话，则默认把文件中所有server都停掉
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">up			# 把容器创建好之后并运行
+</span></span><span class="line"><span class="cl">	-docker-compose up -d
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">port		# 查看某个容器服务的端口
+</span></span><span class="line"><span class="cl">	- docker-compose port nginx-server 80
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">restart		# 重启，把容器的进程回收，然后重建
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="93-docker-compose使用">9.3 docker compose使用</h4>
+<p>docker-compose.yml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version: &#39;3.6&#39;
+</span></span><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  nginx-server:
+</span></span><span class="line"><span class="cl">    image: nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    # 这个镜像还能从仓库里拉
+</span></span><span class="line"><span class="cl">    # 但是前提是自己能pull下来
+</span></span><span class="line"><span class="cl">    # 192.168.1.0:80/khw/nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    container_name: nginx-web1
+</span></span><span class="line"><span class="cl">    expose:		# 表示开放容器的端口
+</span></span><span class="line"><span class="cl">      - 80
+</span></span><span class="line"><span class="cl">      - 443
+</span></span><span class="line"><span class="cl">    ports:		# 表示把宿主机的那些端口映射给容器
+</span></span><span class="line"><span class="cl">      - &#34;80:80&#34;
+</span></span><span class="line"><span class="cl">      - &#34;443:443&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>docker-compose执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 检查当前目录下dockercompose文件有没有写错
+</span></span><span class="line"><span class="cl">docker-compose config -q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 读取当前目录下的compose文件，把容器创建好之后放在后台运行
+</span></span><span class="line"><span class="cl">docker-compose up -d
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="95-使用docker-compose实现-haproxynginxtomcat-小型站点">9.5 使用docker compose实现 haproxy+nginx+tomcat 小型站点</h4>
+<h5 id="951-haproxy的dockerfile">9.5.1 haproxy的dockerfile</h5>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM khw/centos-base:7.8.2003
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;khw 123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN yum install libtermcap-devel ncurses-devel libevent-devel readine-devel gcc gcc-c++ glibc glibc-devel pcre pcre-devel openssl openss1-devel systemd-devel net-too1s vim iotop bc zip unzip zlib-devel 1rzsz tree screen 1sof tcpdump wget ntpdate -y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 写到这就先构建一下
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD haproxy-2.2.1.tar.gz  /usr/local/src
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN cd /usr/local/src/haproxy-2.2.1 &amp;&amp; make ARCH=x86_64 TARGET=linux-glibc USE_PCRE=1 USE_OPENSSL=1 USE_ZLIB=1 USE_SYSTEMD=1  USE_CPU_AFFINITY=1 PREFIX=/apps/haproxy &amp;&amp; make install PREFIX=/apps/haproxy &amp;&amp; cp haproxy /usr/sbin/ &amp;&amp; mkdir /apps/haproxy/run
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 到这在构建一下
+</span></span><span class="line"><span class="cl">ADD run_haproxy.sh /apps/haproxy/bin/run_haproxy.sh
+</span></span><span class="line"><span class="cl">ADD haproxy.cfg /etc/haproxy/haproxy.cfg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">EXPOSE 80 9999
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD [&#34;/apps/haproxy/bin/run_haproxy.sh&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>haproxy.cfg</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">global
+</span></span><span class="line"><span class="cl">chroot /apps/haproxy
+</span></span><span class="line"><span class="cl">uid 99
+</span></span><span class="line"><span class="cl">gid 99
+</span></span><span class="line"><span class="cl">daemon
+</span></span><span class="line"><span class="cl">nbproc 1
+</span></span><span class="line"><span class="cl">pidfile /apps/haproxy/run/haproxy.pid
+</span></span><span class="line"><span class="cl">log 127.0.0.1 local3 info
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">defaults
+</span></span><span class="line"><span class="cl">option http-keep-alive
+</span></span><span class="line"><span class="cl">option forwardfor
+</span></span><span class="line"><span class="cl">mode http
+</span></span><span class="line"><span class="cl">timeout connect 300000ms
+</span></span><span class="line"><span class="cl">timeout client 300000ms
+</span></span><span class="line"><span class="cl">timeout server 300000ms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">listen stats
+</span></span><span class="line"><span class="cl"> mode http
+</span></span><span class="line"><span class="cl"> bind 0.0.0.0:9999
+</span></span><span class="line"><span class="cl"> stats enable
+</span></span><span class="line"><span class="cl"> log global
+</span></span><span class="line"><span class="cl"> stats uri /haproxy-status
+</span></span><span class="line"><span class="cl"> stats auth haadmin:123456
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">listen web_port
+</span></span><span class="line"><span class="cl">        bind 0.0.0.0:80
+</span></span><span class="line"><span class="cl">        mode http
+</span></span><span class="line"><span class="cl">        log global
+</span></span><span class="line"><span class="cl">        balance roundrobin
+</span></span><span class="line"><span class="cl">        server web1 nginx-server:80 check inter 3000 fall 2 rise 5
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>run_haproxy.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>/apps/haproxy/sbin/haproxy      -f /etc/haproxy/haproxy.cfg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tail -f /etc/hosts
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 这里要加上权限，可以在宿主机上加，也可以在dockerfile上加</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/haproxy:1.1 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="952-nginx的dockerfile">9.5.2 nginx的dockerfile</h5>
+<p>Dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">FROM centos:7.8.2003
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">MAINTAINER  &#34;hongwei 1066411@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN yum install -y vim wget tree  lrzsz iproute  gcc gcc-c++  pcre pcre-devel zlib zlib-devel openssl openssl-devel \
+</span></span><span class="line"><span class="cl">    &amp;&amp; yum clean all
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># copy这种方式默认不解压,ADD默认解压
+</span></span><span class="line"><span class="cl"># COPY  nginx-1.16.1.tar.gz /usr/local/src/
+</span></span><span class="line"><span class="cl">ADD nginx-1.16.1.tar.gz /usr/local/src/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 编译安装nginx
+</span></span><span class="line"><span class="cl">RUN cd /usr/local/src/nginx-1.16.1 &amp;&amp; ./configure --prefix=/apps/nginx --with-http_sub_module &amp;&amp; make &amp;&amp; make install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 创建nginx所需要的用户
+</span></span><span class="line"><span class="cl">RUN useradd nginx -u 2022
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 将修改后的nginx配置文件和代码cp到容器中
+</span></span><span class="line"><span class="cl">ADD nginx.conf /apps/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">ADD code.tar.gz /data/nginx/html
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 声明要把容器的某些端口映射到宿主机
+</span></span><span class="line"><span class="cl">EXPOSE 80 443
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#  -g daemon off; 把nginx的后台进程关了让nginx的进程在终端前台执行，把nginx的主进程初始化为pid为1的进程
+</span></span><span class="line"><span class="cl">CMD [&#34;/apps/nginx/sbin/nginx&#34;,&#34;-g&#34;,&#34;daemon off;&#34;]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>nginx.conf</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">upstream web {
+</span></span><span class="line"><span class="cl">server tomcat-app01:8080;
+</span></span><span class="line"><span class="cl">server tomcat-app02:8080;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">server {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    location /myapp {
+</span></span><span class="line"><span class="cl">    #root   /data/nginx/html;
+</span></span><span class="line"><span class="cl">    #index  index.html index.htm;
+</span></span><span class="line"><span class="cl">    proxy_pass http://web;
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t nginx-web1:1.2 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="953-tomcat的dockerfile">9.5.3 tomcat的dockerfile</h5>
+<p>dockerfile</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># tomcat base image
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FROM khw/centos-jdk-base:8u212
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LABEL maintainer=&#34;123@qq.com&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ADD apache-tomcat-8.5.78.tar.gz /apps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN ln -sv /apps/apache-tomcat-8.5.78 /apps/tomcat
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>build-command.sh</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>docker build -t khw/centos-tomcat-base:v8.5.78 .
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="954-docker-composeyml">9.5.4 docker-compose.yml</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version: &#39;3.6&#39;
+</span></span><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  haproxy-service:
+</span></span><span class="line"><span class="cl">    image: khw/haproxy:1.1
+</span></span><span class="line"><span class="cl">    networks:
+</span></span><span class="line"><span class="cl">      - backend
+</span></span><span class="line"><span class="cl">    container_name: haproxy-khw
+</span></span><span class="line"><span class="cl">    expose:
+</span></span><span class="line"><span class="cl">      - 80
+</span></span><span class="line"><span class="cl">      - 9999
+</span></span><span class="line"><span class="cl">      - 443
+</span></span><span class="line"><span class="cl">    ports:
+</span></span><span class="line"><span class="cl">      - &#34;80:80&#34;
+</span></span><span class="line"><span class="cl">      - &#34;443:443&#34;
+</span></span><span class="line"><span class="cl">      - &#34;9999:9999&#34;
+</span></span><span class="line"><span class="cl">    links:
+</span></span><span class="line"><span class="cl">      - nginx-server
+</span></span><span class="line"><span class="cl">  nginx-server:
+</span></span><span class="line"><span class="cl">    image: nginx-web1:1.2
+</span></span><span class="line"><span class="cl">    # 这个镜像还能从仓库里拉
+</span></span><span class="line"><span class="cl">    # 但是前提是自己能pull下来
+</span></span><span class="line"><span class="cl">    # 192.168.1.0:80/khw/nginx-web1:1.16.1
+</span></span><span class="line"><span class="cl">    container_name: nginx-web1
+</span></span><span class="line"><span class="cl">    networks:
+</span></span><span class="line"><span class="cl">      - backend
+</span></span><span class="line"><span class="cl">        # expose: # 表示开放容器的端口
+</span></span><span class="line"><span class="cl">        #- 80
+</span></span><span class="line"><span class="cl">        #- 443
+</span></span><span class="line"><span class="cl">        #ports:
+</span></span><span class="line"><span class="cl">        #- &#34;80:80&#34;
+</span></span><span class="line"><span class="cl">        #- &#34;443:443&#34;
+</span></span><span class="line"><span class="cl">    links:
+</span></span><span class="line"><span class="cl">      - tomcat-app01
+</span></span><span class="line"><span class="cl">      - tomcat-app02
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  tomcat-app01:
+</span></span><span class="line"><span class="cl">    image: khw/centos-tomcat-app:app01
+</span></span><span class="line"><span class="cl">    container_name: tomcat_app01
+</span></span><span class="line"><span class="cl">    #volumes:
+</span></span><span class="line"><span class="cl">      #- /data/testapp:/data/tomcat/webapps/testapp
+</span></span><span class="line"><span class="cl">    networks:
+</span></span><span class="line"><span class="cl">      - backend
+</span></span><span class="line"><span class="cl">    #expose:
+</span></span><span class="line"><span class="cl">      #- 8080
+</span></span><span class="line"><span class="cl">      #- 8443
+</span></span><span class="line"><span class="cl">    #ports:
+</span></span><span class="line"><span class="cl">      #- &#34;8080:8080&#34;
+</span></span><span class="line"><span class="cl">      #- &#34;8443:8443&#34;
+</span></span><span class="line"><span class="cl">  tomcat-app02:
+</span></span><span class="line"><span class="cl">    image: khw/centos-tomcat-app:app02
+</span></span><span class="line"><span class="cl">    container_name: tomcat_app02
+</span></span><span class="line"><span class="cl">    #volumes:
+</span></span><span class="line"><span class="cl">      #- /data/testapp:/data/tomcat/webapps/testapp
+</span></span><span class="line"><span class="cl">    networks:
+</span></span><span class="line"><span class="cl">      - backend
+</span></span><span class="line"><span class="cl">    #expose:
+</span></span><span class="line"><span class="cl">      #- 8080
+</span></span><span class="line"><span class="cl">      #- 8443
+</span></span><span class="line"><span class="cl">    #ports:
+</span></span><span class="line"><span class="cl">      #- &#34;8081:8080&#34;
+</span></span><span class="line"><span class="cl">      #- &#34;8444:8443&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">networks:
+</span></span><span class="line"><span class="cl">  front: # 自定义前端服务网络
+</span></span><span class="line"><span class="cl">    driver: bridge
+</span></span><span class="line"><span class="cl">  backend: # 自定义后端服务的网络
+</span></span><span class="line"><span class="cl">    driver: bridge
+</span></span><span class="line"><span class="cl">  default: # 使用已经存在的docker0默认 172.17.0.1/16 的网络
+</span></span><span class="line"><span class="cl">    external:
+</span></span><span class="line"><span class="cl">      name: bridge
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-05-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/docker/">docker</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/cloudday2k8s/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">cloud,day2,k8s</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday14%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/">
+            <span class="next-text nav-default">python,day14,复习</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

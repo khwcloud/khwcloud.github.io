@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>路由交换 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="双绞线 1 2 568B: 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕 568A：绿白 绿 橙白 蓝 蓝白 橙 棕白 棕 Osi七层模型 1 2 3 4 5 6 7 网络层 为应用进程提供网络服务 表示层 定义数据" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="路由交换" />
+<meta property="og:description" content="双绞线 1 2 568B: 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕 568A：绿白 绿 橙白 蓝 蓝白 橙 棕白 棕 Osi七层模型 1 2 3 4 5 6 7 网络层 为应用进程提供网络服务 表示层 定义数据" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-07-11T11:06:25+08:00" />
+<meta property="article:modified_time" content="2019-07-11T11:06:25+08:00" />
+
+<meta itemprop="name" content="路由交换">
+<meta itemprop="description" content="双绞线 1 2 568B: 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕 568A：绿白 绿 橙白 蓝 蓝白 橙 棕白 棕 Osi七层模型 1 2 3 4 5 6 7 网络层 为应用进程提供网络服务 表示层 定义数据"><meta itemprop="datePublished" content="2019-07-11T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2019-07-11T11:06:25+08:00" />
+<meta itemprop="wordCount" content="3740">
+<meta itemprop="keywords" content="路由交换," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="路由交换"/>
+<meta name="twitter:description" content="双绞线 1 2 568B: 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕 568A：绿白 绿 橙白 蓝 蓝白 橙 棕白 棕 Osi七层模型 1 2 3 4 5 6 7 网络层 为应用进程提供网络服务 表示层 定义数据"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">路由交换</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-07-11 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%91/"> 云 </a>
+            </div>
+          <span class="more-meta"> 3740 words </span>
+          <span class="more-meta"> 8 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#双绞线">双绞线</a></li>
+            <li><a href="#osi七层模型">Osi七层模型</a></li>
+            <li><a href="#tcoip分层封装">TCO/IP分层封装</a></li>
+            <li><a href="#数据封装解封装">数据封装解封装</a></li>
+            <li><a href="#rip">rip</a></li>
+            <li><a href="#ospf">ospf</a></li>
+            <li><a href="#bgp">BGP</a></li>
+            <li><a href="#vrrp">VRRP</a></li>
+            <li><a href="#nat">NAT</a></li>
+            <li><a href="#acl">Acl</a></li>
+            <li><a href="#stp">STP</a></li>
+            <li><a href="#dhcp">DHCP</a></li>
+            <li><a href="#防火墙">防火墙</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="双绞线">双绞线</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">568B: 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕
+</span></span><span class="line"><span class="cl">568A：绿白 绿 橙白 蓝 蓝白 橙 棕白 棕
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="osi七层模型">Osi七层模型</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">网络层 为应用进程提供网络服务
+</span></span><span class="line"><span class="cl">表示层 定义数据的格式结构，加密封装
+</span></span><span class="line"><span class="cl">会话层 简历维护程序间会话，区分一个程序不同访问者
+</span></span><span class="line"><span class="cl">传输层 TCP UDP 数据分段 端口
+</span></span><span class="line"><span class="cl">网络层 路由寻址
+</span></span><span class="line"><span class="cl">数据链路层 MAC地址寻址
+</span></span><span class="line"><span class="cl">物理层 定义一些接口电压线缆等
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="tcoip分层封装">TCO/IP分层封装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">应用层 数据
+</span></span><span class="line"><span class="cl">传输层 数据段
+</span></span><span class="line"><span class="cl">网络层 数据包
+</span></span><span class="line"><span class="cl">数据链路层 数据帧
+</span></span><span class="line"><span class="cl">物理层 比特流
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="数据封装解封装">数据封装解封装</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">数据发送时，从上至下逐层封装
+</span></span><span class="line"><span class="cl">数据接收时，从下至上逐层解封装
+</span></span><span class="line"><span class="cl">只有拆除外层封装才能看到内层封装
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="rip">rip</h3>
+<p>Rip 路由信息协议 协议号为17；使用udp的520端口</p>
+<p>工作原理
+路由器允许rip之后会发送路由更新请求 ，收到request报文的路由器便会更具自己的路由表，生成response报文进行回复，路由器收到response报文之后将相应的报文添加到自己的路由表中</p>
+<p>防环机制
+最大跳数 超过15跳认为不可达
+水平分割 路由器从接口学到的路由不回再从该接口发回给邻居路由器
+毒性逆转 直接将路由跳数设置为16，并从原接收接口发回给邻居路由器
+触发更新 路由信息发生变化时，立即向邻居发送更新报文，不等计时器30s</p>
+<h3 id="ospf">ospf</h3>
+<p>Ospf  封装在IP报文中协议号为89</p>
+<p>数据包
+Hello 发现邻居并建立，保活
+Dbd 数据库描述包 数据库目录信息
+Lsr 链路状态请求 请求缺少的lsa信息
+Lsu 链路状态更新 像对端发送LSA ，LSA内容都在LSU中
+Lsack 链路状态确认</p>
+<p>状态机
+Down 本地一旦发出hello包，进入下一状态
+Init初始化 本地接收到hello包中若存在本地RID ，进入下一状态
+2way双向通信 邻居关系建立的标志 选DR BDR，非DR BDR间不能进入下一状态（点到 点不选直接进入下一状态）
+Exstart预启动 使用类hello和DBD包进行主从关系选举,RID大的为主，主从优先进入下 一状态
+Excjamge准交换 由DR发起交换，每台DRother都把自己的dbd发送给DR/bdr ，然后DR 组播给所有路由器
+Loding加载 使用LSR/LSU/LSACK 来获取位置的LSA信息
+Full转发 邻接关系建立，lsdb 同步完成
+DR/BDR监听224.0.0.6
+Drother监听224.0.0.5</p>
+<p>网络类型
+P2p 点到点 （不选举DR bdr） hello时间为10
+P2mp 点到多点    （不选举dr bdr） hello时间为30
+Bma 广播多路访问 hello时间为10
+Nbma 非广播多路访问 hello时间为30</p>
+<p>LSA
+一类LSA（route lsa） 相当于自我介绍包含，每台路由器都会产生
+二类LSA（networklsa） 由DR产生，描述MA网络内的路由器，P2P没有二类
+三类LSA（network-summary-LSA） 由ABR产生，将一个区域的链路状态信息转化为路由 信息转发给邻居路由器
+四类LSA（asbr-summary-LSA） 由ABR产生，介绍ASBR
+五类LSA（AS-external-LSA） 由ASBR产生，描述外部路由（当有外部路由引入时就 会产生）
+七类LSA（NSSA-LSA） 由NASSA的ASBR产生，描述外部路由</p>
+<p>Type1: 计算路由时cos值是 as内部开销加上AS外部开销
+Type2: 计算路由时cos值是 as内部开销忽略不计，只计算外部开销</p>
+<p>特殊区域:
+Stub 隔离外部路由 lsa4/5 ，由ABR下发一条lsa3默认路由给stub区域内
+Totally stub 隔离外部路由lsa3/4/5，由ABR下发一条lsa3默认路由给stub区域内
+NSSA 隔离外部路由lsa4/5，手工下发一条lsa7
+Totally Nssa 隔离外部路由lsa3/4/5，手工下发一条缺省lsa7 ，ABR产生默认ls&rsquo;a3</p>
+<p>防环机制:
+触发更新，快速检测通告自治系统内拓扑的变化
+区域间的链接规则</p>
+<p>Spf算法:
+三类LSA传递规则；规定从骨干区域传来的三类LSA不在传回骨干区</p>
+<h3 id="bgp">BGP</h3>
+<p>BGP 边界网关路由协议 是一种实现自治系统之间路由可达，并选择最佳距离矢量路由协议
+一般情况下ebgp采用物理接口ibgp采用环回口</p>
+<p>*表示有效</p>
+<blockquote>
+<p>表示最优</p>
+</blockquote>
+<p>BGP分类：
+EBGP：不同AS之间的BGP为EBGP。
+IBGP：运行在同一AS内部的BGP称为IBGP</p>
+<p>BGP工作原理
+BGP对等体的建立，更新和删除等交互过程主要有五种报文，六种状态机和五个原则</p>
+<p>BGP报文
+Open报文： 用于建立BGP对等体连接
+Update报文： 用于在对等体之间交换路由信息
+Notification报文： 用于中断BGP连接
+Keepalive报文： 用于保持BGP连接
+Route-refresh报文： 用于改变路由策略后请求对等体重新发送路由信息</p>
+<p>BGP状态机
+Idle 尝试建立TCP链接
+Conneot 发TCP包
+Active 发TCP包
+Opensent 发Open包
+OpenConfirm 发keepalive包
+Established 发Update包</p>
+<p>路由优选规则</p>
+<p>1. 如果此路由的下一跳不可达，忽略此路由
+2. Preferred-Valnue值数值越高越优先，华为私有属性，仅本地有意义
+3. Local-Preference值最高的路由优先
+4. 聚合路由优先于非聚合路由
+5. 本地手动聚合路由的优先级高于本地自动聚合的路由
+6. 本地通过Network命令引入的路由的优先级高于本地通过Import-route命令引入的路由
+7. AS路径的长度最短的路径优先
+8. 比较Origin属性，IGP优于EGP，EGP优于Incomplete
+9. 选择MED较小的路由
+10. EBGP路由优于IBGP路由
+11. BGP优先选择到BGP下一跳的IGP度量值最低的路径
+当以上全部相同，则为等价路由，可以负载分担（注意： AS_Path必须一致，当负载分担时，以下3条原则无效）
+12. 比较Cluster_list长度，短者优先
+13. 比较Originator_ID（如果没有Originator_ID，则用Router_ID比较），选择数值较小的路径。
+14. 比较对等体的IP地址，选择IP地址数值最小的路径。</p>
+<p> </p>
+<p>BGP属性 公认必遵 origin（起源) as_Path(路径) next-hop（下一跳）
+公认任意 local-preference（本地优先级） atomic—aggregate
+不必存在update报文中，可以根据需求自由选举
+可选过度 aggregate community BGP不能识别该属性，但可以接收该属性，并发送给其他邻居
+可选非过度 med
+BGP可以忽略该属性，并不向它的另据发布 med</p>
+<h3 id="vrrp">VRRP</h3>
+<p>VRRP  虚拟路由器冗余协议   基于组播（必须要同一个广播域）   （接口）</p>
+<p>抢占延迟 ，缺省为0秒</p>
+<p>状态机
+Initalize 初始状态都是initialize
+Master 通过优先级产生 master 和backup
+Backup 没有收到master发来的心跳报文，则切换为master</p>
+<p>负载分担下联傻瓜交换机实现VRRP热备，只要再路由器接口上起两个地址配置两个vrrp组</p>
+<p>三层交换机配置VRRP 和 mstp组合  </p>
+<p>首先发一个ARP请求，上联两个路由器收到后master会转发而backup会丢弃</p>
+<hr>
+<h3 id="nat">NAT</h3>
+<p>Nat
+NAT类型
+静态一对一IP映射
+动态地址池多对多IP映射 no-pat
+端口多路复用多对一 NAPT
+Easy ip 把内网的地址映， 射为外网接口地址（多对一）
+nat outbound 2000 interface gi0/0/1
+Nat server 把私有IP映射到公网IP地址上</p>
+<h3 id="acl">Acl</h3>
+<p>Acl配置：基本acl编号是2000-2999
+Rule 5 permit/deny source 192.168.1.0 0.0.0.255</p>
+<p>抓取奇数地址 192.168.1.0 0.0.0.254
+ACL应用traffic-filter inbound acl 2000 （用在接口上）</p>
+<p>高级ACL
+可以匹配源IP和目的ip
+可以禁止telnet 禁止 23端口 应为telnet端口号为23e</p>
+<h3 id="stp">STP</h3>
+<p>STP 生成树协议 通过阻塞端口来消除环路，并实现链路备份的目的</p>
+<p>工作原理 ：
+选取一个根桥
+每个非艮交换机会选举一个更端口
+每个网段选举一个指定端口
+阻塞非更，非指定端口</p>
+<p>端口角色：
+更端口RP
+指定端口DP
+替代端口AP
+根桥选举（以小为优）
+更具桥ID（BID）选举，由BID和MAC地址组成
+比较顺序 ：优先级 ，MAC地址
+端口角色选举（以小为优）
+RP选举 1.路径开销 2.对端BID 3.对端PID  4.本端PID
+DP选举 1.根路径开销 2.BID 3.PID
+根桥上所有端口都为指定端口
+AP选举 选举过程中被阻塞的端口
+五种端口状态 disabled 禁用
+Blocking 阻塞
+Listening 监听
+Learing 学习
+Forwarding 转发
+监听到学习15秒学习到转发15秒
+BPDU（桥协议数据单元） 包含bid，路径开销，端口id，计时器等参数
+2s发一次hello包，由根交换机发
+RSTP 对应端口状态重划分 由原来的五种变成三种
+MSTP多实例生成树</p>
+<h3 id="dhcp">DHCP</h3>
+<p>Dhcp 动态主机协议
+报文类型
+Discover 查找和定位DHCP服务器
+Offer 服务器用来响应discover报文，携带各种配置信息
+Ack 服务器对request报文确认响应
+Nak 服务器request报文的拒绝响应
+Release 客户端释放地址时通知服务器</p>
+<p>Dhcp discover广播
+Dhcp offer 单播
+Dhcp request广播
+Dhcp ack单播</p>
+<p>租期更新 租期到达50%，会请求更新地址租约
+默认地址租期一天
+重绑定 租期到达87.5%时还没有收到响应会申请重新绑定IP</p>
+<h3 id="防火墙">防火墙</h3>
+<p>五个区域
+Untrust（不信任区域） 低级安全区域，安全优先级为5
+Dmz（隔离区域） 中级安全区域，安全优先级为50
+Trust（信任区域） 高级安全区域，安全优先级为85
+Local（本地） 顶级安全区域，安全优先级为100
+Management（管理） 顶级安全区域，安全优先级为100
+安全优先级从高到底为Inbound 从低到高为 outbound</p>
+<p>三种工作模式
+交换模式（二层模式）
+相当于防火墙有了二层交换机的功能但是上联还需要挂个路由器访问外网
+路由模式（三层模式）
+可以当出口路由器使用直接对接公网，需要做NAT
+混合模式
+一部分接口可以配置IP，一部分接口不能配置IP可以配置IP的接口所在区域为三层路由模式
+不能配置IP的接口所在区域为二层交换模式</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-07-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/">路由交换</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/linux%E5%9F%BA%E7%A1%80/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">linux基础</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

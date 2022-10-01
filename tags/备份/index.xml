@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>备份 on blog</title>
+    <link>http://localhost:1313/tags/%E5%A4%87%E4%BB%BD/</link>
+    <description>Recent content in 备份 on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 15 Oct 2020 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>huaweicloud,day5,ebackup</title>
+      <link>http://localhost:1313/post/huaweicloudday5ebackup/</link>
+      <pubDate>Thu, 15 Oct 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday5ebackup/</guid>
+      <description>&lt;p&gt;华为云备份。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

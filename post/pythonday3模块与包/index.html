@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day3,模块与包 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="python模块与包的使用。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day3,模块与包" />
+<meta property="og:description" content="python模块与包的使用。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-20T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-09-20T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day3,模块与包">
+<meta itemprop="description" content="python模块与包的使用。"><meta itemprop="datePublished" content="2021-09-20T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-09-20T11:06:25+08:00" />
+<meta itemprop="wordCount" content="2076">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day3,模块与包"/>
+<meta name="twitter:description" content="python模块与包的使用。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day3,模块与包</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-20 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 2076 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python模块与包的使用。</p>
+<h4 id="模块大纲">模块大纲</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、模块介绍
+</span></span><span class="line"><span class="cl">		1、什么是模块
+</span></span><span class="line"><span class="cl">		2、为什么要有模块
+</span></span><span class="line"><span class="cl">		3、如何用
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">2、一个py文件的两种用途
+</span></span><span class="line"><span class="cl">		1、被当作程序运行
+</span></span><span class="line"><span class="cl">		2、被当作模块导入
+</span></span><span class="line"><span class="cl">		3、区别
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">3、模块导入方式
+</span></span><span class="line"><span class="cl">		1、import
+</span></span><span class="line"><span class="cl">		2、from...import...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、模块的循环导入问题
+</span></span><span class="line"><span class="cl">		1、第一种方案
+</span></span><span class="line"><span class="cl">		2、第二种方案
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">5、搜索模块的路径与优先级
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6、编写一个模块的规范
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7、包
+</span></span><span class="line"><span class="cl">	1、包是什么？
+</span></span><span class="line"><span class="cl">	2、为何要有包
+</span></span><span class="line"><span class="cl">	3、包的导入
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">8、软件开发的目录规范
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="1模块介绍">1、模块介绍</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">1、什么是模块？
+</span></span><span class="line"><span class="cl">    模块是一系列功能的集合体，分为三大类
+</span></span><span class="line"><span class="cl">        1、内置的模块
+</span></span><span class="line"><span class="cl">        2、第三方的模块
+</span></span><span class="line"><span class="cl">        3、自定义的模块
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、为什么要有模块
+</span></span><span class="line"><span class="cl">    1、内置与第三方的模块拿来就用，无须定义，这种拿来主义，可以极大提升自己的开发效率
+</span></span><span class="line"><span class="cl">    2、自定义的模块
+</span></span><span class="line"><span class="cl">        可以将程序的各部分功能提取出来放到一模块中为大家共享使用
+</span></span><span class="line"><span class="cl">        好处是结案少了代码冗余，程序组织结构更加清晰
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、如何用
+</span></span><span class="line"><span class="cl">    1、导入模块
+</span></span><span class="line"><span class="cl">        1、首次导入模块会发生3件事
+</span></span><span class="line"><span class="cl">            1、执行func.py
+</span></span><span class="line"><span class="cl">            2、产生func.py的名称空间，将func.py运行过程中的名字都丢到func.py的命名空间中
+</span></span><span class="line"><span class="cl">            3、再当前文件中产生一个名字func，该名字指向2中产生的命名空间
+</span></span><span class="line"><span class="cl">        2、之后的导入，都是直接引用首次导入产生的func.py名称空间，不会重复执行代码
+</span></span><span class="line"><span class="cl">        3、导入规范：先导入内置模块，然后第三方，最后自定义模块
+</span></span><span class="line"><span class="cl">        4、自定义模块的导入应该采用纯小写+下划线的风格
+</span></span><span class="line"><span class="cl">        5、可以在函数内导入模块
+</span></span><span class="line"><span class="cl">    2、引用
+</span></span><span class="line"><span class="cl">        print(func.x)
+</span></span><span class="line"><span class="cl">        print(func.get)
+</span></span><span class="line"><span class="cl">        强调1：模块名.名字，是指名道姓的问某一个模块要名字对应的值，不会与当前命名空间中的名字发生冲突
+</span></span><span class="line"><span class="cl">        强调2：无论是查看还是修改都是以源模块为基准的，与调用位置无关
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2一个py文件的两种用途">2、一个py文件的两种用途</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#一个py文件的两种用途
+</span></span><span class="line"><span class="cl">    #1、被当作程序运行
+</span></span><span class="line"><span class="cl">    #2、被当作模块导入
+</span></span><span class="line"><span class="cl">    #3、区别
+</span></span><span class="line"><span class="cl">        #当python文件被运行时，__name__的值为&#39;__main__&#39;
+</span></span><span class="line"><span class="cl">        #当python文件被当作模块导入时，__name__的值为python的文件的值
+</span></span><span class="line"><span class="cl">                if __name__ == &#39;__main__&#39;:
+</span></span><span class="line"><span class="cl">                        print(&#39;文件被执行&#39;)
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                        print(&#39;文件被导入&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3模块导入方式">3、模块导入方式</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#import ; from...import.....
+</span></span><span class="line"><span class="cl">        #1、import导入模块在使用时必须加前缀&#39;模块&#39;
+</span></span><span class="line"><span class="cl">                #优点：肯定不会与当前名称空间中的名字冲突
+</span></span><span class="line"><span class="cl">                #缺点：加前缀显得麻烦
+</span></span><span class="line"><span class="cl">        #2、from...import...导入也发生三件事
+</span></span><span class="line"><span class="cl">                #1、产生一个名称空间
+</span></span><span class="line"><span class="cl">                #2、运行func.py将运行过程中产生的名字都丢到模块的名称空间中
+</span></span><span class="line"><span class="cl">                #3、在当前名称空间拿到一个名字，该名字与模块命名空间中的某一个内存地址
+</span></span><span class="line"><span class="cl">                from func import binary_search
+</span></span><span class="line"><span class="cl">                        #优点：代码更精简
+</span></span><span class="line"><span class="cl">                        #缺点：容易与当前命名空间混淆
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4模块的循环导入问题">4、模块的循环导入问题</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#循环导入问题(无论那种方案都是垃圾，最好不要用)
+</span></span><span class="line"><span class="cl">        #1、第一种方案
+</span></span><span class="line"><span class="cl">            #m1.py
+</span></span><span class="line"><span class="cl">            print(&#39;正在输入m1&#39;)
+</span></span><span class="line"><span class="cl">            x = &#39;a1&#39;
+</span></span><span class="line"><span class="cl">            from m2 import y
+</span></span><span class="line"><span class="cl">            #m2.py
+</span></span><span class="line"><span class="cl">            print(&#39;正在输入m2&#39;)
+</span></span><span class="line"><span class="cl">            y=&#39;m2&#39;
+</span></span><span class="line"><span class="cl">            from m1 import x
+</span></span><span class="line"><span class="cl">        #2、第二种方案（推荐）
+</span></span><span class="line"><span class="cl">            #将导入语句放在函数里
+</span></span><span class="line"><span class="cl">            print(&#39;正在导入m1&#39;)
+</span></span><span class="line"><span class="cl">            def f1():
+</span></span><span class="line"><span class="cl">                from  m2 import y
+</span></span><span class="line"><span class="cl">                pprint(y)
+</span></span><span class="line"><span class="cl">            x = &#39;m1&#39;
+</span></span><span class="line"><span class="cl">            ...
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5搜索模块的路径与优先级">5、搜索模块的路径与优先级</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#搜索模块的路径与优先级
+</span></span><span class="line"><span class="cl">        #1、无论是import还是from...import在导入模块时都涉及到查找问题
+</span></span><span class="line"><span class="cl">            #优先级：
+</span></span><span class="line"><span class="cl">                #1、内存（内置模块）
+</span></span><span class="line"><span class="cl">                #2、从硬盘找（按照sys.path中存放的文件顺序依次寻找要导入的模块）
+</span></span><span class="line"><span class="cl">                    import sys
+</span></span><span class="line"><span class="cl">                    #值为一个列表，存放了一系列的文件夹
+</span></span><span class="line"><span class="cl">                    #其中第一个文件夹是当前执行文件所在的文件夹
+</span></span><span class="line"><span class="cl">                    print(sys.path)
+</span></span><span class="line"><span class="cl">                #3、了解：sys.modules查看已经加载到内存中的模块
+</span></span><span class="line"><span class="cl">                    import sys
+</span></span><span class="line"><span class="cl">                    print(sys.modules)
+</span></span><span class="line"><span class="cl">            #使用sys.path到模块
+</span></span><span class="line"><span class="cl">                    import sys
+</span></span><span class="line"><span class="cl">                    sys.path.append(r&#39;D:\pycharm\day3\func.py&#39;)
+</span></span><span class="line"><span class="cl">                    import func
+</span></span><span class="line"><span class="cl">                    func.binary_search()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="6编写一个模块的规范">6、编写一个模块的规范</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#编写一个模块的规范
+</span></span><span class="line"><span class="cl">        &#39;the module is used to...&#39; #模块的文档描述
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        import sys #导入模块
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        x=1 #定义全局变量
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        class foo: #定义类，并写好类的注释
+</span></span><span class="line"><span class="cl">            &#39;class foo is used to...&#39;
+</span></span><span class="line"><span class="cl">            pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        def test() #定义函数，并写好函数注释
+</span></span><span class="line"><span class="cl">            &#39;function test is used to..&#39;
+</span></span><span class="line"><span class="cl">            pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        if __name__ == &#39;__main__&#39;: #主程序
+</span></span><span class="line"><span class="cl">            test() #在被当作脚本执行时，执行此处代码
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="7包">7、包</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#包
+</span></span><span class="line"><span class="cl">        #1、包就是一个包含有__init__.py文件的文件夹
+</span></span><span class="line"><span class="cl">        #2、为何要有包
+</span></span><span class="line"><span class="cl">            #的本质是模块的一种形式，包是用来当作模块导入
+</span></span><span class="line"><span class="cl">            #作为模块的设计者，模块的功能越来越多时，需要很好管理自己的模块（以文件的方式管理），但还需要暴露给使用者还应该是一个模块
+</span></span><span class="line"><span class="cl">        #3、包的导入：
+</span></span><span class="line"><span class="cl">            #以下导入都是在包内的__init__.py文件内的导入
+</span></span><span class="line"><span class="cl">            #绝对导入：以包的文件夹作为起始导入点
+</span></span><span class="line"><span class="cl">                from w.a.b import xxx
+</span></span><span class="line"><span class="cl">                import w.a.b
+</span></span><span class="line"><span class="cl">                #其中点的左边都必须是包
+</span></span><span class="line"><span class="cl">            #相对导入:仅限于包内使用，不能跨出包(包内模块之间的导入推荐相对导入)
+</span></span><span class="line"><span class="cl">                #.：代表当前文件夹
+</span></span><span class="line"><span class="cl">                #..:代表上一层文件夹
+</span></span><span class="line"><span class="cl">                    from .m1 import f1
+</span></span><span class="line"><span class="cl">                    from ...m1 import f1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="8软件开发的目录规范">8、软件开发的目录规范</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#软件开发的目录规范
+</span></span><span class="line"><span class="cl">        #bin  该目录放一些可执行文件
+</span></span><span class="line"><span class="cl">        #conf 项目的配置文件
+</span></span><span class="line"><span class="cl">        #db   存放数据库相关的操作代码
+</span></span><span class="line"><span class="cl">        #lib  存放程序常用的库（模块）
+</span></span><span class="line"><span class="cl">        #core 存放核心代码的逻辑
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #如何获取父级模块
+</span></span><span class="line"><span class="cl">        import os
+</span></span><span class="line"><span class="cl">        import sys
+</span></span><span class="line"><span class="cl">        BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+</span></span><span class="line"><span class="cl">        sys.path.append(BASE_DIR)
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-09-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day4,常用模块</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday2%E5%87%BD%E6%95%B0/">
+            <span class="next-text nav-default">python,day2,函数</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

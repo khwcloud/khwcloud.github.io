@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on blog</title>
+    <link>http://localhost:1313/tags/linux/</link>
+    <description>Recent content in linux on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Mar 2020 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux基础</title>
+      <link>http://localhost:1313/post/linux%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 01 Mar 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;linux基础。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

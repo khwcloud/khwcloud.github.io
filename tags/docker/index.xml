@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on blog</title>
+    <link>http://localhost:1313/tags/docker/</link>
+    <description>Recent content in docker on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 May 2022 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cloud,day1,docker</title>
+      <link>http://localhost:1313/post/cloudday1docker/</link>
+      <pubDate>Sun, 01 May 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloudday1docker/</guid>
+      <description>&lt;p&gt;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 Sep 2022 11:06:25 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>由github+hugo实现的个人博客站点</description>
+    </item>
+    
+    <item>
+      <title>cloud,day3,nginx</title>
+      <link>http://localhost:1313/post/cloudday3nginx/</link>
+      <pubDate>Wed, 28 Sep 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloudday3nginx/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Nginx&lt;/em&gt; (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cloud,day2,k8s</title>
+      <link>http://localhost:1313/post/cloudday2k8s/</link>
+      <pubDate>Sun, 15 May 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloudday2k8s/</guid>
+      <description>&lt;p&gt;Kubernetes 是一个开源的，用于管理云平台中多个主机上的容器化的应用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cloud,day1,docker</title>
+      <link>http://localhost:1313/post/cloudday1docker/</link>
+      <pubDate>Sun, 01 May 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloudday1docker/</guid>
+      <description>&lt;p&gt;Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day14,复习</title>
+      <link>http://localhost:1313/post/pythonday14%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</link>
+      <pubDate>Thu, 28 Apr 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday14%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</guid>
+      <description>&lt;p&gt;基础复习&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day13,cmdb</title>
+      <link>http://localhost:1313/post/pythonday13cmdb/</link>
+      <pubDate>Wed, 13 Apr 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday13cmdb/</guid>
+      <description>&lt;p&gt;cmdb资产管理系统&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day12,路飞项目</title>
+      <link>http://localhost:1313/post/pythonday12%E8%B7%AF%E9%A3%9E%E9%A1%B9%E7%9B%AE/</link>
+      <pubDate>Fri, 25 Mar 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday12%E8%B7%AF%E9%A3%9E%E9%A1%B9%E7%9B%AE/</guid>
+      <description>&lt;p&gt;小路飞学城&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day11,django</title>
+      <link>http://localhost:1313/post/pythonday11django/</link>
+      <pubDate>Fri, 07 Jan 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday11django/</guid>
+      <description>&lt;p&gt;python django框架详解&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day10,git</title>
+      <link>http://localhost:1313/post/pythonday10git/</link>
+      <pubDate>Thu, 04 Nov 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday10git/</guid>
+      <description>&lt;p&gt;git代码管理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day9,数据库</title>
+      <link>http://localhost:1313/post/pythonday9%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Sat, 30 Oct 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday9%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description>&lt;p&gt;数据库的常用操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day8,前端</title>
+      <link>http://localhost:1313/post/pythonday8%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Sat, 23 Oct 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday8%E5%89%8D%E7%AB%AF/</guid>
+      <description>&lt;p&gt;前端基础。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day7,并发编程</title>
+      <link>http://localhost:1313/post/pythonday7%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Fri, 15 Oct 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday7%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
+      <description>&lt;p&gt;并发编程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day6,网络编程</title>
+      <link>http://localhost:1313/post/pythonday6%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sat, 02 Oct 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday6%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/</guid>
+      <description>&lt;p&gt;套接字编程。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day5,面向对象</title>
+      <link>http://localhost:1313/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Thu, 30 Sep 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>&lt;p&gt;python面向对象。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day4,常用模块</title>
+      <link>http://localhost:1313/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/</link>
+      <pubDate>Sat, 25 Sep 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/</guid>
+      <description>&lt;p&gt;python常用模块介绍。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day3,模块与包</title>
+      <link>http://localhost:1313/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/</link>
+      <pubDate>Mon, 20 Sep 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/</guid>
+      <description>&lt;p&gt;python模块与包的使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day2,函数</title>
+      <link>http://localhost:1313/post/pythonday2%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Tue, 14 Sep 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday2%E5%87%BD%E6%95%B0/</guid>
+      <description>&lt;p&gt;python函数使用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python,day1,文件</title>
+      <link>http://localhost:1313/post/pythonday1%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Tue, 07 Sep 2021 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/pythonday1%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;python文件操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day7,容灾</title>
+      <link>http://localhost:1313/post/huaweicloudday7%E5%AE%B9%E7%81%BE/</link>
+      <pubDate>Sat, 14 Nov 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday7%E5%AE%B9%E7%81%BE/</guid>
+      <description>&lt;p&gt;本地容灾，同城容灾，异地容灾规划。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day6,Rainbow</title>
+      <link>http://localhost:1313/post/huaweicloudday6%E8%BF%81%E7%A7%BB/</link>
+      <pubDate>Sat, 07 Nov 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday6%E8%BF%81%E7%A7%BB/</guid>
+      <description>&lt;p&gt;华为云迁移，将x86架构的物理机或者虚拟机迁移到华为的私有云上或者虚拟化平台上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day5,ebackup</title>
+      <link>http://localhost:1313/post/huaweicloudday5ebackup/</link>
+      <pubDate>Thu, 15 Oct 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday5ebackup/</guid>
+      <description>&lt;p&gt;华为云备份。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day4,openstack</title>
+      <link>http://localhost:1313/post/huaweicloudday4openstack/</link>
+      <pubDate>Sun, 04 Oct 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday4openstack/</guid>
+      <description>&lt;p&gt;OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day3,FsuionStorage</title>
+      <link>http://localhost:1313/post/huaweicloudday3fsuionstorage/</link>
+      <pubDate>Mon, 07 Sep 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday3fsuionstorage/</guid>
+      <description>&lt;p&gt;华为分布式存储。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day2,FusionAccess</title>
+      <link>http://localhost:1313/post/huaweicloudday2fusionaccess/</link>
+      <pubDate>Fri, 07 Aug 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday2fusionaccess/</guid>
+      <description>&lt;p&gt;华为桌面云。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>huaweicloud,day1,FusionCompute</title>
+      <link>http://localhost:1313/post/huaweicloudday1fusioncompute/</link>
+      <pubDate>Wed, 01 Jul 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/huaweicloudday1fusioncompute/</guid>
+      <description>&lt;p&gt;华为虚拟化平台。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>存储</title>
+      <link>http://localhost:1313/post/%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Thu, 02 Apr 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%AD%98%E5%82%A8/</guid>
+      <description>&lt;p&gt;存储相关。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux基础</title>
+      <link>http://localhost:1313/post/linux%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Sun, 01 Mar 2020 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/linux%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;linux基础。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>路由交换</title>
+      <link>http://localhost:1313/post/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/</link>
+      <pubDate>Thu, 11 Jul 2019 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2/</guid>
+      <description>双绞线 1 2 568B: 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕 568A：绿白 绿 橙白 蓝 蓝白 橙 棕白 棕 Osi七层模型 1 2 3 4 5 6 7 网络层 为应用进程提供网络服务 表示层 定义数据</description>
+    </item>
+    
+  </channel>
+</rss>

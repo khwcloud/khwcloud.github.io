@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>huaweicloud,day4,openstack - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/huaweicloudday4openstack/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="huaweicloud,day4,openstack" />
+<meta property="og:description" content="OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/huaweicloudday4openstack/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-10-04T11:06:25+08:00" />
+<meta property="article:modified_time" content="2020-10-04T11:06:25+08:00" />
+
+<meta itemprop="name" content="huaweicloud,day4,openstack">
+<meta itemprop="description" content="OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。"><meta itemprop="datePublished" content="2020-10-04T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2020-10-04T11:06:25+08:00" />
+<meta itemprop="wordCount" content="3744">
+<meta itemprop="keywords" content="openstack," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="huaweicloud,day4,openstack"/>
+<meta name="twitter:description" content="OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">huaweicloud,day4,openstack</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-10-04 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%91/"> 云 </a>
+            </div>
+          <span class="more-meta"> 3744 words </span>
+          <span class="more-meta"> 8 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#openstack">Openstack</a>
+          <ul>
+            <li><a href="#组件介绍"><strong>组件介绍</strong></a></li>
+            <li><a href="#服务器虚拟化和私有云的对比"><strong>服务器虚拟化和私有云的对比</strong></a></li>
+            <li><a href="#openstack的定位优势"><strong>openstack的定位优势</strong></a></li>
+            <li><a href="#openstack网络平面规划"><strong>openstack网络平面规划</strong></a></li>
+            <li><a href="#云硬盘和本地磁盘对比"><strong>云硬盘和本地磁盘对比</strong></a></li>
+            <li><a href="#私有云项目规划"><strong>私有云项目规划</strong></a></li>
+            <li><a href="#云基础概念">云基础概念</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>OpenStack是一个云操作系统，通过数据中心可控制大型的计算、存储、网络等资源池。</p>
+<h2 id="openstack">Openstack</h2>
+<h3 id="组件介绍"><strong>组件介绍</strong></h3>
+<h4 id="keystone">keystone</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1.keystone：提供鉴权和浮动目录的（各个组件api的endpoint地址）
+</span></span><span class="line"><span class="cl">两种鉴权方式 pki，uuid
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="nova">Nova</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nova：提供计算资源，提供虚拟机的创建删除等操作
+</span></span><span class="line"><span class="cl">Nova虚拟机创建流程？
+</span></span><span class="line"><span class="cl">1.user发送创建虚拟机请求到nova-api
+</span></span><span class="line"><span class="cl">2.nova-api进行参数解析、记录数据库、转发给nova-conductor
+</span></span><span class="line"><span class="cl">3.nova-conductor将请求信息发送给nova-scheduler
+</span></span><span class="line"><span class="cl">4.nova-scheduler接收到数据后，开始筛选主机：filter、权重、随机，将选出合适的主机返还给nova-conductor
+</span></span><span class="line"><span class="cl">5.nova-conductor拿到主机后直接调用该主机对应的nova-compute，要求创建虚拟机
+</span></span><span class="line"><span class="cl">6.nova-compute调用driver创建虚拟机
+</span></span><span class="line"><span class="cl">7.nova-compute找到neutron创建port
+</span></span><span class="line"><span class="cl">8.nova-compute找到cinder创建disk，并且挂载
+</span></span><span class="line"><span class="cl">9.nova-compute启动虚拟机，glance下载镜像
+</span></span><span class="line"><span class="cl">10.生成虚拟机的xml文件，调用libvirt拉起虚拟机
+</span></span><span class="line"><span class="cl">11.更新数据库
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">每两个nova-compute对应一个集群或者一个计算节点，fc，kvn等
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="neutron">neutron</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">neutron：提供网络资源的
+</span></span><span class="line"><span class="cl">Neutron分为两大类组件：
+</span></span><span class="line"><span class="cl">1.neutron server：控制节点、多活部署
+</span></span><span class="line"><span class="cl">2.xxx agent：如ovs-agent控制+计算节点多活部署
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="cinder">cinder</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cinder：提供块存储资源的，提供卷的挂载删除等操作
+</span></span><span class="line"><span class="cl">Cinder-api：提供服务的入口。控制节点、多活部署。前端通过haporxy负载均衡
+</span></span><span class="line"><span class="cl">Cinder-scheduler：筛选。调度合适的后端存储。控制节点、多活部署。前端通过rabbitMQ进行负载均衡
+</span></span><span class="line"><span class="cl">filter：一种是已经用了最少的胜出。一种是剩下最多的胜出
+</span></span><span class="line"><span class="cl">权重：对应的主机存储胜出最多的胜出
+</span></span><span class="line"><span class="cl">Cinder-Volume：通过不同的dirver对接不同的后端存储。控制+计算节点，多活部署。前端通过rabbitMQ进行负载均衡
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cinder创建卷的流程？
+</span></span><span class="line"><span class="cl">1.用户下发创建卷的请求到Cinder-api
+</span></span><span class="line"><span class="cl">2.Cinder-api接收后，向Keystone进行身份认证，通过后，生成卷的ID
+</span></span><span class="line"><span class="cl">3.认证通过后，将请求丢到scheduler队列中
+</span></span><span class="line"><span class="cl">4.Cinder-Scheduler在队列中去读取创建卷的信息，根据调度策略和权重计算策略筛选出合适的后端存储
+</span></span><span class="line"><span class="cl">5.将该消息投递到相对应的Cinder-Volume队列中
+</span></span><span class="line"><span class="cl">6.Volume从自己的队列当中读取该消息，调用dirver创建卷，然后更新数据库
+</span></span><span class="line"><span class="cl">7.diver发送对应的创建卷的请求到存储，让存储完成创建卷的操作
+</span></span><span class="line"><span class="cl">8、后端创建一个卷，或者一个lun，然后映射给计算机点(云硬盘的方式(VBD,SCSI))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps:vbd一个lun，直接映射给计算节点，然后计算节点对他进行格式化系统，然后创建卷，创建文件，映射给虚拟机，虚拟机拿到的就是vbd
+</span></span><span class="line"><span class="cl">如果是scsi，就是直接映射给虚拟机，虚拟机对他进行格式化
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps：下面对接的存储可以是分布式存储，san，nas，市面上的所有存储
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="glance">glance</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">glance：提供镜像资源的，可以对接swift，本地磁盘，OBS，提供镜像的上传下载删除等操作
+</span></span><span class="line"><span class="cl">api：对外提供服务的入口，有web/cli的方式
+</span></span><span class="line"><span class="cl">1.能够对消息进行认证鉴权处理、并且调用其他组件处理请求：image store
+</span></span><span class="line"><span class="cl">glance registry（glance的核心）：操作数据库
+</span></span><span class="line"><span class="cl">DB：mySQL
+</span></span><span class="line"><span class="cl">image store（镜像仓库）：Swfit/S3/ceph/本地存储。华为只支持Swift/本地存储/OBS（公有云对象存储服务）
+</span></span><span class="line"><span class="cl">Glance缓存：
+</span></span><span class="line"><span class="cl">1.用户是不可见且不知道使用的是本地还是后端的镜像。
+</span></span><span class="line"><span class="cl">2.可配置：缓存的开关、大小、周期
+</span></span><span class="line"><span class="cl">目的：解决因扩展节点带来的镜像服务性能问题（上传和下载）
+</span></span><span class="line"><span class="cl">原理：由Glance api提供缓存的位置，缓存的位置：计算节点、glance api（官网是这种）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Glance上传：
+</span></span><span class="line"><span class="cl">1.请求者通过web/cli发起上传请求，glance api接收到请求
+</span></span><span class="line"><span class="cl">2.glance api让glance
+</span></span><span class="line"><span class="cl">Registry到DB中记录需要存放的位置
+</span></span><span class="line"><span class="cl">3.  记录完成后，glance api直接上传镜像到image store的后端存储中
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Glance下载：
+</span></span><span class="line"><span class="cl">1.请求者通过web/cli发起上传请求，glance api接收到请求
+</span></span><span class="line"><span class="cl">2.glance api找到glance缓存是是否有cache
+</span></span><span class="line"><span class="cl">3.如果没有cache，找到glance registry查找DB，查看元数据，返还给glance api
+</span></span><span class="line"><span class="cl">4.glance api到image store中下载镜像给请求者
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="swift">swift</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">swift：提供对象存储的，在华为的op里仅仅用来给 glance来存放镜像
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="heat">heat</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">heat：自动编排服务
+</span></span><span class="line"><span class="cl">流程：创建好一个模板，在这个模板里写好脚本交给heat api 执行，heat api通过MQ将其交给 heat engin执行，heat engin将这个模板解析成具体的时间交由各个组件执行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="ceilometer">ceilometer</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ceilometer：提供监控计量服务的
+</span></span><span class="line"><span class="cl">通过各种agent来收集信息
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="服务器虚拟化和私有云的对比"><strong>服务器虚拟化和私有云的对比</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">结构上，应用场景，服务对象，实现方式 ，兼容性，产品优势
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="openstack的定位优势"><strong>openstack的定位优势</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">华为op底层对接了各种计算、存储、网络等资源，它是云操作系统软件，是一种经过商业加固的Openstack，可以对资源进行统一管理与调配，未来还可以接入更多的资源。
+</span></span><span class="line"><span class="cl">部署：原生的OP部署复杂难度大门槛高，华为的OP部署相对简单且规划方便
+</span></span><span class="line"><span class="cl">稳定性：原生的OP一年更新2次，但是每个版本都可能存在不稳定因素，而华为针对M版进行了大量的改进与改良，修复了许多BUG，打了很多补丁，很大程度上提升了稳定与安全性
+</span></span><span class="line"><span class="cl">高可靠：原生OP的组件默认都不是冗余部署的，华为的私有云控制节点至少都是3个节点冗余部署
+</span></span><span class="line"><span class="cl">健康检查：原生OP的健康检查功能少，华为的OP检查项目多、功能多样，可以提供报表、告警、硬件状态信息等数据
+</span></span><span class="line"><span class="cl">服务：原生的OP没有服务提供，运维门槛高难度大，华为的OP有官方的维护，需要服务可以按需求购买添加，售后有保障
+</span></span><span class="line"><span class="cl">页面：原生的OP页面比较简陋且单一，华为OP页面华丽美观，更适合中国人的使用习惯版本：华为的OP是基于M版（2016-04）进行改良，版本架构较老，对新功能新特性支持程度较低。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="openstack网络平面规划"><strong>openstack网络平面规划</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">internal_base：openstack内部组件、子组件通信平面，安全等级最高。
+</span></span><span class="line"><span class="cl">external_OM：openstack内部组件与FSM\VRM\service OM通信平面，对接后端资源
+</span></span><span class="line"><span class="cl">external_api：openstack内部组件与外部管理员、租户通信平面，提供用户的登录网络
+</span></span><span class="line"><span class="cl">tunnel_bearing：vxlan的承载平面，任意节点都有。
+</span></span><span class="line"><span class="cl">storage_data：管理存储和业务存储走的平面，控制流走external_om平面。 
+</span></span><span class="line"><span class="cl">	对接后端存储，如果是ipsan，就storage_data0和storage_data1，如果是fs就是storage_data0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pubilc server：云服务后端网络，提供公共组件后端通信的网络，如lvs nginx  ntp
+</span></span><span class="line"><span class="cl">dmz server：云服务前端网络，提供各个服务的console，比如登录SC
+</span></span><span class="line"><span class="cl">heat bate：云心跳平面，监控各个组件的心跳，对接eshige
+</span></span><span class="line"><span class="cl">bmc_base：用来和裸金属服务器的IPMI接口三层互通，对主机进行上下电操作。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">privsion：用来给裸金属pxe安装系统的平面，操作系统镜像包的下载及安装。前身是internal_base平面，部署完成之后Privsion平面会切换成租户网络平面。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="云硬盘和本地磁盘对比"><strong>云硬盘和本地磁盘对比</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">定义，性能，vdc配额，生命周期，高级特性，可靠，场景
+</span></span><span class="line"><span class="cl">云硬盘的类型，模式
+</span></span><span class="line"><span class="cl">ssi锁机制，共享运营爬满
+</span></span><span class="line"><span class="cl">云硬盘高级特性：快照，升降配，备份，高可用，迁移
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="私有云项目规划"><strong>私有云项目规划</strong></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">调研，评估，规划，实施（安装流程），测试，交付
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">安装流程
+</span></span><span class="line"><span class="cl">1、安装fcd，fcd本身是在一台服务器上
+</span></span><span class="line"><span class="cl">2、通过fcd安装控制节点首节点，然后控制节点首节点pxe安装其他两个节点
+</span></span><span class="line"><span class="cl">3、然后对这三个节点安装openstack底座，安装kvm，安装其他u虚拟机sc，oc，fsm
+</span></span><span class="line"><span class="cl">fs和管理节点融合部署，vbs和osd部署在统一节点上，一键化部署
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="云基础概念">云基础概念</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Domain：域，keystone 中资源（project、user、group）的持有者 region 在 keystone 里基本代表一个数据中心 
+</span></span><span class="line"><span class="cl">Service：服务，一组相关功能的集合，比如计算服务、网络服务、镜像服务、存储服 务等。 
+</span></span><span class="line"><span class="cl">Endpoint: 必须和一个服务关联，代表这个服务的访问地址，一般一个服务需要提供 三种类型的访问地址：public、internal、admin 以阿里云为利 ： Aliyun.com ---domian 地域（华北 1） ---region 可用区（可用区 B ） ---az Identity.aliyun.com
+</span></span><span class="line"><span class="cl"> 一个 domain 中可以包含 N 多个 region，一个 region 可以包含 N 多个可用区（AZ）， 一个 AZ 中包含 N 多个服务，这些服务组成向上组成为 VDC，VPC 等资源。一个 keystone 作用于一个 domain。
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-10-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/openstack/">openstack</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/huaweicloudday5ebackup/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">huaweicloud,day5,ebackup</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/huaweicloudday3fsuionstorage/">
+            <span class="next-text nav-default">huaweicloud,day3,FsuionStorage</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day2,函数 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="python函数使用。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday2%E5%87%BD%E6%95%B0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day2,函数" />
+<meta property="og:description" content="python函数使用。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday2%E5%87%BD%E6%95%B0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-14T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-09-14T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day2,函数">
+<meta itemprop="description" content="python函数使用。"><meta itemprop="datePublished" content="2021-09-14T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-09-14T11:06:25+08:00" />
+<meta itemprop="wordCount" content="6432">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day2,函数"/>
+<meta name="twitter:description" content="python函数使用。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day2,函数</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-14 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 6432 words </span>
+          <span class="more-meta"> 13 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python函数使用。</p>
+<h4 id="内容大纲">内容大纲</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、函数的基本使用
+</span></span><span class="line"><span class="cl">	先定义
+</span></span><span class="line"><span class="cl">		三种定义方式
+</span></span><span class="line"><span class="cl">	后调用
+</span></span><span class="line"><span class="cl">		三种调用方式
+</span></span><span class="line"><span class="cl">	返回值
+</span></span><span class="line"><span class="cl">		三种返回值的方式
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">2、函数的参数
+</span></span><span class="line"><span class="cl">	形参与实参的介绍
+</span></span><span class="line"><span class="cl">		1、形参
+</span></span><span class="line"><span class="cl">		2、实参
+</span></span><span class="line"><span class="cl">		3、新参与实参的关系
+</span></span><span class="line"><span class="cl">	形参与实参的具体使用
+</span></span><span class="line"><span class="cl">		1、位置参数
+</span></span><span class="line"><span class="cl">		2、关键字参数
+</span></span><span class="line"><span class="cl">		3、默认参数
+</span></span><span class="line"><span class="cl">		4、可变长参数
+</span></span><span class="line"><span class="cl">		5、命名关键字参数（了解）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、名称空间与作用域、函数对象、闭包函数（进阶）
+</span></span><span class="line"><span class="cl">	命名空间
+</span></span><span class="line"><span class="cl">		1、内置命名空间
+</span></span><span class="line"><span class="cl">		2、全局命名空间
+</span></span><span class="line"><span class="cl">		3、局部命名空间
+</span></span><span class="line"><span class="cl">		4、命名空间加载顺序
+</span></span><span class="line"><span class="cl">		5、命名空间销毁顺序
+</span></span><span class="line"><span class="cl">		6、名称空间查找优先级
+</span></span><span class="line"><span class="cl">	作用域
+</span></span><span class="line"><span class="cl">		1、局部作用域
+</span></span><span class="line"><span class="cl">		2、全局作用域
+</span></span><span class="line"><span class="cl">	函数对象
+</span></span><span class="line"><span class="cl">	闭包函数
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、无参装饰器、有参装饰器
+</span></span><span class="line"><span class="cl">		1、什么是装饰器
+</span></span><span class="line"><span class="cl">		2、为什么要用装饰器
+</span></span><span class="line"><span class="cl">		3、如何用
+</span></span><span class="line"><span class="cl">			1、无参装饰器模板
+</span></span><span class="line"><span class="cl">			2、有参装饰器模板
+</span></span><span class="line"><span class="cl">			3、叠加多个装饰器加载运行分析
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">5、可迭代对象：迭代器、生成器（自定义的迭代器）
+</span></span><span class="line"><span class="cl">		1、什么是迭代器
+</span></span><span class="line"><span class="cl">		2、为什么要有迭代器
+</span></span><span class="line"><span class="cl">		3、迭代器原理
+</span></span><span class="line"><span class="cl">		4、什么是生成器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6、三元表达式、生成式
+</span></span><span class="line"><span class="cl">		1、三元表达式语法
+</span></span><span class="line"><span class="cl">		2、列表生成式
+</span></span><span class="line"><span class="cl">		3、字典生成式
+</span></span><span class="line"><span class="cl">		4、集合生成式
+</span></span><span class="line"><span class="cl">		5、生成式表达式
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7、函数的递归调用
+</span></span><span class="line"><span class="cl">		1、具体概念
+</span></span><span class="line"><span class="cl">		2、递归的两个阶段
+</span></span><span class="line"><span class="cl">		3、递归应用
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">8、二分法（算法）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">9、匿名函数
+</span></span><span class="line"><span class="cl">		1、sorted排序应用
+</span></span><span class="line"><span class="cl">		2、map的应用(了解)
+</span></span><span class="line"><span class="cl">		3、filter的应用(了解)
+</span></span><span class="line"><span class="cl">		4、reduce的应用（了解）
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">10、内置函数（待补充）
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">11、面向过程的编程思想（武功秘籍）
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="1函数的基本使用">1、函数的基本使用</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#一函数定义</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#定义语法</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;&#39;&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    def 函数名（参数）：
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#34;&#34;&#34;文档描&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    函数体
+</span></span></span><span class="line"><span class="cl"><span class="s1">    return值
+</span></span></span><span class="line"><span class="cl"><span class="s1">    &#39;&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#定义函数发生的事情</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、申请内存空间保存函体代码</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、将上述内存地址绑定函数名</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、定义函数不会执行函数体代码，但会检测函数体语法</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#调用函数发生的事情</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、通过函数名找到函数的内存地址</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、然后加口号就是在出发函数体代码的执行</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#形式一:无参函数</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;哈哈&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#形式二：有参函数,调用的时候也需要传参数</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#形式三：空函数，函数体代码为pass</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#三种定义方式的使用案例</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、无参函数的应用场景</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">interactive</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                <span class="n">name</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;username=&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">age</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;userage=&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">msg</span><span class="o">=</span><span class="s1">&#39;名字:</span><span class="si">{}</span><span class="s1">,年龄:</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">age</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">msg</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、有参函数的应用场景</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#x=20</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#y=30</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、空函数的应用场景 构思代码的时候</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#二、调用函数</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、语句的形式:只加括号调用函数</span>
+</span></span><span class="line"><span class="cl">    <span class="n">func</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#2、表达式形式:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#赋值表达式</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#res=func(1,2)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#print(res)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#数学表达式</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#res=func(1,2)*10</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#print(res)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#3、函数调用可以当作参数</span>
+</span></span><span class="line"><span class="cl">        <span class="n">func</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#4、函数的递归调用：是函数嵌套调用的一种特殊形式，本质就是循环</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#具体指：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#在调用一个函数的过程中又直接或者间接调用到本身</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">():</span> <span class="c1">#直接调用本身</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;是我是我还是我&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">():</span><span class="c1">#间接调本身</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#强调：递归不应该无限的调用下去，必须在满足某种条件下结束递归</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#递归的两个阶段：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#回溯：一层一层调用下去</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#递推：满足某种结束条件，结束递归调用，然后一层一层返回</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#递归应用：</span>
+</span></span><span class="line"><span class="cl">            <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">#如果是列表，应该循环、再判断</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#三、函数返回值</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#return是函数结束的标志，即函数体单吗一旦运行到return会立刻终止函数运行</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、返回None：函数体内没有return，或者return后没有参数</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#2、返回一个值：return参数后更一个值</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#3、返回多个值：用逗号分开多个值，会被return返回成元组</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2函数的参数">2、函数的参数</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#函数参数的使用</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#一、形参与实参的介绍</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#形参：在定义函数阶段的函数称之为形式参数，简称形参,相当于变量名</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#实参：在调用函数阶段传入的值称之为实际参数，简称实参，相当于变量值</span>
+</span></span><span class="line"><span class="cl">            <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#实参与形参的关系</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#1、在调用阶段，实参会赋值给形参</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#2、这种绑定关系只能在函数体内使用</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#3、实参与形参的绑定关系在函数调用时生效，函数调用结束后接触绑定关系</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#二、形参与实参的具体使用</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、位置参数：按照从左到右的顺序一次定义的参数称之为位置参数</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#1.1、位置形参：在函数定义阶段，按照从左到右的顺序直接定义的变量名</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#特点：必须被传值，多一个不行少一个也不行</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#1.2、位置实参：在函数调用阶段，按照从左到由的顺序一次传入的值</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#特点：按照顺序与形参一一对应</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、关键字参数：在函数调用阶段，按照key=value形式传入的值</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#特点：可以指定参数传值</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#位置:1、实参和关键字参数混用，位置实参必须放在关键字实参前</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#    2、不能为同一个形参重复传值</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、默认参数：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#3.1：默认形参：在定义函数阶段，就已经被赋值的形参，称之为默认参数</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#特点：在定义阶段已经被赋值，在调用阶段可以不为其赋值</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">l</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">l</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#4、可变长度的参数（*与**的用法）：在调用函数时，传入的值（实参）的个数不固定，对应着真对溢出的实参必须由对应的形参来接收</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#4.1、*形参名：用来接收溢出的位置实参,溢出的位置实参会被*保存成元组的格式然后赋值紧跟气候的元组名</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#*可以用在实参中，实参中带*，先*后的值打散成位置实参</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">res</span><span class="o">+=</span><span class="n">item</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>  <span class="c1">#func(1,2,3)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>  <span class="c1">#func(&#39;h&#39;,&#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#4.2、**新参名：用来接收溢出的关键字实参，**会将溢出的关键字实参保存成字典格式，然后赋值给紧跟其后的形参名</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#**可以用在实参中（**后只能是字典），实参中带**，先**后的值打散成关键字实参</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="o">**</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">})</span>  <span class="c1">#func(x=1,y=2)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#5、命名关键字参数（了解），在定义函数时，*后定义的参数，如下所示，称之为命名关键字参数</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="o">*</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>  <span class="c1">#a,b为命名关键字函数</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3名称空间与作用域函数对象闭包函数进阶">3、名称空间与作用域、函数对象、闭包函数（进阶）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#名称空间与作用域、函数对象、闭包函数（进阶）</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、名称空间（namespaces）：存放名字的地方，是对栈区的划分</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、内置名称空间</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#存放的名字：存放的python解释器内置的名称</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#存放的周期：python解释器启动则产生，python解释器关闭则销毁</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、全局名称空间</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#存放的名字：运行顶级代码所产生的名字，不是函数内定义，也不是内置，剩下的都是全局名称空间</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#存放的周期：python文件执行则产生，python文件运行完毕后销毁</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、局部名称空间</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#存放的名字：在调用函数时，运行函体代码过程中产生的函数体内的名字</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#存放的周期：在调用函数时存货，函数调用完毕后则销毁</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#4、命名空间加载顺序：内置&gt;全局&gt;局部</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#5、命名空间销毁顺序：局部&gt;全局&gt;内置</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#6、名字的查找优先级：当前所在位置向上一层一层查找</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#关键点1、命名空间的‘嵌套’关系是以函数定义阶段为准，与调用位置无关</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#2、作用域：作用范围</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#全局作用域：内置名称空间、全局名称空间</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#1、全局存活</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#2、全局有效：被所有函数共享</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#局部作用域：局部名称空间的名字</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#1、临时存货</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#2、局部有效：函数内有效</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#4、函数对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、可以赋值</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;from func&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f</span> <span class="o">=</span> <span class="n">func</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">func</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、可以当作函数的参数传入</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">foo</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、可以吧函数当作另一个函数的返回值</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">foo</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#4、可以当作容器类型的一个元素</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="n">func</span><span class="p">,]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dic</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;k1&#39;</span><span class="p">:</span><span class="n">func</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#5、函数的嵌套调用：在调用一个函数的过程中又调用其他函数</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">max2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="n">x</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">max4</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#第一步：比较a,b得到res1</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res1</span> <span class="o">=</span> <span class="n">max2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#第二步：比较res1和c得到res2</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res2</span> <span class="o">=</span> <span class="n">max2</span><span class="p">(</span><span class="n">res1</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#第三步：比较res2和d得到res3</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res3</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">res2</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">res3</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="n">max4</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#6、函数的嵌套定义：在函数内定义其他函数</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">f1</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">def</span> <span class="nf">f2</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#5、闭包函数</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、大前提：闭包函数=命名空间与作用域+函数嵌套+函数对象</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#核心点：名字的查找关系是以定义阶段为准</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、什么是闭包函数</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#’闭‘函数指的是该函数是内嵌函数</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#’包‘函数指的是该函数包含对外层函数作用域名字的应用（不是对全局作用域）</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、为什么要用到闭包函数</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#两种为函数体传参的方式</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#方式一：直接把函数体需要的擦书定义成形参</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#方式二：利用名称空间和作用域将值包给f2</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">f2</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span> <span class="o">=</span> <span class="n">f1</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4无参装饰器有参装饰器">4、无参装饰器、有参装饰器</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#装饰器</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#一、什么是装饰器</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#器：指的是工具，可以定义成函数</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#装饰：指的是为其他事物添加额外的东西点缀</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#装饰器：装饰器指的是定义一个函数，该函数是用来装饰其他函数的，为其他函数添加额外的功能</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#二、为什么要用装饰器</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#开放封闭原则</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#开放：指的是对拓展功能是开放的</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#封闭：指的是对修改源代码是封闭的</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#装饰器就是在不修改被装饰器对象源代码以及调用方式的前提下为被装饰对象添加新功能</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#三、如何用</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#无参装饰器模板</span>
+</span></span><span class="line"><span class="cl">            <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">outter</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#调用原函数</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#添加新功能</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">            <span class="nd">@outter</span>  <span class="c1">#func=outter(func)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#有参装饰器模板</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">有参装饰器</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">x</span><span class="o">=</span><span class="mi">111</span>
+</span></span><span class="line"><span class="cl">                <span class="k">def</span> <span class="nf">outter</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">#调用原函数</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">#添加新功能</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">return</span> <span class="n">res</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> <span class="n">wrapper</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="n">outter</span>
+</span></span><span class="line"><span class="cl">            <span class="nd">@有参装饰器</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">被装饰对象</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">                <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#叠加多个装饰器的加载、运行分析</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#@deco1 #index=deco1(deco2.wrapper的内存地址)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#@deco2 #deco2.wrapper的内存地址=deco2（deco3.wrapper的内存地址）</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#@deco3 #deco3.wrapper的内存地址=deco3（index）</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#def index（）：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#   pass</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5可迭代对象迭代器生成器自定义的迭代器">5、可迭代对象：迭代器、生成器（自定义的迭代器）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#迭代器</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、什么是迭代器</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#迭代器指的是迭代取值的工具，迭代是一个重复的过程，每次重复都是基于上一次结果而继续的，单纯的重复并不是迭代</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#2、为什么要有迭代器</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#迭代器是用来迭代取值的工具，而涉及到把多个值循环取出来的类型有：列表、字符串、元组、字典、集合、打开文件</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># i=0</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># while i &lt; len(l):</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#     print(l[i])</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#     i+=1</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#上述迭代取值的方式只适用于有缩影的数据类型：列表、字符串、元组</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#为了解决基于索引迭代器取值的局限性，python必须提供一种能够不依赖于索引的取值方式，这就是迭代器</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#3、迭代器原理</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、可迭代对象（可以转换成迭代器的对象）：内置有__iter__方法的对象</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#可迭代对象.__iter__():得到迭代器对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、迭代器对象：内置有__next__方法并且内置有__iter__方法的对象</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#迭代器对象.__next__():得到迭代器的下一个值</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#迭代器对象.__iter__():得到迭代器本身，说白了调了和没调一样</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#3、for循环工作原理</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#1、d.__iter__()得到一个迭代器对象</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#2、迭代器对象.__next__()拿到一个返回值，然后将该返回值赋值给k</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#3、循环王府步骤2，知道跳出StopIterator异常for循环会捕捉异常然后结束循环</span>
+</span></span><span class="line"><span class="cl">                <span class="n">d</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># d_iter=d.__iter__()</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># while True</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#     try:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#         print(d_iter.__next__())</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#     except StopIteration:</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#         break</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#4、迭代器优缺点：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#优点</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#1、不依赖索引的取值方案</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#2、惰性取值；每次只取一个数据，不占内存；迭代器保存的是产生数据的算法，而不是实际的数据。</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#缺点</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#1、除非取尽，否则无法获取迭代器的长度</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#2、只能往后依次取值，不能返回头往前取值，一次性的</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#生产器：生成器就是自定义的迭代器</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、如何得到自定义的迭代器</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#在函数中定义yield关键字，调用函数并不会执行函数体代码，会放回一个生成器对象</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#有了yield关键字，就有了自定义迭代器的实现方式。yield可以用于返回值，但不同于return，函数一旦遇到return就结束了，而yield可以保存函数的运行状态，用来返回多次值</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#2、应用案例</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#自定义迭代器，自己生产数值</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">my_range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span><span class="n">stop</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;start...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">while</span> <span class="n">start</span><span class="o">&lt;</span><span class="n">stop</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                <span class="n">start</span><span class="o">+=</span><span class="n">step</span>
+</span></span><span class="line"><span class="cl">                <span class="k">yield</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;end...&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">g</span> <span class="o">=</span> <span class="n">my_range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#1 3</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="o">=</span><span class="nb">next</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#生成器的高级玩法之yield挂起函数：yield的表达形式 （了解）</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#x=yield 返回值</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">dog</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dog</span><span class="si">%s</span><span class="s1">准备吃东西啦。。。&#39;</span><span class="o">%</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">#x拿到的是yield接收到的值</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">x</span> <span class="o">=</span> <span class="k">yield</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dog</span><span class="si">%s</span><span class="s1">吃了 </span><span class="si">%s</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">x</span><span class="p">))]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span><span class="o">=</span><span class="n">dog</span><span class="p">(</span><span class="s1">&#39;狗子&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span> <span class="c1">#等同于next（g）</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s1">&#39;肉包子&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">g</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>   <span class="c1">#关闭send</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="6三元表达式生成式">6、三元表达式、生成式</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#三元表达式</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#语法格式：条件成立时要返回的值 if 条件else条件不成立要返回的值</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="n">res</span> <span class="o">=</span> <span class="n">x</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span> <span class="k">else</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#生成式</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#列表生成式</span>
+</span></span><span class="line"><span class="cl">        <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hw_dsb&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;k_dsb&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># new_l = []</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># for name in l:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#     if name.endswith(&#39;sdb&#39;):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#         new_l.append(name)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">new_l</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">l</span> <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;dsb&#39;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#练习：吧所有小写名字全变成大写，吧dsb后缀去掉</span>
+</span></span><span class="line"><span class="cl">        <span class="n">new_l</span><span class="o">=</span><span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">new_l</span><span class="o">=</span><span class="p">[</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_dsb&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">l</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#字典生成式</span>
+</span></span><span class="line"><span class="cl">        <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dic</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span><span class="kc">None</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">items</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;egon&#39;</span><span class="p">),(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="mi">18</span><span class="p">),(</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span><span class="s1">&#39;male&#39;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">items</span> <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span><span class="s1">&#39;gender&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#集合生成式</span>
+</span></span><span class="line"><span class="cl">        <span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span> <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">set1</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">set1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#生成器表达式</span>
+</span></span><span class="line"><span class="cl">        <span class="n">g</span><span class="o">=</span><span class="nb">sum</span><span class="p">(</span><span class="n">cc</span>
+</span></span><span class="line"><span class="cl">    <span class="n">表达式</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="k">if</span> <span class="n">条件</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#此刻g内部一个值也没有，next一下就执行一下</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">g</span><span class="o">=</span><span class="p">[</span><span class="n">表达式</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">可迭代对象</span> <span class="k">if</span> <span class="n">条件</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="7函数的递归调用">7、函数的递归调用</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#函数的递归调用：是函数嵌套调用的一种特殊形式，本质就是循环</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#具体指：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#在调用一个函数的过程中又直接或者间接调用到本身</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">():</span> <span class="c1">#直接调用本身</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;是我是我还是我&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="n">f1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">():</span><span class="c1">#间接调本身</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f2&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">f1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#强调：递归不应该无限的调用下去，必须在满足某种条件下结束递归</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span><span class="mi">10</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">n</span><span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">                <span class="n">func</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#递归的两个阶段：</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#回溯：一层一层调用下去</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#递推：满足某种结束条件，结束递归调用，然后一层一层返回</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#递归应用：</span>
+</span></span><span class="line"><span class="cl">            <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span> <span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="c1">#如果是列表，应该循环、再判断</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                        <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="8二分法算法">8、二分法（算法）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#二分法（算法）</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#需求：有一个按照从小到达顺序排列的数字列表</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#需要从该数字列表中找到我们想要的一个数字如何做更搞笑？？</span>
+</span></span><span class="line"><span class="cl">            <span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">46</span><span class="p">]</span>  <span class="c1">#如果列表顺序乱的则 name.sort（）排下序</span>
+</span></span><span class="line"><span class="cl">            <span class="n">find_num</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">            <span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">find_num</span><span class="p">,</span><span class="n">l</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;找的值不存在&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mid_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">//</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">                <span class="n">mid_val</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">mid_index</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="k">if</span> <span class="n">find_num</span> <span class="o">&gt;</span> <span class="n">mid_val</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">l</span> <span class="o">=</span> <span class="n">l</span><span class="p">[</span><span class="n">mid_index</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">binary_search</span><span class="p">(</span><span class="n">find_num</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">elif</span> <span class="n">find_num</span> <span class="o">&lt;</span> <span class="n">mid_val</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">l</span> <span class="o">=</span> <span class="n">l</span><span class="p">[:</span><span class="n">mid_index</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">binary_search</span><span class="p">(</span><span class="n">find_num</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;find it&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="9匿名函数">9、匿名函数</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#匿名函数</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、有名函数</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#func = 函数的内存地址</span>
+</span></span><span class="line"><span class="cl">        <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#2、匿名函数</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#lamdab用于定义匿名函数</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#调用匿名函数</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#方式一：</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">)(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#方式二：无意义</span>
+</span></span><span class="line"><span class="cl">            <span class="n">func</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">            <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#场景：匿名函数由于没有名字，调用一次内存地址就会销毁，所以匿名用于临时调用一次的场景：更多的是将匿名与其他函数配合使用</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#需求1：找出薪资最高的那个人 =》 lili</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#sorted排序应用</span>
+</span></span><span class="line"><span class="cl">                <span class="n">salaries</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;khw&#39;</span><span class="p">:</span><span class="mi">7000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;bxy&#39;</span><span class="p">:</span><span class="mi">13000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="s1">&#39;asd&#39;</span><span class="p">:</span><span class="mi">2500</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># def func(k):</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">#     return salaries[k]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># res = max(salaries, key=func)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">salaries</span><span class="p">,</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span><span class="n">salaries</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>    <span class="c1">#取最大的</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># res = min(salaries,key=lambda k:salaries[k])    #求最小的</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># res = sorted(salaries,key=lambda k:salaries[k])    #排序</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">#1、map的应用(了解)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kxx&#39;</span><span class="p">,</span><span class="s1">&#39;rxx&#39;</span><span class="p">,</span><span class="s1">&#39;zxx&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># new_l=[name+&#39;_dsb&#39; for name in l]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># print(new_l)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span><span class="n">name</span><span class="o">+</span><span class="s1">&#39;_dsb&#39;</span><span class="p">,</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="c1">#生成器</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#2、filter的应用(了解)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;kxx_sb&#39;</span><span class="p">,</span><span class="s1">&#39;rxx&#39;</span><span class="p">,</span><span class="s1">&#39;zxx&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># res = (for name in l if name.endswith(&#39;_sb&#39;))</span>
+</span></span><span class="line"><span class="cl">                <span class="c1"># print(res)</span>
+</span></span><span class="line"><span class="cl">                <span class="n">res</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span><span class="n">name</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;sb&#39;</span><span class="p">),</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">#3、reduce的应用（了解）</span>
+</span></span><span class="line"><span class="cl">                <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+</span></span><span class="line"><span class="cl">                <span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#11 13 16</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="11面向过程的编程思想武功秘籍">11、面向过程的编程思想（武功秘籍）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#编程思想/范式</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#面向过程的编程思想：</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#核心是“过程”二字、过程及流程，指的是做事的步骤：先什么，再什么，后什么</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#基于该思想编写程序，就好比再设计一条流水线</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#优点：复杂的问题流程化、进而简单化</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#缺点：扩展性非常差</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">#面向对象的编程思想应用场景解析：</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#1、不是所有的软件都要频繁更迭：比如编写脚本</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">#2、即便是一个软件需要频繁更迭，也并不代表这个软件所有的组成部分都需要一起更迭</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">#函数式编程：将计算机的运算视为数学意义上的运算</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-09-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day3,模块与包</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday1%E6%96%87%E4%BB%B6/">
+            <span class="next-text nav-default">python,day1,文件</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

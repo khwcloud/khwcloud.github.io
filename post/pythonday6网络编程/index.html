@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day6,网络编程 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="套接字编程。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday6%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day6,网络编程" />
+<meta property="og:description" content="套接字编程。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday6%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-10-02T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-10-02T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day6,网络编程">
+<meta itemprop="description" content="套接字编程。"><meta itemprop="datePublished" content="2021-10-02T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-10-02T11:06:25+08:00" />
+<meta itemprop="wordCount" content="1530">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day6,网络编程"/>
+<meta name="twitter:description" content="套接字编程。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day6,网络编程</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-10-02 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 1530 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>套接字编程。</p>
+<h4 id="网络知识补充">网络知识补充</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、CS架构与BS架构
+</span></span><span class="line"><span class="cl">    CS:客户端，服务端
+</span></span><span class="line"><span class="cl">    BS：浏览器，服务器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、tcp 三次握手，四次挥手
+</span></span><span class="line"><span class="cl">![img](https://images2015.cnblogs.com/blog/1036857/201610/1036857-20161008185648160-191189690.png)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、数据包传输过程
+</span></span><span class="line"><span class="cl">![img](https://img2020.cnblogs.com/blog/1036857/202004/1036857-20200415215541847-564448301.gif)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="基于tcp协议的套接字">基于TCP协议的套接字</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">server端：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_STREAM)	 #创建服务器套接字
+</span></span><span class="line"><span class="cl">phone.bind((&#39;127.0.0.1&#39;,8899))		#把地址绑定到套接字
+</span></span><span class="line"><span class="cl">phone.listen(5)						#监听链接，括号内为指定半连接数
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    conn,client_add = phone.accept()	#接受客户端链接,conn表示连接，client表示客户端ip和端口
+</span></span><span class="line"><span class="cl">    print(conn)
+</span></span><span class="line"><span class="cl">    print(&#39;客户端的ip和端口&#39;,client_add)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">#conn.close()	#关闭当前连接
+</span></span><span class="line"><span class="cl">#phone.close()            # 关闭套接字服务器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">client端：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_STREAM)		#创建服务器套接字
+</span></span><span class="line"><span class="cl">phone.connect((&#39;127.0.0.1&#39;,8899))		#设置连接地址
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    msg = input(&#39;请输入命令:&#39;).strip()
+</span></span><span class="line"><span class="cl">    if len(msg) == 0:
+</span></span><span class="line"><span class="cl">        continue
+</span></span><span class="line"><span class="cl">    phone.send(msg.encode(&#39;utf-8&#39;))		#设置发送的数据
+</span></span><span class="line"><span class="cl">    data = phone.recv(1024)				#设置接收的数据
+</span></span><span class="line"><span class="cl">    print(&#39;接收到服务器发来的：&#39;,data.decode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">phone.close()	#关闭当前连接
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="基于udp协议的套接字">基于UDP协议的套接字</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">服务器：
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_DGRAM)
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    choice = input(&#39;请输入传输内容：&#39;).strip()
+</span></span><span class="line"><span class="cl">    phone.sendto(choice.encode(&#39;utf-8&#39;),(&#39;127.0.0.1&#39;,8081))
+</span></span><span class="line"><span class="cl">    func=phone.recv(1024)
+</span></span><span class="line"><span class="cl">    print(func.decode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">    # phone.close()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">客户端
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_DGRAM)
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    choice = input(&#39;请输入传输内容：&#39;).strip()
+</span></span><span class="line"><span class="cl">    phone.sendto(choice.encode(&#39;utf-8&#39;),(&#39;127.0.0.1&#39;,8081))
+</span></span><span class="line"><span class="cl">    func=phone.recv(1024)
+</span></span><span class="line"><span class="cl">    print(func.decode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">    # phone.close()                  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="tcp沾包问题-and-远程执行命令功能">TCP沾包问题 and 远程执行命令功能</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span><span class="lnt">94
+</span><span class="lnt">95
+</span><span class="lnt">96
+</span><span class="lnt">97
+</span><span class="lnt">98
+</span><span class="lnt">99
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">服务端：
+</span></span><span class="line"><span class="cl">import json
+</span></span><span class="line"><span class="cl">import struct
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">import subprocess
+</span></span><span class="line"><span class="cl">import string
+</span></span><span class="line"><span class="cl">import _json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_STREAM)
+</span></span><span class="line"><span class="cl">phone.bind((&#39;127.0.0.1&#39;,8899))
+</span></span><span class="line"><span class="cl">phone.listen(5)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">        conn,client_add = phone.accept()
+</span></span><span class="line"><span class="cl">        while True:
+</span></span><span class="line"><span class="cl">            try:
+</span></span><span class="line"><span class="cl">                cmd = conn.recv(1024)
+</span></span><span class="line"><span class="cl">                if len(cmd) ==0:
+</span></span><span class="line"><span class="cl">                    break
+</span></span><span class="line"><span class="cl">                obj = subprocess.Popen(
+</span></span><span class="line"><span class="cl">                    cmd.decode(&#39;utf-8&#39;),
+</span></span><span class="line"><span class="cl">                    shell = True,
+</span></span><span class="line"><span class="cl">                    stdout=subprocess.PIPE,
+</span></span><span class="line"><span class="cl">                    stderr=subprocess.PIPE,
+</span></span><span class="line"><span class="cl">                )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                stdout_res = obj.stdout.read()
+</span></span><span class="line"><span class="cl">                stderr_res = obj.stderr.read()
+</span></span><span class="line"><span class="cl">                total_size = len(stderr_res) + len(stdout_res)
+</span></span><span class="line"><span class="cl">                header_dir = {
+</span></span><span class="line"><span class="cl">                    &#34;filename&#34;:&#39;a.txt&#39;,
+</span></span><span class="line"><span class="cl">                    &#34;total_size&#34;:total_size,
+</span></span><span class="line"><span class="cl">                    &#34;md5&#34;:&#39;123123ass123&#39;
+</span></span><span class="line"><span class="cl">                }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            #服务端：
+</span></span><span class="line"><span class="cl">                #1、制作头
+</span></span><span class="line"><span class="cl">                # 将字典转化成json格式的字符串,然后在转化为bytes，然后将其打入到header_size里
+</span></span><span class="line"><span class="cl">                json_str = json.dumps(header_dir)
+</span></span><span class="line"><span class="cl">                json_str_bytes = json_str.encode(&#39;utf-8&#39;)
+</span></span><span class="line"><span class="cl">                x = struct.pack(&#39;i&#39;,len(json_str_bytes))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #2、将头的长度发送过去
+</span></span><span class="line"><span class="cl">                conn.send(x)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #3、传输头信息
+</span></span><span class="line"><span class="cl">                conn.send(json_str_bytes)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #4、最后发送真时数据
+</span></span><span class="line"><span class="cl">                conn.send(stdout_res)
+</span></span><span class="line"><span class="cl">                conn.send(stderr_res)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            #接收端
+</span></span><span class="line"><span class="cl">                #1、先收4个字，从中提取下来要收的头的长度
+</span></span><span class="line"><span class="cl">                #2、json_str_bytes = recv (头的长度)
+</span></span><span class="line"><span class="cl">                #   json_str=json_str_bytes.decode(&#39;utf-8&#39;)
+</span></span><span class="line"><span class="cl">                #   header_dic = json.loads(json_str)
+</span></span><span class="line"><span class="cl">                #   print(header_dic)
+</span></span><span class="line"><span class="cl">                #   total_size = header_dic[&#34;total_size&#34;]
+</span></span><span class="line"><span class="cl">                #3、接收真正的数据
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            except Exception:
+</span></span><span class="line"><span class="cl">                break
+</span></span><span class="line"><span class="cl">        # conn.close()
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">客户端：
+</span></span><span class="line"><span class="cl">import struct
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">import json
+</span></span><span class="line"><span class="cl">client = socket(AF_INET,SOCK_STREAM)
+</span></span><span class="line"><span class="cl">client.connect((&#39;127.0.0.1&#39;,8899))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    cmd = input(&#39;请输入命令:&#39;).strip()
+</span></span><span class="line"><span class="cl">    if len(cmd) == 0:
+</span></span><span class="line"><span class="cl">        continue
+</span></span><span class="line"><span class="cl">    client.send(cmd.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # 1、先收4个字，从中提取下来要收的头的长度
+</span></span><span class="line"><span class="cl">    x=client.recv(4)
+</span></span><span class="line"><span class="cl">    if not len(x) == 4:
+</span></span><span class="line"><span class="cl">        continue
+</span></span><span class="line"><span class="cl">    header_len = struct.unpack(&#39;i&#39;,x)[0]     #将拿到的4个集字节进行反解
+</span></span><span class="line"><span class="cl">    # 2、接收头并解析
+</span></span><span class="line"><span class="cl">    json_str_bytes = client.recv (header_len)
+</span></span><span class="line"><span class="cl">    json_str=json_str_bytes.decode(&#39;utf-8&#39;)
+</span></span><span class="line"><span class="cl">    header_dic = json.loads(json_str)
+</span></span><span class="line"><span class="cl">    print(header_dic)
+</span></span><span class="line"><span class="cl">    total_size = header_dic[&#34;total_size&#34;]
+</span></span><span class="line"><span class="cl">    # 3、接收真正的数据
+</span></span><span class="line"><span class="cl">    recv_size = 0
+</span></span><span class="line"><span class="cl">    while recv_size &lt; total_size:
+</span></span><span class="line"><span class="cl">        recv_data = client.recv(1024)
+</span></span><span class="line"><span class="cl">        recv_size += len(recv_data)
+</span></span><span class="line"><span class="cl">        print(recv_data.decode(&#39;gbk&#39;),end=&#39;&#39;)
+</span></span><span class="line"><span class="cl">    else:
+</span></span><span class="line"><span class="cl">        print()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="socketserver多并发">socketserver多并发</h4>
+<h5 id="基于tcp">基于TCP</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#服务端
+</span></span><span class="line"><span class="cl">import socketserver
+</span></span><span class="line"><span class="cl">class MyRequestHandle(socketserver.BaseRequestHandler):
+</span></span><span class="line"><span class="cl">    def handle(self):
+</span></span><span class="line"><span class="cl">        print(self.request) #如果tcp协议，self.request=&gt;conn
+</span></span><span class="line"><span class="cl">        print(self.client_address)
+</span></span><span class="line"><span class="cl">        while True:
+</span></span><span class="line"><span class="cl">            try:
+</span></span><span class="line"><span class="cl">                data = self.request.recv(1024)
+</span></span><span class="line"><span class="cl">                if len(data) == 0:
+</span></span><span class="line"><span class="cl">                    break
+</span></span><span class="line"><span class="cl">                self.request.send(data.upper())
+</span></span><span class="line"><span class="cl">            except Exception:
+</span></span><span class="line"><span class="cl">                break
+</span></span><span class="line"><span class="cl">        self.request.close
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#相当于循环的从半连接池中取出连接请求建立双向连接，拿到连接对象
+</span></span><span class="line"><span class="cl">s = socketserver.ThreadingTCPServer((&#39;127.0.0.1&#39;,8888),MyRequestHandle)
+</span></span><span class="line"><span class="cl">s.serve_forever()       #这个函数会建连接，每建立一个连接则生成一个进程来处理
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#客户端
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_STREAM)
+</span></span><span class="line"><span class="cl">phone.connect((&#39;127.0.0.1&#39;,8888))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    msg = input(&#39;请输入命令:&#39;).strip()
+</span></span><span class="line"><span class="cl">    if len(msg) == 0:
+</span></span><span class="line"><span class="cl">        continue
+</span></span><span class="line"><span class="cl">    phone.send(msg.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">    data = phone.recv(1024)
+</span></span><span class="line"><span class="cl">    print(&#39;接收到服务器发来的：&#39;,data.decode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">phone.close()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="基于udp">基于UDP</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#客户端
+</span></span><span class="line"><span class="cl">from socket import *
+</span></span><span class="line"><span class="cl">phone = socket(AF_INET,SOCK_DGRAM)
+</span></span><span class="line"><span class="cl">while True:
+</span></span><span class="line"><span class="cl">    choice = input(&#39;请输入传输内容：&#39;).strip()
+</span></span><span class="line"><span class="cl">    phone.sendto(choice.encode(&#39;utf-8&#39;),(&#39;127.0.0.1&#39;,8888))
+</span></span><span class="line"><span class="cl">    func=phone.recvfrom(1024)
+</span></span><span class="line"><span class="cl">    print(func)
+</span></span><span class="line"><span class="cl">    # phone.close()
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">#服务端
+</span></span><span class="line"><span class="cl">import socketserver
+</span></span><span class="line"><span class="cl">class MyRequestHandle(socketserver.BaseRequestHandler):
+</span></span><span class="line"><span class="cl">    def handle(self):
+</span></span><span class="line"><span class="cl">        client_data = self.request[0]
+</span></span><span class="line"><span class="cl">        server = self.request[1]
+</span></span><span class="line"><span class="cl">        client_add = self.client_address
+</span></span><span class="line"><span class="cl">        print(&#39;客户端发来的数据%s&#39;%client_data)
+</span></span><span class="line"><span class="cl">        server.sendto(client_data.upper(),client_add)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">s = socketserver.ThreadingUDPServer((&#39;127.0.0.1&#39;,8888),MyRequestHandle)
+</span></span><span class="line"><span class="cl">s.serve_forever()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#相当于：只负责循环的收,收到后交给小弟去处理
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-10-02
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday7%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day7,并发编程</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+            <span class="next-text nav-default">python,day5,面向对象</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

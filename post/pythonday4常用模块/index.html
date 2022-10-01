@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day4,常用模块 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="python常用模块介绍。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day4,常用模块" />
+<meta property="og:description" content="python常用模块介绍。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-25T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-09-25T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day4,常用模块">
+<meta itemprop="description" content="python常用模块介绍。"><meta itemprop="datePublished" content="2021-09-25T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-09-25T11:06:25+08:00" />
+<meta itemprop="wordCount" content="6977">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day4,常用模块"/>
+<meta name="twitter:description" content="python常用模块介绍。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day4,常用模块</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-25 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 6977 words </span>
+          <span class="more-meta"> 14 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python常用模块介绍。</p>
+<h4 id="1time模块">1、time模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#一、time
+</span></span><span class="line"><span class="cl">        #时间分为三种格式：
+</span></span><span class="line"><span class="cl">            #1、时间戳：从1970年等到现在经历过的秒数
+</span></span><span class="line"><span class="cl">                #用于时间间隔的计算
+</span></span><span class="line"><span class="cl">                import time
+</span></span><span class="line"><span class="cl">                print(time.time())
+</span></span><span class="line"><span class="cl">            #2、格式化时间：2020-03-30 11：11：11
+</span></span><span class="line"><span class="cl">                #用于展示时间
+</span></span><span class="line"><span class="cl">                print(time.strftime(&#39;%Y-%m-%d %H:%M:%S &#39;))
+</span></span><span class="line"><span class="cl">            #3、结构化的时间
+</span></span><span class="line"><span class="cl">                #用于获取时间的某一部分
+</span></span><span class="line"><span class="cl">                res = time.localtime()
+</span></span><span class="line"><span class="cl">                print(res)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#二、datetime
+</span></span><span class="line"><span class="cl">        #求当前时间与三天后的时间
+</span></span><span class="line"><span class="cl">            import datetime
+</span></span><span class="line"><span class="cl">            print(datetime.datetime.now())
+</span></span><span class="line"><span class="cl">            print(datetime.datetime.now()) + datetime.timedelta(days=3)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#三、时间模块需要掌握的操作
+</span></span><span class="line"><span class="cl">        #1、时间格式的转换
+</span></span><span class="line"><span class="cl">            #结构化(struct_time) -&gt; 时间戳(timestamp)
+</span></span><span class="line"><span class="cl">                s_time = time.localtime()
+</span></span><span class="line"><span class="cl">                print(time.mktime(s_time))
+</span></span><span class="line"><span class="cl">            #时间戳(timestamp) -&gt; 结构化(struct_time)
+</span></span><span class="line"><span class="cl">                tp_time = time.time()
+</span></span><span class="line"><span class="cl">                print(time.localtime(tp_time))
+</span></span><span class="line"><span class="cl">            #结构化(struct_time) -&gt; 格式化(format_string)
+</span></span><span class="line"><span class="cl">                s_time=time.localtime()
+</span></span><span class="line"><span class="cl">                print(time.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;,s_time))
+</span></span><span class="line"><span class="cl">            #格式化(format_string) -&gt; 结构化(struct_time)
+</span></span><span class="line"><span class="cl">                print(time.strptime(&#39;1988-03-03 11:11:11&#39;,&#39;%Y-%m-%d %H:%M:%S&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            #格式化(format_string)-&gt; 结构化(format_string) -&gt; 时间戳(timestamp)  重点
+</span></span><span class="line"><span class="cl">                struct_time = time.strptime(&#39;1988-03-03 11:11:11&#39;,&#39;%Y-%m-%d %H:%M:%S&#39;)
+</span></span><span class="line"><span class="cl">                timestamp = time.mktime(struct_time)+7*86400
+</span></span><span class="line"><span class="cl">                print(timestamp)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            #格式化(format_string) &lt;- 结构化(format_string) &lt;- 时间戳(timestamp)  重点
+</span></span><span class="line"><span class="cl">                time.strftime(&#39;%Y-%m-%d %X&#39;,time.localtime(timestamp))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#四、零碎知识点
+</span></span><span class="line"><span class="cl">        time.sleep(3) #控制代码执行时间
+</span></span><span class="line"><span class="cl">        print(time.asctime()) #直接显示当前格式化时间
+</span></span><span class="line"><span class="cl">        print(datetime.datetime.now())     #中国标准时间
+</span></span><span class="line"><span class="cl">        print(datetime.datetime.utcnow())  #世界标准时间
+</span></span><span class="line"><span class="cl">        print(datetime.datetime.fromordinal(333))  #将时间戳转化为字符串格式
+</span></span><span class="line"><span class="cl">        
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2random模块">2、random模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import random
+</span></span><span class="line"><span class="cl"># print(random.random())                      #(0,1)  ---float  大于0且小于1之间的小数
+</span></span><span class="line"><span class="cl"># print(random.randint(1,3))                  #[1,3]   大于等于1且小于等于3之间的整数
+</span></span><span class="line"><span class="cl"># print(random.randrange([1,3]))              #[1,3) 大于等于1且小于3之间的整数
+</span></span><span class="line"><span class="cl"># print(random.choice([1,&#39;23&#39;,[4,5]]))        #1或23或者[4，5]
+</span></span><span class="line"><span class="cl"># print(random.sample([1,&#39;23&#39;,[4,5],2]))      #列表元素任意2个组合
+</span></span><span class="line"><span class="cl"># print(random.uniform(1,3))                  #大于1小于3的小鼠，如1.9895656664646
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># item = [1,2,3,4,5,6]
+</span></span><span class="line"><span class="cl"># random.shuffle(item)                        #打乱item的顺序，相当于&#39;洗牌&#39;
+</span></span><span class="line"><span class="cl"># print(item)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#应用：随机验证码
+</span></span><span class="line"><span class="cl">def make_code(size=4):                 #默认为4位验证码
+</span></span><span class="line"><span class="cl">    res = &#39;&#39;                           #定义res为字符串
+</span></span><span class="line"><span class="cl">    for i in range(size):              #默认循环4次
+</span></span><span class="line"><span class="cl">        s1=chr(random.randint(65,90))  #从26个大写字母随机取出一个字母
+</span></span><span class="line"><span class="cl">        s2=str(random.randint(0,9))    #从10个数字中随机取出一个数字
+</span></span><span class="line"><span class="cl">        res+=random.choice([s1,s2])    #字符串相加得到验证码
+</span></span><span class="line"><span class="cl">    return res
+</span></span><span class="line"><span class="cl">print(make_code(1))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3os模块">3、OS模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import os
+</span></span><span class="line"><span class="cl"># os.getcwd() 获取当前工作目录，即当前python脚本工作的目录路径
+</span></span><span class="line"><span class="cl"># os.chdir(&#34;dirname&#34;)  改变当前脚本工作目录；相当于shell下cd
+</span></span><span class="line"><span class="cl"># os.curdir  返回当前目录: (&#39;.&#39;)
+</span></span><span class="line"><span class="cl"># os.pardir  获取当前目录的父目录字符串名：(&#39;..&#39;)
+</span></span><span class="line"><span class="cl"># os.makedirs(&#39;dirname1/dirname2&#39;)    可生成多层递归目录
+</span></span><span class="line"><span class="cl"># os.removedirs(&#39;dirname1&#39;)    若目录为空，则删除，并递归到上一级目录，如若也为空，则删除，依此类推
+</span></span><span class="line"><span class="cl"># os.mkdir(&#39;dirname&#39;)    生成单级目录；相当于shell中mkdir dirname
+</span></span><span class="line"><span class="cl"># os.rmdir(&#39;dirname&#39;)    删除单级空目录，若目录不为空则无法删除，报错；相当于shell中rmdir dirname
+</span></span><span class="line"><span class="cl"># os.listdir(&#39;dirname&#39;)    列出指定目录下的所有文件和子目录，包括隐藏文件，并以列表方式打印
+</span></span><span class="line"><span class="cl">os.remove()  删除一个文件
+</span></span><span class="line"><span class="cl">os.rename(&#34;oldname&#34;,&#34;newname&#34;)  重命名文件/目录
+</span></span><span class="line"><span class="cl"># os.stat(&#39;path/filename&#39;)  获取文件/目录信息
+</span></span><span class="line"><span class="cl"># os.sep    输出操作系统特定的路径分隔符，win下为&#34;\\&#34;,Linux下为&#34;/&#34;
+</span></span><span class="line"><span class="cl"># os.linesep    输出当前平台使用的行终止符，win下为&#34;\t\n&#34;,Linux下为&#34;\n&#34;
+</span></span><span class="line"><span class="cl"># os.pathsep    输出用于分割文件路径的字符串 win下为;,Linux下为:
+</span></span><span class="line"><span class="cl"># os.name    输出字符串指示当前使用平台。win-&gt;&#39;nt&#39;; Linux-&gt;&#39;posix&#39;
+</span></span><span class="line"><span class="cl">os.system(&#34;bash command&#34;)  运行shell命令，直接显示
+</span></span><span class="line"><span class="cl">os.environ[&#39;aaa&#39;]=&#39;11&#39;  获取系统环境变量,规定：key与value必须都为字符串
+</span></span><span class="line"><span class="cl">os.path.abspath(path)  返回path规范化的绝对路径
+</span></span><span class="line"><span class="cl">os.path.split(path)  将path分割成目录和文件名二元组返回
+</span></span><span class="line"><span class="cl">os.path.dirname(path)  返回path的目录。其实就是os.path.split(path)的第一个元素
+</span></span><span class="line"><span class="cl">os.path.basename(path)  返回path最后的文件名。如何path以／或\结尾，那么就会返回空值。即os.path.split(path)的第二个元素
+</span></span><span class="line"><span class="cl">os.path.exists(path)  如果path存在，返回True；如果path不存在，返回False
+</span></span><span class="line"><span class="cl">os.path.isabs(path)  如果path是绝对路径，返回True
+</span></span><span class="line"><span class="cl">os.path.isfile(path)  如果path是一个存在的文件，返回True。否则返回False
+</span></span><span class="line"><span class="cl">os.path.isdir(path)  如果path是一个存在的目录，则返回True。否则返回False
+</span></span><span class="line"><span class="cl">os.path.join(path1[, path2[, ...]])  将多个路径组合后返回，第一个绝对路径之前的参数将被忽略
+</span></span><span class="line"><span class="cl">os.path.getatime(path)  返回path所指向的文件或者目录的最后存取时间
+</span></span><span class="line"><span class="cl">os.path.getmtime(path)  返回path所指向的文件或者目录的最后修改时间
+</span></span><span class="line"><span class="cl">os.path.getsize(path) 返回path的大小
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4sys模块">4、sys模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import sys
+</span></span><span class="line"><span class="cl"># 1 sys.argv           命令行参数List，第一个元素是程序本身路径
+</span></span><span class="line"><span class="cl"># 2 sys.exit(n)        退出程序，正常退出时exit(0)
+</span></span><span class="line"><span class="cl"># 3 sys.version        获取Python解释程序的版本信息
+</span></span><span class="line"><span class="cl"># 4 sys.maxint         最大的Int值
+</span></span><span class="line"><span class="cl"># 5 sys.path           返回模块的搜索路径，初始化时使用PYTHONPATH环境变量的值
+</span></span><span class="line"><span class="cl"># 6 sys.platform       返回操作系统平台名称
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#copy文件编写
+</span></span><span class="line"><span class="cl"># src_file = sys.argv[1]
+</span></span><span class="line"><span class="cl"># dst_file = sys.argv[2]
+</span></span><span class="line"><span class="cl"># with open(r&#39;%s&#39;%src_file,mode=&#39;rb&#39;)as read_f,\
+</span></span><span class="line"><span class="cl">#     open(r&#39;%s&#39;%dst_file,mode=&#39;wb&#39;)as write_f:
+</span></span><span class="line"><span class="cl">#     for line in read_f:
+</span></span><span class="line"><span class="cl">#         write_f.write(line)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#打印进度条
+</span></span><span class="line"><span class="cl">import time
+</span></span><span class="line"><span class="cl"># def progress(percemt):
+</span></span><span class="line"><span class="cl">#     res = &#39;&#39;
+</span></span><span class="line"><span class="cl">#     for i in range(50):
+</span></span><span class="line"><span class="cl">#         res+=&#39;#&#39;
+</span></span><span class="line"><span class="cl">#         time.sleep(0.5)
+</span></span><span class="line"><span class="cl">#         print(&#39;\r[%-50s]&#39;%res,end=&#39;&#39;)
+</span></span><span class="line"><span class="cl">def progress(percent):
+</span></span><span class="line"><span class="cl">    if percent &gt;1
+</span></span><span class="line"><span class="cl">        percent=1
+</span></span><span class="line"><span class="cl">        res = int(50 * percent) * &#39;#&#39;
+</span></span><span class="line"><span class="cl">        print(&#39;\r[%-50s] %d%%&#39; % (res, 100 * percent), end=&#39;&#39;)
+</span></span><span class="line"><span class="cl">    a1=0
+</span></span><span class="line"><span class="cl">    a2=100000
+</span></span><span class="line"><span class="cl">    while a1 &lt; a2:
+</span></span><span class="line"><span class="cl">        time.sleep(0.01)
+</span></span><span class="line"><span class="cl">        a1+=1024
+</span></span><span class="line"><span class="cl">        percent = a1 / a2
+</span></span><span class="line"><span class="cl">        res=int(50*percent)*&#39;#&#39;
+</span></span><span class="line"><span class="cl">        print(&#39;\r[%-50s] %d%%&#39;%(res,100*percent),end=&#39;&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5shutil模块">5、shutil模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#高级的 文件、文件夹、压缩包 处理模块
+</span></span><span class="line"><span class="cl">    #1、 shutil.copyfileobj(fsrc, fdst[, length])
+</span></span><span class="line"><span class="cl">        # 将文件内容拷贝到另一个文件中
+</span></span><span class="line"><span class="cl">        import shutil
+</span></span><span class="line"><span class="cl">        shutil.copyfileobj(open(&#39;old.xml&#39;,&#39;r&#39;), open(&#39;new.xml&#39;, &#39;w&#39;))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #2、shutil.copyfile(src, dst)
+</span></span><span class="line"><span class="cl">        # 拷贝文件
+</span></span><span class="line"><span class="cl">        shutil.copyfile(&#39;f1.log&#39;, &#39;f2.log&#39;) #目标文件无需存在
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #3、shutil.copymode(src, dst)
+</span></span><span class="line"><span class="cl">        #仅拷贝权限。内容、组、用户均不变
+</span></span><span class="line"><span class="cl">        shutil.copymode(&#39;f1.log&#39;, &#39;f2.log&#39;) #目标文件必须存在
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #4、shutil.copystat(src, dst)
+</span></span><span class="line"><span class="cl">        #仅拷贝状态的信息，包括：mode bits, atime, mtime, flags
+</span></span><span class="line"><span class="cl">        shutil.copystat(&#39;f1.log&#39;, &#39;f2.log&#39;) #目标文件必须存在
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #5、shutil.copy(src, dst)
+</span></span><span class="line"><span class="cl">        #拷贝文件和权限
+</span></span><span class="line"><span class="cl">        shutil.copy(&#39;f1.log&#39;, &#39;f2.log&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #6、shutil.copy2(src, dst)
+</span></span><span class="line"><span class="cl">        #拷贝文件和状态信息
+</span></span><span class="line"><span class="cl">        shutil.copy2(&#39;f1.log&#39;, &#39;f2.log&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #7、shutil.ignore_patterns(*patterns)
+</span></span><span class="line"><span class="cl">        #shutil.copytree(src, dst, symlinks=False, ignore=None)
+</span></span><span class="line"><span class="cl">        #递归的去拷贝文件夹
+</span></span><span class="line"><span class="cl">        shutil.copytree(&#39;folder1&#39;, &#39;folder2&#39;, ignore=shutil.ignore_patterns(&#39;*.pyc&#39;, &#39;tmp*&#39;)) #目标目录不能存在，注意对folder2目录父级目录要有可写权限，ignore的意思是排除
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #8、shutil.rmtree(path[, ignore_errors[, onerror]])
+</span></span><span class="line"><span class="cl">        #递归的去删除文件
+</span></span><span class="line"><span class="cl">        shutil.rmtree(&#39;folder1&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    #9、shutil.move(src, dst)
+</span></span><span class="line"><span class="cl">        #递归的去移动文件，它类似mv命令，其实就是重命名
+</span></span><span class="line"><span class="cl">            shutil.move(&#39;folder1&#39;, &#39;folder3&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="6jsonpickle模块">6、json&amp;pickle模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#json&amp;pickle模块
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">    1、什么是序列化？
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            3、内存中的数据类型 ---》序列化---》特定的格式（json格式或者pickle格式）
+</span></span><span class="line"><span class="cl">            4、内存中的数据类型 《---反序列化《---特定的格式（json格式或者pickle格式）
+</span></span><span class="line"><span class="cl">                土办法：
+</span></span><span class="line"><span class="cl">                    {‘aa’:11}--&gt;序列化str（{‘aa’:11}）---&gt;&#39;{&#39;aa&#39;:11}&#39;
+</span></span><span class="line"><span class="cl">                    {‘aa’:11}&lt;--反序列化str（{‘aa’:11}）&lt;---&#39;{&#39;aa&#39;:11}&#39;
+</span></span><span class="line"><span class="cl">    2、为什么要有序列化
+</span></span><span class="line"><span class="cl">            1、序列化得到的结果 =》特定的格式的内容有两种用途
+</span></span><span class="line"><span class="cl">                1、可用于存储 =》用于存档
+</span></span><span class="line"><span class="cl">                2、传输给其他平台使用 =》跨平台数据交互
+</span></span><span class="line"><span class="cl">            2、针对用途1的特定格式：可是一种专用的格式 =》pickle只有python可以识别
+</span></span><span class="line"><span class="cl">                针对用途2的特定格式：应该是一种通用的，能够被所有语言识别的格式 =》json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    3、怎么用
+</span></span><span class="line"><span class="cl">            import json
+</span></span><span class="line"><span class="cl">            json模块
+</span></span><span class="line"><span class="cl">                #序列化的结果写入文件的复杂方法
+</span></span><span class="line"><span class="cl">                json_res=json.dumps([True,False,&#39;aaa&#39;,1])
+</span></span><span class="line"><span class="cl">                # print(json_res,type(json_res))  #[true, false, &#34;aaa&#34;, 1]
+</span></span><span class="line"><span class="cl">                with open(&#39;test.json&#39;,mode=&#39;wt&#39;,encoding=&#39;utf-8&#39;)as f:
+</span></span><span class="line"><span class="cl">                    f.write(json_res)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #将序列化的结果写入文件的简单方法
+</span></span><span class="line"><span class="cl">                with open(&#39;test.json&#39;,mode=&#39;wt&#39;,encoding=&#39;utf-8&#39;)as f:
+</span></span><span class="line"><span class="cl">                    json.dumps([1,&#39;aaa&#39;,True,False],f)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #从文件读取json格式的字符串进行反序列化操作的复杂方法
+</span></span><span class="line"><span class="cl">                with open(&#39;test.json&#39;,mode=&#39;rt&#39;,encoding=&#39;utf-8&#39;)as f:
+</span></span><span class="line"><span class="cl">                    json_res=f.read()
+</span></span><span class="line"><span class="cl">                    l=json.loads(json_res)
+</span></span><span class="line"><span class="cl">                    print(l,type(l))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #从文件读取json格式的字符串进行反序列化操作的简单方法
+</span></span><span class="line"><span class="cl">                with open(&#39;test.json&#39;,mode=&#39;rt&#39;,encoding=&#39;utf-8&#39;)as f:
+</span></span><span class="line"><span class="cl">                    l=json.loads(f)
+</span></span><span class="line"><span class="cl">                    print(l,type(l))
+</span></span><span class="line"><span class="cl">            import pickle
+</span></span><span class="line"><span class="cl">            pickle模块
+</span></span><span class="line"><span class="cl">                #序列化
+</span></span><span class="line"><span class="cl">                    res = pickle.dumps({1,2,3,4,5})
+</span></span><span class="line"><span class="cl">                    print(res,type(res))
+</span></span><span class="line"><span class="cl">                #反序列化
+</span></span><span class="line"><span class="cl">                    s = pickle.loads(res)
+</span></span><span class="line"><span class="cl">                    print(s,type(s))
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="7shelve模块了解">7、shelve模块（了解）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">shelve模块比pickle模块简单，只有一个open函数，返回类似字典的对象，可读可写;key必须为字符串，而值可以是python所支持的数据类型
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import shelve
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">f=shelve.open(r&#39;sheve.txt&#39;)
+</span></span><span class="line"><span class="cl"># f[&#39;stu1_info&#39;]={&#39;name&#39;:&#39;egon&#39;,&#39;age&#39;:18,&#39;hobby&#39;:[&#39;piao&#39;,&#39;smoking&#39;,&#39;drinking&#39;]}
+</span></span><span class="line"><span class="cl"># f[&#39;stu2_info&#39;]={&#39;name&#39;:&#39;gangdan&#39;,&#39;age&#39;:53}
+</span></span><span class="line"><span class="cl"># f[&#39;school_info&#39;]={&#39;website&#39;:&#39;http://www.pypy.org&#39;,&#39;city&#39;:&#39;beijing&#39;}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(f[&#39;stu1_info&#39;][&#39;hobby&#39;])
+</span></span><span class="line"><span class="cl">f.close()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="8xml模块了解">8、xml模块（了解）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">xml是实现不同语言或程序之间进行数据交换的协议，跟json差不多，但json使用起来更简单，不过，古时候，在json还没诞生的黑暗年代，大家只能选择用xml呀，至今很多传统公司如金融行业的很多系统的接口还主要是xml。
+</span></span><span class="line"><span class="cl">&lt;?xml version=&#34;1.0&#34;?&gt;
+</span></span><span class="line"><span class="cl">&lt;data&gt;
+</span></span><span class="line"><span class="cl">    &lt;country name=&#34;Liechtenstein&#34;&gt;
+</span></span><span class="line"><span class="cl">        &lt;rank updated=&#34;yes&#34;&gt;2&lt;/rank&gt;
+</span></span><span class="line"><span class="cl">        &lt;year&gt;2008&lt;/year&gt;
+</span></span><span class="line"><span class="cl">        &lt;gdppc&gt;141100&lt;/gdppc&gt;
+</span></span><span class="line"><span class="cl">        &lt;neighbor name=&#34;Austria&#34; direction=&#34;E&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;neighbor name=&#34;Switzerland&#34; direction=&#34;W&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/country&gt;
+</span></span><span class="line"><span class="cl">    &lt;country name=&#34;Singapore&#34;&gt;
+</span></span><span class="line"><span class="cl">        &lt;rank updated=&#34;yes&#34;&gt;5&lt;/rank&gt;
+</span></span><span class="line"><span class="cl">        &lt;year&gt;2011&lt;/year&gt;
+</span></span><span class="line"><span class="cl">        &lt;gdppc&gt;59900&lt;/gdppc&gt;
+</span></span><span class="line"><span class="cl">        &lt;neighbor name=&#34;Malaysia&#34; direction=&#34;N&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/country&gt;
+</span></span><span class="line"><span class="cl">    &lt;country name=&#34;Panama&#34;&gt;
+</span></span><span class="line"><span class="cl">        &lt;rank updated=&#34;yes&#34;&gt;69&lt;/rank&gt;
+</span></span><span class="line"><span class="cl">        &lt;year&gt;2011&lt;/year&gt;
+</span></span><span class="line"><span class="cl">        &lt;gdppc&gt;13600&lt;/gdppc&gt;
+</span></span><span class="line"><span class="cl">        &lt;neighbor name=&#34;Costa Rica&#34; direction=&#34;W&#34;/&gt;
+</span></span><span class="line"><span class="cl">        &lt;neighbor name=&#34;Colombia&#34; direction=&#34;E&#34;/&gt;
+</span></span><span class="line"><span class="cl">    &lt;/country&gt;
+</span></span><span class="line"><span class="cl">&lt;/data&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">xml数据
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="9configparser模块">9、configparser模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">配置文件
+</span></span><span class="line"><span class="cl">    # 注释1
+</span></span><span class="line"><span class="cl">    ; 注释2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    [section1]
+</span></span><span class="line"><span class="cl">    k1 = v1
+</span></span><span class="line"><span class="cl">    k2:v2
+</span></span><span class="line"><span class="cl">    user=egon
+</span></span><span class="line"><span class="cl">    age=18
+</span></span><span class="line"><span class="cl">    is_admin=true
+</span></span><span class="line"><span class="cl">    salary=31
+</span></span><span class="line"><span class="cl">    [section2]
+</span></span><span class="line"><span class="cl">    k1 = v1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">使用方法：
+</span></span><span class="line"><span class="cl">        import configparser
+</span></span><span class="line"><span class="cl">        config=configparser.ConfigParser()
+</span></span><span class="line"><span class="cl">        config.read(&#39;file.ini&#39;)
+</span></span><span class="line"><span class="cl">        #1、获取sections
+</span></span><span class="line"><span class="cl">            print(config.sections())
+</span></span><span class="line"><span class="cl">        #2、获取某一section下的所有options
+</span></span><span class="line"><span class="cl">            print(config.options(&#39;section1&#39;))
+</span></span><span class="line"><span class="cl">        #3、获取items
+</span></span><span class="line"><span class="cl">            print(config.items(&#39;section1&#39;))
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="10hashlib-模块">10、hashlib 模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">1、什么是hash
+</span></span><span class="line"><span class="cl">        hash是一类算法，该算法接收传入的内容，经过运算得到一串hash值
+</span></span><span class="line"><span class="cl">        hash值的特点：
+</span></span><span class="line"><span class="cl">                1、传入的内容一样，得到的hash值必然一样 ==》明问
+</span></span><span class="line"><span class="cl">                2、不能由hash值反解成内容
+</span></span><span class="line"><span class="cl">                3、只要使用的hash算法不变，无论校验内容多大，得到的hash值的长度是固定的
+</span></span><span class="line"><span class="cl">2、hash的用途：
+</span></span><span class="line"><span class="cl">        1、密文传输与验证
+</span></span><span class="line"><span class="cl">        2、文件完整性校验
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、用途
+</span></span><span class="line"><span class="cl">                import hashlib
+</span></span><span class="line"><span class="cl">                m=hashlib.md5()
+</span></span><span class="line"><span class="cl">                m.update(&#39;hello&#39;.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">                m.update(&#39;world&#39;.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">                res = m.hexdigest()  #&#39;helloworld&#39;
+</span></span><span class="line"><span class="cl">                print(res)
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        1、模拟撞库
+</span></span><span class="line"><span class="cl">                cryptograph = &#39;asd78979zcx654qa65d4sa1c65f&#39;
+</span></span><span class="line"><span class="cl">                passwd = [
+</span></span><span class="line"><span class="cl">                    &#39;asd1&#39;,
+</span></span><span class="line"><span class="cl">                    &#39;qwe2&#39;,
+</span></span><span class="line"><span class="cl">                    &#39;ads54&#39;
+</span></span><span class="line"><span class="cl">                ]
+</span></span><span class="line"><span class="cl">                import  hashlib
+</span></span><span class="line"><span class="cl">                dic = {}
+</span></span><span class="line"><span class="cl">                for p in passwd:
+</span></span><span class="line"><span class="cl">                    res = hashlib.md5(p.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">                    dic[p]=res.hexdigest()
+</span></span><span class="line"><span class="cl">                print(dic)
+</span></span><span class="line"><span class="cl">                for k,v in dic.items():
+</span></span><span class="line"><span class="cl">                    if v == cryptograph:
+</span></span><span class="line"><span class="cl">                        print(&#39;撞库成功，铭文密码是&#39;%k)
+</span></span><span class="line"><span class="cl">                        break
+</span></span><span class="line"><span class="cl">        2、提升撞库的成本 =》密码加盐
+</span></span><span class="line"><span class="cl">                import  hashlib
+</span></span><span class="line"><span class="cl">                m = hashlib.md5()
+</span></span><span class="line"><span class="cl">                m.update(&#39;加&#39;.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">                m.update(&#39;password&#39;.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">                m.update(&#39;盐&#39;.encode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">                print(m.hexdigest())     
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="11suprocess模块">11、suprocess模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import  subprocess
+</span></span><span class="line"><span class="cl">obj=subprocess.Popen(&#39;ls /&#39;,shell=True,
+</span></span><span class="line"><span class="cl">                 stdout=subprocess.PIPE,
+</span></span><span class="line"><span class="cl">                 stderr=subprocess.PIPE,
+</span></span><span class="line"><span class="cl">                 )
+</span></span><span class="line"><span class="cl">res = obj.stdout.read()   #正确输出
+</span></span><span class="line"><span class="cl">print(res.decode(&#39;utf-8&#39;))
+</span></span><span class="line"><span class="cl">err_res=obj.stderr.read()   #错误输出
+</span></span><span class="line"><span class="cl">print(err_res.decode(&#39;utf-8&#39;))
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="12logging模块">12、logging模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import logging
+</span></span><span class="line"><span class="cl">日志级别与配置：
+</span></span><span class="line"><span class="cl">    # 一：日志配置
+</span></span><span class="line"><span class="cl">    logging.basicConfig(
+</span></span><span class="line"><span class="cl">        # 1、日志输出位置：1、终端 2、文件
+</span></span><span class="line"><span class="cl">        # filename=&#39;access.log&#39;, # 不指定，默认打印到终端
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 2、日志格式
+</span></span><span class="line"><span class="cl">        format=&#39;%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s&#39;,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 3、时间格式
+</span></span><span class="line"><span class="cl">        datefmt=&#39;%Y-%m-%d %H:%M:%S %p&#39;,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 4、日志级别
+</span></span><span class="line"><span class="cl">        # critical =&gt; 50
+</span></span><span class="line"><span class="cl">        # error =&gt; 40
+</span></span><span class="line"><span class="cl">        # warning =&gt; 30
+</span></span><span class="line"><span class="cl">        # info =&gt; 20
+</span></span><span class="line"><span class="cl">        # debug =&gt; 10
+</span></span><span class="line"><span class="cl">        level=30,
+</span></span><span class="line"><span class="cl">    )
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # 二：输出日志
+</span></span><span class="line"><span class="cl">    logging.debug(&#39;调试debug&#39;)
+</span></span><span class="line"><span class="cl">    logging.info(&#39;消息info&#39;)
+</span></span><span class="line"><span class="cl">    logging.warning(&#39;警告warn&#39;)
+</span></span><span class="line"><span class="cl">    logging.error(&#39;错误error&#39;)
+</span></span><span class="line"><span class="cl">    logging.critical(&#39;严重critical&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    &#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">    # 注意下面的root是默认的日志名字
+</span></span><span class="line"><span class="cl">    WARNING:root:警告warn
+</span></span><span class="line"><span class="cl">    ERROR:root:错误error
+</span></span><span class="line"><span class="cl">    CRITICAL:root:严重critical
+</span></span><span class="line"><span class="cl">    &#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">日志配置字典
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">logging配置
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import os
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 1、定义三种日志输出格式，日志中可能用到的格式化串如下
+</span></span><span class="line"><span class="cl"># %(name)s Logger的名字
+</span></span><span class="line"><span class="cl"># %(levelno)s 数字形式的日志级别
+</span></span><span class="line"><span class="cl"># %(levelname)s 文本形式的日志级别
+</span></span><span class="line"><span class="cl"># %(pathname)s 调用日志输出函数的模块的完整路径名，可能没有
+</span></span><span class="line"><span class="cl"># %(filename)s 调用日志输出函数的模块的文件名
+</span></span><span class="line"><span class="cl"># %(module)s 调用日志输出函数的模块名
+</span></span><span class="line"><span class="cl"># %(funcName)s 调用日志输出函数的函数名
+</span></span><span class="line"><span class="cl"># %(lineno)d 调用日志输出函数的语句所在的代码行
+</span></span><span class="line"><span class="cl"># %(created)f 当前时间，用UNIX标准的表示时间的浮 点数表示
+</span></span><span class="line"><span class="cl"># %(relativeCreated)d 输出日志信息时的，自Logger创建以 来的毫秒数
+</span></span><span class="line"><span class="cl"># %(asctime)s 字符串形式的当前时间。默认格式是 “2003-07-08 16:49:45,896”。逗号后面的是毫秒
+</span></span><span class="line"><span class="cl"># %(thread)d 线程ID。可能没有
+</span></span><span class="line"><span class="cl"># %(threadName)s 线程名。可能没有
+</span></span><span class="line"><span class="cl"># %(process)d 进程ID。可能没有
+</span></span><span class="line"><span class="cl"># %(message)s用户输出的消息
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 2、强调：其中的%(name)s为getlogger时指定的名字
+</span></span><span class="line"><span class="cl">standard_format = &#39;[%(asctime)s][%(threadName)s:%(thread)d][task_id:%(name)s][%(filename)s:%(lineno)d]&#39; \
+</span></span><span class="line"><span class="cl">                  &#39;[%(levelname)s][%(message)s]&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">simple_format = &#39;[%(levelname)s][%(asctime)s][%(filename)s:%(lineno)d]%(message)s&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">test_format = &#39;%(asctime)s] %(message)s&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 3、日志配置字典
+</span></span><span class="line"><span class="cl">LOGGING_DIC = {
+</span></span><span class="line"><span class="cl">    &#39;version&#39;: 1,
+</span></span><span class="line"><span class="cl">    &#39;disable_existing_loggers&#39;: False,
+</span></span><span class="line"><span class="cl">    &#39;formatters&#39;: {
+</span></span><span class="line"><span class="cl">        &#39;standard&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;format&#39;: standard_format
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        &#39;simple&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;format&#39;: simple_format
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        &#39;test&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;format&#39;: test_format
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#39;filters&#39;: {},
+</span></span><span class="line"><span class="cl">    &#39;handlers&#39;: {
+</span></span><span class="line"><span class="cl">        #打印到终端的日志
+</span></span><span class="line"><span class="cl">        &#39;console&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;level&#39;: &#39;DEBUG&#39;,
+</span></span><span class="line"><span class="cl">            &#39;class&#39;: &#39;logging.StreamHandler&#39;,  # 打印到屏幕
+</span></span><span class="line"><span class="cl">            &#39;formatter&#39;: &#39;simple&#39;
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        #打印到文件的日志,收集info及以上的日志
+</span></span><span class="line"><span class="cl">        &#39;default&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;level&#39;: &#39;DEBUG&#39;,
+</span></span><span class="line"><span class="cl">            &#39;class&#39;: &#39;logging.handlers.RotatingFileHandler&#39;,  # 保存到文件,日志轮转
+</span></span><span class="line"><span class="cl">            &#39;formatter&#39;: &#39;standard&#39;,
+</span></span><span class="line"><span class="cl">            # 可以定制日志文件路径
+</span></span><span class="line"><span class="cl">            # BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # log文件的目录
+</span></span><span class="line"><span class="cl">            # LOG_PATH = os.path.join(BASE_DIR,&#39;a1.log&#39;)
+</span></span><span class="line"><span class="cl">            &#39;filename&#39;: &#39;a1.log&#39;,  # 日志文件
+</span></span><span class="line"><span class="cl">            &#39;maxBytes&#39;: 1024*1024*5,  # 日志大小 5M
+</span></span><span class="line"><span class="cl">            &#39;backupCount&#39;: 5,
+</span></span><span class="line"><span class="cl">            &#39;encoding&#39;: &#39;utf-8&#39;,  # 日志文件的编码，再也不用担心中文log乱码了
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        &#39;other&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;level&#39;: &#39;DEBUG&#39;,
+</span></span><span class="line"><span class="cl">            &#39;class&#39;: &#39;logging.FileHandler&#39;,  # 保存到文件
+</span></span><span class="line"><span class="cl">            &#39;formatter&#39;: &#39;test&#39;,
+</span></span><span class="line"><span class="cl">            &#39;filename&#39;: &#39;a2.log&#39;,
+</span></span><span class="line"><span class="cl">            &#39;encoding&#39;: &#39;utf-8&#39;,
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#39;loggers&#39;: {
+</span></span><span class="line"><span class="cl">        #logging.getLogger(__name__)拿到的logger配置
+</span></span><span class="line"><span class="cl">        &#39;&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;handlers&#39;: [&#39;default&#39;, &#39;console&#39;],  # 这里把上面定义的两个handler都加上，即log数据既写入文件又打印到屏幕
+</span></span><span class="line"><span class="cl">            &#39;level&#39;: &#39;DEBUG&#39;, # loggers(第一层日志级别关限制)---&gt;handlers(第二层日志级别关卡限制)
+</span></span><span class="line"><span class="cl">            &#39;propagate&#39;: False,  # 默认为True，向上（更高level的logger）传递，通常设置为False即可，否则会一份日志向上层层传递
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        &#39;专门的采集&#39;: {
+</span></span><span class="line"><span class="cl">            &#39;handlers&#39;: [&#39;other&#39;,],
+</span></span><span class="line"><span class="cl">            &#39;level&#39;: &#39;DEBUG&#39;,
+</span></span><span class="line"><span class="cl">            &#39;propagate&#39;: False,
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">日志配置字典LOGGING_DIC
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">使用：
+</span></span><span class="line"><span class="cl">import settings
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># !!!强调!!!
+</span></span><span class="line"><span class="cl"># 1、logging是一个包，需要使用其下的config、getLogger，可以如下导入
+</span></span><span class="line"><span class="cl"># from logging import config
+</span></span><span class="line"><span class="cl"># from logging import getLogger
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 2、也可以使用如下导入
+</span></span><span class="line"><span class="cl">import logging.config # 这样连同logging.getLogger都一起导入了,然后使用前缀logging.config.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 3、加载配置
+</span></span><span class="line"><span class="cl">logging.config.dictConfig(settings.LOGGING_DIC)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 4、输出日志
+</span></span><span class="line"><span class="cl">logger1=logging.getLogger(&#39;用户交易&#39;)
+</span></span><span class="line"><span class="cl">logger1.info(&#39;egon儿子alex转账3亿冥币&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># logger2=logging.getLogger(&#39;专门的采集&#39;) # 名字传入的必须是&#39;专门的采集&#39;，与LOGGING_DIC中的配置唯一对应
+</span></span><span class="line"><span class="cl"># logger2.debug(&#39;专门采集的日志&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">common.py
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="13re模块">13、re模块</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span><span class="lnt">90
+</span><span class="lnt">91
+</span><span class="lnt">92
+</span><span class="lnt">93
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">常用匹配模式：http://blog.csdn.net/yufenghyc/article/details/51078107
+</span></span><span class="line"><span class="cl"># =================================匹配模式=================================
+</span></span><span class="line"><span class="cl">#一对一的匹配
+</span></span><span class="line"><span class="cl"># &#39;hello&#39;.replace(old,new)
+</span></span><span class="line"><span class="cl"># &#39;hello&#39;.find(&#39;pattern&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#正则匹配
+</span></span><span class="line"><span class="cl">import re
+</span></span><span class="line"><span class="cl">#\w与\W
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\w&#39;,&#39;hello egon 123&#39;)) #[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;e&#39;, &#39;g&#39;, &#39;o&#39;, &#39;n&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\W&#39;,&#39;hello egon 123&#39;)) #[&#39; &#39;, &#39; &#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#\s与\S
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\s&#39;,&#39;hello  egon  123&#39;)) #[&#39; &#39;, &#39; &#39;, &#39; &#39;, &#39; &#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\S&#39;,&#39;hello  egon  123&#39;)) #[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;e&#39;, &#39;g&#39;, &#39;o&#39;, &#39;n&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#\n \t都是空,都可以被\s匹配
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\s&#39;,&#39;hello \n egon \t 123&#39;)) #[&#39; &#39;, &#39;\n&#39;, &#39; &#39;, &#39; &#39;, &#39;\t&#39;, &#39; &#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#\n与\t
+</span></span><span class="line"><span class="cl">print(re.findall(r&#39;\n&#39;,&#39;hello egon \n123&#39;)) #[&#39;\n&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(r&#39;\t&#39;,&#39;hello egon\t123&#39;)) #[&#39;\n&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#\d与\D
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\d&#39;,&#39;hello egon 123&#39;)) #[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\D&#39;,&#39;hello egon 123&#39;)) #[&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39; &#39;, &#39;e&#39;, &#39;g&#39;, &#39;o&#39;, &#39;n&#39;, &#39; &#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#\A与\Z
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\Ahe&#39;,&#39;hello egon 123&#39;)) #[&#39;he&#39;],\A==&gt;^
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;123\Z&#39;,&#39;hello egon 123&#39;)) #[&#39;he&#39;],\Z==&gt;$
+</span></span><span class="line"><span class="cl">^ 指定匹配必须出现在字符串的开头或行的开头。
+</span></span><span class="line"><span class="cl">\A 指定匹配必须出现在字符串的开头（忽略 Multiline 选项）。
+</span></span><span class="line"><span class="cl">$ 指定匹配必须出现在以下位置：字符串结尾、字符串结尾的 \n 之前或行的结尾。
+</span></span><span class="line"><span class="cl">\Z 指定匹配必须出现在字符串的结尾或字符串结尾的 \n 之前（忽略 Multiline 选项）。
+</span></span><span class="line"><span class="cl">#^与$
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;^h&#39;,&#39;hello egon 123&#39;)) #[&#39;h&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;3$&#39;,&#39;hello egon 123&#39;)) #[&#39;3&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 重复匹配：| . | * | ? | .* | .*? | + | {n,m} |
+</span></span><span class="line"><span class="cl">#.
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.b&#39;,&#39;a1b&#39;)) #[&#39;a1b&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.b&#39;,&#39;a1b a*b a b aaab&#39;)) #[&#39;a1b&#39;, &#39;a*b&#39;, &#39;a b&#39;, &#39;aab&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.b&#39;,&#39;a\nb&#39;)) #[]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.b&#39;,&#39;a\nb&#39;,re.S)) #[&#39;a\nb&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.b&#39;,&#39;a\nb&#39;,re.DOTALL)) #[&#39;a\nb&#39;]同上一条意思一样
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#*
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab*&#39;,&#39;bbbbbbb&#39;)) #[]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab*&#39;,&#39;a&#39;)) #[&#39;a&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab*&#39;,&#39;abbbb&#39;)) #[&#39;abbbb&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#?
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab?&#39;,&#39;a&#39;)) #[&#39;a&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab?&#39;,&#39;abbb&#39;)) #[&#39;ab&#39;]
+</span></span><span class="line"><span class="cl">#匹配所有包含小数在内的数字
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;\d+\.?\d*&#39;,&#34;asdfasdf123as1.13dfa12adsf1asdf3&#34;)) #[&#39;123&#39;, &#39;1.13&#39;, &#39;12&#39;, &#39;1&#39;, &#39;3&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#.*默认为贪婪匹配
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.*b&#39;,&#39;a1b22222222b&#39;)) #[&#39;a1b22222222b&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#.*?为非贪婪匹配：推荐使用
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a.*?b&#39;,&#39;a1b22222222b&#39;)) #[&#39;a1b&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#+
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab+&#39;,&#39;a&#39;)) #[]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab+&#39;,&#39;abbb&#39;)) #[&#39;abbb&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#{n,m}
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab{2}&#39;,&#39;abbb&#39;)) #[&#39;abb&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab{2,4}&#39;,&#39;abbb&#39;)) #[&#39;abb&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab{1,}&#39;,&#39;abbb&#39;)) #&#39;ab{1,}&#39; ===&gt; &#39;ab+&#39;
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab{0,}&#39;,&#39;abbb&#39;)) #&#39;ab{0,}&#39; ===&gt; &#39;ab*&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#[]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a[1*-]b&#39;,&#39;a1b a*b a-b&#39;)) #[]内的都为普通字符了，且如果-没有被转意的话，应该放到[]的开头或结尾
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a[^1*-]b&#39;,&#39;a1b a*b a-b a=b&#39;)) #[]内的^代表的意思是取反，所以结果为[&#39;a=b&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a[0-9]b&#39;,&#39;a1b a*b a-b a=b&#39;)) #[]内的^代表的意思是取反，所以结果为[&#39;a=b&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a[a-z]b&#39;,&#39;a1b a*b a-b a=b aeb&#39;)) #[]内的^代表的意思是取反，所以结果为[&#39;a=b&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a[a-zA-Z]b&#39;,&#39;a1b a*b a-b a=b aeb aEb&#39;)) #[]内的^代表的意思是取反，所以结果为[&#39;a=b&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#\# print(re.findall(&#39;a\\c&#39;,&#39;a\c&#39;)) #对于正则来说a\\c确实可以匹配到a\c,但是在python解释器读取a\\c时，会发生转义，然后交给re去执行，所以抛出异常
+</span></span><span class="line"><span class="cl">print(re.findall(r&#39;a\\c&#39;,&#39;a\c&#39;)) #r代表告诉解释器使用rawstring，即原生字符串，把我们正则内的所有符号都当普通字符处理，不要转义
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;a\\\\c&#39;,&#39;a\c&#39;)) #同上面的意思一样，和上面的结果一样都是[&#39;a\\c&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#():分组
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;ab+&#39;,&#39;ababab123&#39;)) #[&#39;ab&#39;, &#39;ab&#39;, &#39;ab&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;(ab)+123&#39;,&#39;ababab123&#39;)) #[&#39;ab&#39;]，匹配到末尾的ab123中的ab
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;(?:ab)+123&#39;,&#39;ababab123&#39;)) #findall的结果不是匹配的全部内容，而是组内的内容,?:可以让结果为匹配的全部内容
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;href=&#34;(.*?)&#34;&#39;,&#39;&lt;a href=&#34;http://www.baidu.com&#34;&gt;点击&lt;/a&gt;&#39;))#[&#39;http://www.baidu.com&#39;]
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;href=&#34;(?:.*?)&#34;&#39;,&#39;&lt;a href=&#34;http://www.baidu.com&#34;&gt;点击&lt;/a&gt;&#39;))#[&#39;href=&#34;http://www.baidu.com&#34;&#39;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#|
+</span></span><span class="line"><span class="cl">print(re.findall(&#39;compan(?:y|ies)&#39;,&#39;Too many companies have gone bankrupt, and the next one is my company&#39;))
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-09-25
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day5,面向对象</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday3%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/">
+            <span class="next-text nav-default">python,day3,模块与包</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

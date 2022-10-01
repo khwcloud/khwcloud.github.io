@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day5,面向对象 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="python面向对象。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day5,面向对象" />
+<meta property="og:description" content="python面向对象。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-30T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-09-30T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day5,面向对象">
+<meta itemprop="description" content="python面向对象。"><meta itemprop="datePublished" content="2021-09-30T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-09-30T11:06:25+08:00" />
+<meta itemprop="wordCount" content="5583">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day5,面向对象"/>
+<meta name="twitter:description" content="python面向对象。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day5,面向对象</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-30 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 5583 words </span>
+          <span class="more-meta"> 12 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python面向对象。</p>
+<h4 id="面向对象介绍">面向对象介绍</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">面向过程：
+</span></span><span class="line"><span class="cl">    核心是&#34;过程&#34;二字
+</span></span><span class="line"><span class="cl">    过程的核心思想是将程序流程化
+</span></span><span class="line"><span class="cl">    过程是”流水线“，用来分步骤解决问题
+</span></span><span class="line"><span class="cl">面向对象：
+</span></span><span class="line"><span class="cl">    1、核心是”对象“二字
+</span></span><span class="line"><span class="cl">    2、对象的终极奥义就是将程序”整合“
+</span></span><span class="line"><span class="cl">    3、对象就是”容器“，用来盛放数据与功能
+</span></span><span class="line"><span class="cl">        优点：
+</span></span><span class="line"><span class="cl">            1、提升程序的解耦合程度，进而增强程序的可扩展性
+</span></span><span class="line"><span class="cl">        缺点：
+</span></span><span class="line"><span class="cl">            2、可扩展性差
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    4、python这门语言到底提供了什么语法来允许我们将数据与功能整合在一起？
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    5、类：
+</span></span><span class="line"><span class="cl">        类是对象相似数据与功能的集合体
+</span></span><span class="line"><span class="cl">        所以类体中常见的是变量与函数定义，但是类体其实是可以包含任意其他代码的
+</span></span><span class="line"><span class="cl">        强调！！：类体代码是再类定义阶段就会立即执行，会产生类的名称空间
+</span></span><span class="line"><span class="cl">    6、使用顺序
+</span></span><span class="line"><span class="cl">        # 一、先定义类
+</span></span><span class="line"><span class="cl">                class Student:
+</span></span><span class="line"><span class="cl">                        stu_school = &#39;oldboy&#39;
+</span></span><span class="line"><span class="cl">                        def __init__(obj, x):   #对象下面的属性
+</span></span><span class="line"><span class="cl">                            obj.stu_name = x
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                        def tell_stu_info(stu_obj):
+</span></span><span class="line"><span class="cl">                            print(&#39;学生信息：名字：%s,年龄：%s 性别：%s&#39;%(stu_obj[&#39;stu_name&#39;],
+</span></span><span class="line"><span class="cl">                            stu_obj[&#39;stu_age&#39;],
+</span></span><span class="line"><span class="cl">                            stu_obj[&#39;stu_gender&#39;]))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                        def set_info(stu_obj,x,y,z):
+</span></span><span class="line"><span class="cl">                            stu_obj[&#39;stu_name&#39;] = x
+</span></span><span class="line"><span class="cl">                            stu_obj[&#39;stu_age&#39;] = y
+</span></span><span class="line"><span class="cl">                            stu_obj[&#39;stu_gender&#39;] = z
+</span></span><span class="line"><span class="cl">                # 功能的定义
+</span></span><span class="line"><span class="cl">                pass
+</span></span><span class="line"><span class="cl">                # 属性访问的语法:
+</span></span><span class="line"><span class="cl">                    # 访问数据属性    print(Student.set_school)
+</span></span><span class="line"><span class="cl">                    # 访问函数属性    print(Student.set_info)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 二、再调用类产生对象
+</span></span><span class="line"><span class="cl">                    stu1_obj = Student(&#39;hongwei&#39;)
+</span></span><span class="line"><span class="cl">                    print(stu1_obj.set_info)
+</span></span><span class="line"><span class="cl">                    print(stu1_obj.__dict__)
+</span></span><span class="line"><span class="cl">                #调用类的过程由称之为实例化，发生了三件事
+</span></span><span class="line"><span class="cl">                    # 1、先产生一个空对象
+</span></span><span class="line"><span class="cl">                    # 2、python会调用类中的__init__方法，然后将空对象已经调用类括号内传入的参数一同传给init
+</span></span><span class="line"><span class="cl">                    # 3、返回初始完的对象
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #总结__init__方法
+</span></span><span class="line"><span class="cl">                        # 1、会在调用类时自动触发执行，用来为对象初始化自己独有的数据
+</span></span><span class="line"><span class="cl">                        # 2、__init__内因该存放是为对象初始化属性的功能，但是是可以存放任意其他代码，想要在
+</span></span><span class="line"><span class="cl">                        # 类调用时就立刻执行的代码都可以放到该方法内
+</span></span><span class="line"><span class="cl">                        # 3、__init__方法必须返回Now
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 三、绑定方法：
+</span></span><span class="line"><span class="cl">                #谁来调用绑定方法就会将谁当做第一个参数自动传入
+</span></span><span class="line"><span class="cl">                    stu1_obj.tell_stu_info()
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">案例
+</span></span><span class="line"><span class="cl">#学校信息
+</span></span><span class="line"><span class="cl">class School:
+</span></span><span class="line"><span class="cl">    school_name=&#39;ke&#39;
+</span></span><span class="line"><span class="cl">    def __init__(self,nickname,addr):
+</span></span><span class="line"><span class="cl">        self.addr = addr
+</span></span><span class="line"><span class="cl">        self.nickname = nickname
+</span></span><span class="line"><span class="cl">        self.classes = []
+</span></span><span class="line"><span class="cl">    def related_class(self,class_obj):
+</span></span><span class="line"><span class="cl">        self.classes.append(class_obj)
+</span></span><span class="line"><span class="cl">    def tell_class(self):
+</span></span><span class="line"><span class="cl">        print(self.nickname)
+</span></span><span class="line"><span class="cl">        for class_obj in self.classes:
+</span></span><span class="line"><span class="cl">            class_obj.tell_course()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#班级信息
+</span></span><span class="line"><span class="cl">class Class:
+</span></span><span class="line"><span class="cl">    def __init__(self,name):
+</span></span><span class="line"><span class="cl">        self.name=name  #班级名字
+</span></span><span class="line"><span class="cl">        self.coures = None
+</span></span><span class="line"><span class="cl">    def related_course(self,course_obj): #班级课程
+</span></span><span class="line"><span class="cl">        self.coures = course_obj
+</span></span><span class="line"><span class="cl">    def tell_course(self):
+</span></span><span class="line"><span class="cl">        print(&#39;班级名：%s &#39;%(self.name))
+</span></span><span class="line"><span class="cl">        # print(&#39;课程信息:%s&#39;%(self.coures))
+</span></span><span class="line"><span class="cl">        self.coures.tell_info()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#课程信息
+</span></span><span class="line"><span class="cl">class Course:
+</span></span><span class="line"><span class="cl">    def __init__(self,name,period,price):
+</span></span><span class="line"><span class="cl">        self.name = name
+</span></span><span class="line"><span class="cl">        self.period = period
+</span></span><span class="line"><span class="cl">        self.price = price
+</span></span><span class="line"><span class="cl">    def tell_info(self):
+</span></span><span class="line"><span class="cl">        print(&#39;&lt;课程名：%s 周期：%s 价钱：%s &gt;&#39;%(self.name,self.period,self.price))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Student:
+</span></span><span class="line"><span class="cl">    pass
+</span></span><span class="line"><span class="cl"># 一、班级操作
+</span></span><span class="line"><span class="cl">        # 创建班级
+</span></span><span class="line"><span class="cl">        class_obj1 = Class(&#39;脱产14期&#39;)
+</span></span><span class="line"><span class="cl">        class_obj2 = Class(&#39;脱产15期&#39;)
+</span></span><span class="line"><span class="cl">        #创建课程
+</span></span><span class="line"><span class="cl">        class_obj1.related_course(&#39;python全栈开发&#39;)
+</span></span><span class="line"><span class="cl">        class_obj2.related_course(&#39;HCIE云计算&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 二、校区操作
+</span></span><span class="line"><span class="cl">        # 创建校区
+</span></span><span class="line"><span class="cl">        school_obj1 = School(&#39;宏伟魔都校区&#39;,&#39;瑞昌&#39;)
+</span></span><span class="line"><span class="cl">        school_obj2 = School(&#39;宏伟帝都校区&#39;,&#39;北京&#39;)
+</span></span><span class="line"><span class="cl">        # 为学校开设班级
+</span></span><span class="line"><span class="cl">        school_obj1.related_class(class_obj1)
+</span></span><span class="line"><span class="cl">        school_obj2.related_class(class_obj2)
+</span></span><span class="line"><span class="cl">        # 查看每个校区开设的班级
+</span></span><span class="line"><span class="cl">        # school_obj2.tell_class()
+</span></span><span class="line"><span class="cl">        # print(school_obj1.nickname)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#三、课程
+</span></span><span class="line"><span class="cl">        #1、创建课程
+</span></span><span class="line"><span class="cl">        course_obj1 = Course(&#39;python全栈开发&#39;,&#39;6mons&#39;,2000)
+</span></span><span class="line"><span class="cl">        course_obj2 = Course(&#39;HCIE云计算&#39;,&#39;6mons&#39;,2000)
+</span></span><span class="line"><span class="cl">        #2、查看课程的详细信息
+</span></span><span class="line"><span class="cl">        # course_obj1.tell_info()
+</span></span><span class="line"><span class="cl">        # course_obj2.tell_info()
+</span></span><span class="line"><span class="cl">        #3、为班级关联课程对象
+</span></span><span class="line"><span class="cl">        class_obj1.related_course(course_obj1)
+</span></span><span class="line"><span class="cl">        class_obj2.related_course(course_obj2)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#四、验证
+</span></span><span class="line"><span class="cl">        # school_obj2.tell_class()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="封装">封装</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 一、封装介绍
+</span></span><span class="line"><span class="cl">     #封装是面向对象三大特性最核心的一个特性
+</span></span><span class="line"><span class="cl">     #封装 = 整合
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#二、将封装的属性进行隐藏操作
+</span></span><span class="line"><span class="cl">        #如何隐藏：在属性名前加__前缀，就会实现一个对外隐藏属性效果
+</span></span><span class="line"><span class="cl">            #需要注意的问题：
+</span></span><span class="line"><span class="cl">            #1、在类外部无法直接访问双下划线开头的属性，但知道了类名和属性名就可以拼出属性
+</span></span><span class="line"><span class="cl">            #所以说这种操作并没有严格意义上的限制外部访问，仅仅只是一种语法意义
+</span></span><span class="line"><span class="cl">            #2、这种隐藏对外不对内，应为__开头的属性会在检查类体代码语法时同意变形
+</span></span><span class="line"><span class="cl">            #3、这种变形操作旨在检查类语法的时候发生一次，之后定义的__开头的都不会变形
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #为什么要隐藏？
+</span></span><span class="line"><span class="cl">            #隔离复杂度
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Foo:
+</span></span><span class="line"><span class="cl">    __x=111 #_Foo__x
+</span></span><span class="line"><span class="cl">    def __init__(self,y):
+</span></span><span class="line"><span class="cl">        self.__y = y
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 三、property（类的装饰器）
+</span></span><span class="line"><span class="cl">        # 案例一、
+</span></span><span class="line"><span class="cl">                class People:
+</span></span><span class="line"><span class="cl">                    def __init__(self,name,weight,height):
+</span></span><span class="line"><span class="cl">                        self.name = name
+</span></span><span class="line"><span class="cl">                        self.weight = weight
+</span></span><span class="line"><span class="cl">                        self.height = height
+</span></span><span class="line"><span class="cl">                    #定义函数的原因：
+</span></span><span class="line"><span class="cl">                    # 1、从bmi的公式上看，bmi是应该出发功能计算得到的
+</span></span><span class="line"><span class="cl">                    # 2、bmi是随着身高、体重的变化而动态变化的，不是一个固定的值
+</span></span><span class="line"><span class="cl">                    # 3、
+</span></span><span class="line"><span class="cl">                    @property
+</span></span><span class="line"><span class="cl">                    def bmi(self):
+</span></span><span class="line"><span class="cl">                        return self.weight / (self.height **2 )
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">                obj = People(&#39;hw&#39;,85,1.86)
+</span></span><span class="line"><span class="cl">                print(obj.bmi)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # 案例二
+</span></span><span class="line"><span class="cl">            class People:
+</span></span><span class="line"><span class="cl">                def __init__(self,name):
+</span></span><span class="line"><span class="cl">                    self.__name = name
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">                def get_name(self):
+</span></span><span class="line"><span class="cl">                    return self.__name
+</span></span><span class="line"><span class="cl">                def set_name(self,val):
+</span></span><span class="line"><span class="cl">                    if type(val) is not str:
+</span></span><span class="line"><span class="cl">                        print(&#39;必须传入str类型&#39;)
+</span></span><span class="line"><span class="cl">                        return
+</span></span><span class="line"><span class="cl">                    self.__name = val
+</span></span><span class="line"><span class="cl">                def del_name(self):
+</span></span><span class="line"><span class="cl">                    print(&#39;不让删除&#39;)
+</span></span><span class="line"><span class="cl">                name = property(get_name,set_name,del_name)
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">            obj = People(&#39;kehongwei&#39;)
+</span></span><span class="line"><span class="cl">            obj.name = 18
+</span></span><span class="line"><span class="cl">            del obj.name
+</span></span><span class="line"><span class="cl">            print(obj.name)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="继承">继承</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">1、什么是继承
+</span></span><span class="line"><span class="cl">继承是一个类继承另一个类
+</span></span><span class="line"><span class="cl">    python支持多继承
+</span></span><span class="line"><span class="cl">        在python中，新建的类可以继承一个或多个父类
+</span></span><span class="line"><span class="cl">            class a:
+</span></span><span class="line"><span class="cl">                pass
+</span></span><span class="line"><span class="cl">            class b:
+</span></span><span class="line"><span class="cl">                pass
+</span></span><span class="line"><span class="cl">            class c(a): #单继承
+</span></span><span class="line"><span class="cl">                pass
+</span></span><span class="line"><span class="cl">            class d(a,b):  #多继承
+</span></span><span class="line"><span class="cl">                pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、为何要用继承？：用来解决类与类之间代码冗余问题
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、多继承？
+</span></span><span class="line"><span class="cl">    优点：子类可以同时遗传多个父类属性
+</span></span><span class="line"><span class="cl">    缺点：
+</span></span><span class="line"><span class="cl">        1、违背人的思维习惯
+</span></span><span class="line"><span class="cl">        2、代码可读性变差
+</span></span><span class="line"><span class="cl">        3、不建议使用多继承，扩展性变差
+</span></span><span class="line"><span class="cl">        如果不可避免的用到多继承，应该使用mixins
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、如何实现继承（怎么使用）
+</span></span><span class="line"><span class="cl">    # 基于继承解决类与类之间的冗余问题(在此基础上加上学生学号)
+</span></span><span class="line"><span class="cl">        class Func:
+</span></span><span class="line"><span class="cl">            school = &#39;宏伟&#39;
+</span></span><span class="line"><span class="cl">            def __init__(self,name,age,sex):
+</span></span><span class="line"><span class="cl">                self.name = name
+</span></span><span class="line"><span class="cl">                self.age = age
+</span></span><span class="line"><span class="cl">                self.sex = sex
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        class Student(Func):
+</span></span><span class="line"><span class="cl">            # school=&#39;宏伟&#39;
+</span></span><span class="line"><span class="cl">            # def __init__(self,name,age):
+</span></span><span class="line"><span class="cl">            #     self.name = name
+</span></span><span class="line"><span class="cl">            #     self.age = age
+</span></span><span class="line"><span class="cl">            def choose_course(self):
+</span></span><span class="line"><span class="cl">                print(&#39;%s 正向选课&#39;%self.name)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        # obj = Student(&#39;HW&#39;,18,&#39;female&#39;)
+</span></span><span class="line"><span class="cl">        # print(obj.__dict__)
+</span></span><span class="line"><span class="cl">        # print(obj.school)
+</span></span><span class="line"><span class="cl">        # obj.choose_course()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        class Teacher(Func):
+</span></span><span class="line"><span class="cl">            school = &#39;宏伟&#39;
+</span></span><span class="line"><span class="cl">            def __init__(self,name,age,sex,salary):
+</span></span><span class="line"><span class="cl">                Func.__init__(self,name,age,sex)
+</span></span><span class="line"><span class="cl">                self.name = name
+</span></span><span class="line"><span class="cl">                self.age = age
+</span></span><span class="line"><span class="cl">                self.sex = sex
+</span></span><span class="line"><span class="cl">                self.salary = salary
+</span></span><span class="line"><span class="cl">            def choose_course(self):
+</span></span><span class="line"><span class="cl">                print(&#39;%s 正向选课&#39;%self.name)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        obj2=Teacher(&#39;hh&#39;,9,&#39;male&#39;,4000)
+</span></span><span class="line"><span class="cl">        print(obj2.__dict__)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">5、单继承背景下的属性查找
+</span></span><span class="line"><span class="cl">    # 示例1
+</span></span><span class="line"><span class="cl">        class Foo:
+</span></span><span class="line"><span class="cl">            def f1(self):
+</span></span><span class="line"><span class="cl">                print(&#39;FOO.F1&#39;)
+</span></span><span class="line"><span class="cl">            def f2(self):
+</span></span><span class="line"><span class="cl">                print(&#39;FOO.F2&#39;)
+</span></span><span class="line"><span class="cl">                self.f1()   #obj.f1()
+</span></span><span class="line"><span class="cl">                Foo.f1(self) #想调用当前类的f1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        class Bar(Foo):
+</span></span><span class="line"><span class="cl">            def f1(self):
+</span></span><span class="line"><span class="cl">                print(&#39;Bar.f1&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        obj = Bar()
+</span></span><span class="line"><span class="cl">        obj.f2()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # 示例2
+</span></span><span class="line"><span class="cl">        class Foo:
+</span></span><span class="line"><span class="cl">            def __f1(self):
+</span></span><span class="line"><span class="cl">                print(&#39;FOO.F1&#39;)
+</span></span><span class="line"><span class="cl">            def f2(self):
+</span></span><span class="line"><span class="cl">                print(&#39;FOO.F2&#39;)
+</span></span><span class="line"><span class="cl">                self.__f1()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        class Bar(Foo):
+</span></span><span class="line"><span class="cl">            def f1(self):
+</span></span><span class="line"><span class="cl">                print(&#39;Bar.f1&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        obj = Bar()
+</span></span><span class="line"><span class="cl">        obj.f2()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6、多继承背景下的属性查找
+</span></span><span class="line"><span class="cl">    1、先查找父类，父类没有就找父类的父类，总之就是先把父类这个分支找完
+</span></span><span class="line"><span class="cl">    2、通过mro表来查找
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7、如果多继承是菱形继承，经典类与新式类的属性查找顺序不一样
+</span></span><span class="line"><span class="cl">    1、新式类与经典类
+</span></span><span class="line"><span class="cl">        父类或者以上由boject就是新式类，否则就是经典类
+</span></span><span class="line"><span class="cl">    2、深度优先与广度优先
+</span></span><span class="line"><span class="cl">        1、经典类：深度优先。会在检索第一条分支的时候直接一条道走到黑
+</span></span><span class="line"><span class="cl">        2、新式类：广度优先，会在检索最后一条分支的时候检索object
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">8、多继承
+</span></span><span class="line"><span class="cl">    多继承要不要用？
+</span></span><span class="line"><span class="cl">    要用，但是需规避几点问题
+</span></span><span class="line"><span class="cl">    1、继承结构经历不要过于复杂
+</span></span><span class="line"><span class="cl">    2、需要使用mixinx：要在多继承的背景下满足继承什么是什么的关系（单继承）=》mixinx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">9、 mixins机制核心：
+</span></span><span class="line"><span class="cl">    # mixins提升多继承的可读性
+</span></span><span class="line"><span class="cl">    #满足人的思维，什么是什么
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">10、子类中重用父类属性有两种方式：
+</span></span><span class="line"><span class="cl">    #方式一：指名道姓的调用
+</span></span><span class="line"><span class="cl">    #方式二：super（）调用父类提供给自己的方法 =》严格以来继承关系
+</span></span><span class="line"><span class="cl">          #调用super（）会得到一个特殊对象，该对象会参照发起属性查找的那个类的mro取重用父类属性
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="多态">多态</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、多态：指的是一类事务有多种形态
+</span></span><span class="line"><span class="cl">    动物的多种形态：牛，马
+</span></span><span class="line"><span class="cl">    文件的多种形态：文本文件，可执行文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、多态性：指在不考虑实例类型的情况下使用实例
+</span></span><span class="line"><span class="cl">    举个栗子：老师.下课铃响了（），学生.下课铃响了()，老师执行的是下班操作，学生执行的是放学操作，虽然二者消息一样，但是执行的效果不同
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、为什么要用多态性（多态性的好处）
+</span></span><span class="line"><span class="cl">	1.增加了程序的灵活性
+</span></span><span class="line"><span class="cl">		以不变应万变，不论对象千变万化，使用者都是同一种形式去调用，如func(animal)
+</span></span><span class="line"><span class="cl">	2.增加了程序额可扩展性
+</span></span><span class="line"><span class="cl">		　通过继承animal类创建了一个新的类，使用者无需更改自己的代码，还是用func(animal)去调用 　
+</span></span><span class="line"><span class="cl">		　
+</span></span><span class="line"><span class="cl">		　
+</span></span><span class="line"><span class="cl">class Cat(Animal): #属于动物的另外一种形态：猫
+</span></span><span class="line"><span class="cl">...     def talk(self):
+</span></span><span class="line"><span class="cl">...         print(&#39;say miao&#39;)
+</span></span><span class="line"><span class="cl">... 
+</span></span><span class="line"><span class="cl">def func(animal): #对于使用者来说，自己的代码根本无需改动
+</span></span><span class="line"><span class="cl">...     animal.talk()
+</span></span><span class="line"><span class="cl">... 
+</span></span><span class="line"><span class="cl">cat1=Cat() #实例出一只猫
+</span></span><span class="line"><span class="cl">func(cat1) #甚至连调用方式也无需改变，就能调用猫的talk功能
+</span></span><span class="line"><span class="cl">say miao
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">这样我们新增了一个形态Cat，由Cat类产生的实例cat1，使用者可以在完全不需要修改自己代码的情况下。使用和人、狗、猪一样的方式调用cat1的talk方法，即func(cat1)
+</span></span><span class="line"><span class="cl">&#39;&#39;&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、鸭子类型
+</span></span><span class="line"><span class="cl">	如果看起来像、叫声像而且走起路来像鸭子，那么它就是鸭子，程序也是如此
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">#二者都像鸭子,二者看起来都像文件,因而就可以当文件一样去用
+</span></span><span class="line"><span class="cl">class TxtFile:
+</span></span><span class="line"><span class="cl">    def read(self):
+</span></span><span class="line"><span class="cl">        pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def write(self):
+</span></span><span class="line"><span class="cl">        pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class DiskFile:
+</span></span><span class="line"><span class="cl">    def read(self):
+</span></span><span class="line"><span class="cl">        pass
+</span></span><span class="line"><span class="cl">    def write(self):
+</span></span><span class="line"><span class="cl">        pass
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="反射">反射</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 反射
+</span></span><span class="line"><span class="cl">        #1、什么是反射
+</span></span><span class="line"><span class="cl">            #指的是程序在运行过程中可以动态获取对象的信息
+</span></span><span class="line"><span class="cl">        #2、为什么要用反射？
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #3、实现反射机制的步骤
+</span></span><span class="line"><span class="cl">            #1、通过dir:查看对象可以.出那些属性来
+</span></span><span class="line"><span class="cl">                print(dir(obj))
+</span></span><span class="line"><span class="cl">            #2、通过字符串反射到真正的属性上，得到属性值
+</span></span><span class="line"><span class="cl">                print(obj.__dict__[dir(obj)[-2]])
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #4、四个内置函数的使用:通过字符串来操作属性值
+</span></span><span class="line"><span class="cl">            #1、hasattr()  查看对象下有没有name属性
+</span></span><span class="line"><span class="cl">                print(hasattr(obj,&#39;name&#39;))
+</span></span><span class="line"><span class="cl">            #2、setattr()  给属性赋值操作, obj.name = &#39;asd&#39;
+</span></span><span class="line"><span class="cl">                print(setattr(obj,&#39;bool&#39;,&#39;asd&#39;))
+</span></span><span class="line"><span class="cl">            #3、getattr()  获取对象的属性值
+</span></span><span class="line"><span class="cl">                print(getattr(obj,&#39;name&#39;))
+</span></span><span class="line"><span class="cl">            #4、delattr()  删除对象属性
+</span></span><span class="line"><span class="cl">                delattr(obj,&#39;name&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="内置方法">内置方法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#内置方法
+</span></span><span class="line"><span class="cl">        #1、什么是内置方法？
+</span></span><span class="line"><span class="cl">            #定义在类内部，__开头并以__结尾的方法
+</span></span><span class="line"><span class="cl">            #特点：会在某种情况自动触发执行
+</span></span><span class="line"><span class="cl">        #2、为什么需要用内置方法
+</span></span><span class="line"><span class="cl">            #为了定制我们的类和对象
+</span></span><span class="line"><span class="cl">        #3、如何使用内置方法？
+</span></span><span class="line"><span class="cl">            #__str__：在打印对象时会自动触发，然后将返回值（必须是字符串类型）当作本次结果
+</span></span><span class="line"><span class="cl">            #__del__：在清理对象时出发，会先执行该方法
+</span></span><span class="line"><span class="cl">            #__new__：在执行类的时候会第一个执行该方法
+</span></span><span class="line"><span class="cl">            #__call__：将对象做成一个可以加括号调用的对象，加括号时会调用call这个方法，然后将该方法得到的值返回
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="元类">元类</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 元类
+</span></span><span class="line"><span class="cl">        #1、什么是元类？
+</span></span><span class="line"><span class="cl">            #就是用来实例化产生类的类
+</span></span><span class="line"><span class="cl">            #关系：元类---实例化---》类---实例化---》对象
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #2、查看内置元类：
+</span></span><span class="line"><span class="cl">            #1、type是内置的元类
+</span></span><span class="line"><span class="cl">            #2、class关键字定义的所有类都是由元类type实例化产生的
+</span></span><span class="line"><span class="cl">            print(type()) #查看内置的元类
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #3、class关键字创造类的步骤
+</span></span><span class="line"><span class="cl">            #1、引入类的三个特征 类名，类的基类，执行类体代码拿到类的命名空间
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            #2、执行步骤
+</span></span><span class="line"><span class="cl">                #1、拿到类名： class_name = &#39;obj&#39;
+</span></span><span class="line"><span class="cl">                #2、拿到类的基类： class_bases=(object,)
+</span></span><span class="line"><span class="cl">                #3、拿到执行类体代码拿到类的命名空间 class_dic = {}
+</span></span><span class="line"><span class="cl">                #4、调用元类 a = type(class_name,class_bases,class_dic)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #4、如何自定义元类来控制类的产生
+</span></span><span class="line"><span class="cl">            #第四步：调用Mymeta发生三件事，调用Mymeta就是type.__call__（该方法也会做以下三个步骤）
+</span></span><span class="line"><span class="cl">                #1、先造一个空对象People，调用类内的__new__方法
+</span></span><span class="line"><span class="cl">                #2、调用mymeta这个类内的__init__方法，完成初始化对象的操作
+</span></span><span class="line"><span class="cl">                #3、返回初始化好的对象
+</span></span><span class="line"><span class="cl">            #强调：只要是调用类，会依次调用类内的 __new__ ，__init__
+</span></span><span class="line"><span class="cl">                class Mymeta(type):
+</span></span><span class="line"><span class="cl">                    # 会将空对象，class_name,class_bases,class_dic这四个参数传入
+</span></span><span class="line"><span class="cl">                    def __init__(self, x, y, z):
+</span></span><span class="line"><span class="cl">                        if not x.capitalize():
+</span></span><span class="line"><span class="cl">                            raise NameError(&#39;类名的首字母必须大写！&#39;)
+</span></span><span class="line"><span class="cl">                        # print(&#39;run&#39;)
+</span></span><span class="line"><span class="cl">                        # print(self)
+</span></span><span class="line"><span class="cl">                        # print(x)
+</span></span><span class="line"><span class="cl">                        # print(y)
+</span></span><span class="line"><span class="cl">                        # print(z)
+</span></span><span class="line"><span class="cl">                    def __new__(cls, *args, **kwargs):
+</span></span><span class="line"><span class="cl">                        # 造Mymeta的对象
+</span></span><span class="line"><span class="cl">                        print(cls, args, kwargs)
+</span></span><span class="line"><span class="cl">                        # return super().__new__(cls, *args, **kwargs)
+</span></span><span class="line"><span class="cl">                        return type.__new__(cls, *args, **kwargs)
+</span></span><span class="line"><span class="cl">                class People(metaclass=Mymeta):
+</span></span><span class="line"><span class="cl">                    def __init__(self, name, age):
+</span></span><span class="line"><span class="cl">                        self.name = name
+</span></span><span class="line"><span class="cl">                        self.age = age
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #5、__call__：将对象做成一个可以加括号调用的对象，加括号时会调用call这个方法，然后将该方法得到的值返回
+</span></span><span class="line"><span class="cl">                # type.__call__函数干的三件事
+</span></span><span class="line"><span class="cl">                    #1、先造一个空对象People，调用类内的__new__方法
+</span></span><span class="line"><span class="cl">                    #2、调用mymeta这个类内的__init__方法，完成初始化对象的操作
+</span></span><span class="line"><span class="cl">                    #3、返回初始化好的对象
+</span></span><span class="line"><span class="cl">                #总结
+</span></span><span class="line"><span class="cl">                    #对象（）-》类内的__call__
+</span></span><span class="line"><span class="cl">                    #类（）-》自定义元类内的__call__
+</span></span><span class="line"><span class="cl">                    #自定义元类（） -》内置元类内的__call__
+</span></span><span class="line"><span class="cl">                class Foo:
+</span></span><span class="line"><span class="cl">                    def __init__(self,x,y):
+</span></span><span class="line"><span class="cl">                        self.x = x
+</span></span><span class="line"><span class="cl">                        self.y = y
+</span></span><span class="line"><span class="cl">                    def __call__(self, *args, **kwargs):
+</span></span><span class="line"><span class="cl">                        return 123
+</span></span><span class="line"><span class="cl">                obj = Foo(123123, 123123)
+</span></span><span class="line"><span class="cl">                a = obj()
+</span></span><span class="line"><span class="cl">                print(a)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #6、自定义元类控制类的调用
+</span></span><span class="line"><span class="cl">                #people = Mymeta() =&gt; type.__call__ =&gt; 干了三件事
+</span></span><span class="line"><span class="cl">                #1、type.__call__函数内会调用Mymeta内的__new__
+</span></span><span class="line"><span class="cl">                #2、type.__call__函数内会调用Mymeta内的__init__
+</span></span><span class="line"><span class="cl">                #3、type.__call__函数内会返回一个初始化好的对象
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                #obj = People(&#39;asd&#39;,18) -&gt;Mymeta.__call__-&gt;干了三件事
+</span></span><span class="line"><span class="cl">                # 1、Mymeta.__call__函数内会调用People内的__new__
+</span></span><span class="line"><span class="cl">                # 2、Mymeta.__call__函数内会调用People内的__init__
+</span></span><span class="line"><span class="cl">                # 3、Mymeta.__call__函数内会返回一个初始化好的对象
+</span></span><span class="line"><span class="cl">                class Mymeta(type):
+</span></span><span class="line"><span class="cl">                    def __call__(self, *args, **kwargs):
+</span></span><span class="line"><span class="cl">                        # 1、type.__call__函数内会调用Mymeta内的__new__
+</span></span><span class="line"><span class="cl">                        people_obj = self.__new__(self)
+</span></span><span class="line"><span class="cl">                        # 2、type.__call__函数内会调用Mymeta内的__init__
+</span></span><span class="line"><span class="cl">                        self.__init__(people_obj,*args, **kwargs)
+</span></span><span class="line"><span class="cl">                        people_obj.__dict__[&#39;xxx&#39;]=111
+</span></span><span class="line"><span class="cl">                        # 3、type.__call__函数内会返回一个初始化好的对象
+</span></span><span class="line"><span class="cl">                        return people_obj
+</span></span><span class="line"><span class="cl">                class People(metaclass=Mymeta):
+</span></span><span class="line"><span class="cl">                    def __init__(self, name, age):
+</span></span><span class="line"><span class="cl">                        self.name = name
+</span></span><span class="line"><span class="cl">                        self.age = age
+</span></span><span class="line"><span class="cl">                    def __new__(cls, *args, **kwargs):
+</span></span><span class="line"><span class="cl">                        #产生真正的对象
+</span></span><span class="line"><span class="cl">                        return  object.__new__(cls)
+</span></span><span class="line"><span class="cl">                #小试牛刀：
+</span></span><span class="line"><span class="cl">                    # 将People添加个属性，xxx=111
+</span></span><span class="line"><span class="cl">                    obj = People(&#39;hw&#39;, 18)
+</span></span><span class="line"><span class="cl">                    abc = People(&#39;hw&#39;, 19)
+</span></span><span class="line"><span class="cl">                    print(obj.__dict__)
+</span></span><span class="line"><span class="cl">                    print(abc.__dict__)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #7、属性查找
+</span></span><span class="line"><span class="cl">                #正常的属性查找规则：对象 》 类 》 父类
+</span></span><span class="line"><span class="cl">                    #强调：该属性查找不会衍生到元类
+</span></span><span class="line"><span class="cl">                #调类时的属性查找：类》父类》元类
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        #8、作业
+</span></span><span class="line"><span class="cl">                #1、在元类中控制把自定义类的数据属性都变成大写
+</span></span><span class="line"><span class="cl">               5 #2、在元类中控制自定义的类无需__init__方法
+</span></span><span class="line"><span class="cl">                #3、在元类中控制自定义的类产生的对象相关的属性全部为隐藏属性
+</span></span><span class="line"><span class="cl">                #4、基于元类实现单例模式
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-09-30
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday6%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day6,网络编程</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday4%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97/">
+            <span class="next-text nav-default">python,day4,常用模块</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

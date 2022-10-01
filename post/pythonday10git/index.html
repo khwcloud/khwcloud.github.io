@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day10,git - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="git代码管理。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday10git/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day10,git" />
+<meta property="og:description" content="git代码管理。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday10git/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-04T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-11-04T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day10,git">
+<meta itemprop="description" content="git代码管理。"><meta itemprop="datePublished" content="2021-11-04T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-11-04T11:06:25+08:00" />
+<meta itemprop="wordCount" content="2105">
+<meta itemprop="keywords" content="python,git," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day10,git"/>
+<meta name="twitter:description" content="git代码管理。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day10,git</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-11-04 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 2105 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#1git基本命令">1、git基本命令</a></li>
+            <li><a href="#2撤销修改">2、撤销修改</a></li>
+            <li><a href="#3代码回退">3、代码回退</a></li>
+            <li><a href="#4忽略文件">4、忽略文件</a></li>
+            <li><a href="#5分支操作">5、分支操作</a></li>
+            <li><a href="#6git关联远程仓库">6、git关联远程仓库</a></li>
+            <li><a href="#7git上传拉取">7、git上传，拉取</a></li>
+            <li><a href="#8ssh连接">8、ssh连接</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>git代码管理。</p>
+<h3 id="1git基本命令">1、git基本命令</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">工作区，暂存区，版本库
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">初始化:
+</span></span><span class="line"><span class="cl">	git init  文件夹名		# 表示管理该文件夹
+</span></span><span class="line"><span class="cl">	git init			# 表示当前路径全被管理
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">添加作者信息：
+</span></span><span class="line"><span class="cl">	git config --global user.email &#34;aaa@qq.com&#34;
+</span></span><span class="line"><span class="cl">	git config --global user.name &#34;lqz&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">查看状态：
+</span></span><span class="line"><span class="cl">	git status
+</span></span><span class="line"><span class="cl">	红色表示未被管理
+</span></span><span class="line"><span class="cl">	绿色表示提交到了暂存区
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">提交暂存区: 
+</span></span><span class="line"><span class="cl">	git add a.txt	把a提交到暂存区
+</span></span><span class="line"><span class="cl">	git add .		把当前路径下的所有提交暂存区
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">提交版本库：
+</span></span><span class="line"><span class="cl">	commit -m &#34;注释，我新增了readme.txt&#34;	# 把暂存区所有提交到版本库
+</span></span><span class="line"><span class="cl">	git checkout .	# 恢复到提交版本的位置
+</span></span><span class="line"><span class="cl">	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="2撤销修改">2、撤销修改</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">查看修改明细：
+</span></span><span class="line"><span class="cl">	git diff
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">撤销修改：
+</span></span><span class="line"><span class="cl">	这个要分三种情况
+</span></span><span class="line"><span class="cl">		1、修改了文件，但未提交到暂存区(文件还在工作区)
+</span></span><span class="line"><span class="cl">			git checkout readme.txt		# 丢弃工作区的修改
+</span></span><span class="line"><span class="cl">			或者 git resotre readme.txt
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">		2、文件已修改，且已经提交给了暂存区(add)
+</span></span><span class="line"><span class="cl">			使用一下任一条命令，让文件退出暂存区到工作区。然后在执行第一种操作。
+</span></span><span class="line"><span class="cl">			git restore --staged readme.txt
+</span></span><span class="line"><span class="cl">			git reset HEAD readme.txt
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">		3、文件已经提交(commit)
+</span></span><span class="line"><span class="cl">			直接使用版本回退即可
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">			
+</span></span><span class="line"><span class="cl">把暂存区的东西拉回到工作区：
+</span></span><span class="line"><span class="cl">	git rest .		# 原来是绿的变红了
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3代码回退">3、代码回退</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">版本回退：
+</span></span><span class="line"><span class="cl">	git log	# 查看版本
+</span></span><span class="line"><span class="cl">	git reset --hard 版本号	# 回退到对应版本
+</span></span><span class="line"><span class="cl">	git reset --hard HEAD^		# 回退到上一个版本
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">线上回滚
+</span></span><span class="line"><span class="cl">	1、切换到master分支
+</span></span><span class="line"><span class="cl">	2、回滚到某个版本 git reset --herd  版本号
+</span></span><span class="line"><span class="cl">	3、强制提交代码 git push origin master -f 		# 强制提交
+</span></span><span class="line"><span class="cl">	ps：查看之前的日志 git reflog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="4忽略文件">4、忽略文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">在管理的根目录创建.gitignore
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">-语法：
+</span></span><span class="line"><span class="cl">	直接在.gitignore写文件夹名字，表示文件夹忽略，不被管理
+</span></span><span class="line"><span class="cl">	写文件名字，表示文件忽略不被管理
+</span></span><span class="line"><span class="cl">	如果向忽略某个文件夹下某个文件，直接写 文件夹/xxx.py,表示把文件夹后面的xxx.py忽略
+</span></span><span class="line"><span class="cl">	/dist 表示根路径下的dist文件夹，不被管理
+</span></span><span class="line"><span class="cl">	*.py 表示后缀名为py的文件都被忽略
+</span></span><span class="line"><span class="cl">	*.log* 表示忽略日志文件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">以斜杠/开头表示目录；
+</span></span><span class="line"><span class="cl">以星号*通配多个字符；
+</span></span><span class="line"><span class="cl">以问号?通配单个字符
+</span></span><span class="line"><span class="cl">以方括号[]包含单个字符的匹配列表；
+</span></span><span class="line"><span class="cl">以叹号!表示不忽略(跟踪)匹配到的文件或目录；
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">此外，git 对于 .ignore 配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效；
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5分支操作">5、分支操作</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">查看分支：
+</span></span><span class="line"><span class="cl">	git branch		# 查看所有分支分支是绿的，表示在当前分支上
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">创建分支：
+</span></span><span class="line"><span class="cl">	git branch dev	# 创建分支dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">创建并切换：
+</span></span><span class="line"><span class="cl">	git checkout -b dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">删除分支：
+</span></span><span class="line"><span class="cl">	# ps：删除分支首先不能在该分支上
+</span></span><span class="line"><span class="cl">	git branch -d dev	# 删除dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">切换分支：
+</span></span><span class="line"><span class="cl">	git checkout dev	# 切换到dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">合并分支：
+</span></span><span class="line"><span class="cl">	# 把dev分支合并到master分支：切换到master分支，执行合并dev分支的命令
+</span></span><span class="line"><span class="cl">	git merge 分支名	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">提交本地分支到远程：
+</span></span><span class="line"><span class="cl">	git push origin dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">线上分支合并：
+</span></span><span class="line"><span class="cl">	在码云的代码库里面的pull request操作
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">出现冲突就两种情况：
+</span></span><span class="line"><span class="cl">	1、分支合并
+</span></span><span class="line"><span class="cl">		# 新建一个分支并切换
+</span></span><span class="line"><span class="cl">		git switch -c dev
+</span></span><span class="line"><span class="cl">		# 修改该分支的某个文件
+</span></span><span class="line"><span class="cl">		# 然后提交
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		# 然后切换到master分支
+</span></span><span class="line"><span class="cl">		# 然后再将master分支上的文件修改提交
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		# 然后两个分支合并就有冲突了
+</span></span><span class="line"><span class="cl">		# 这个时候需要手动把文件修改好
+</span></span><span class="line"><span class="cl">		# 然后添加暂存区，提交版本库，提交远端仓库(先pull，然后push)
+</span></span><span class="line"><span class="cl">	2、在同一个文件中改了同一行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6git关联远程仓库">6、git关联远程仓库</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 1、码云
+</span></span><span class="line"><span class="cl"># 2、创建仓库的时候不要点readme初始化这个仓库
+</span></span><span class="line"><span class="cl"># 3、现在什么都没有，新建仓库
+</span></span><span class="line"><span class="cl">	mkdir xxx_test
+</span></span><span class="line"><span class="cl">	cd xxx_test
+</span></span><span class="line"><span class="cl">	git init 
+</span></span><span class="line"><span class="cl">	touch a.txt
+</span></span><span class="line"><span class="cl">	git add a.txt
+</span></span><span class="line"><span class="cl">	git commit -m &#34;提交a&#34;
+</span></span><span class="line"><span class="cl">	git remote add origin https://gitee.com/khwcloud/kehongwei.git	# 远程连接
+</span></span><span class="line"><span class="cl">	git push origin master	# 提交master到远程
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 4、已经有了仓库
+</span></span><span class="line"><span class="cl">	cd xxx_test
+</span></span><span class="line"><span class="cl">	git remote add origin https://gitee.com/khwcloud/kehongwei.git	# 远程连接
+</span></span><span class="line"><span class="cl">	git push origin master
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 5、git 远程操作命令
+</span></span><span class="line"><span class="cl">	git remote	# 查看远程仓库(没有就看不到)
+</span></span><span class="line"><span class="cl">	git remote add origin https://gitee.com/khwcloud/kehongwei.git	# 远程连接
+</span></span><span class="line"><span class="cl">	git push origin master	# 把本地的master分支提交到远程origin，需要输入用户名和密码
+</span></span><span class="line"><span class="cl">	ps：用户平局存在 控制面板&gt;用户账户&gt;凭据管理器 里面
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 6、代码
+</span></span><span class="line"><span class="cl">	git remote -v		# 查看远程库信息
+</span></span><span class="line"><span class="cl">	git remote rm origin	# 删除已有的GitHub远程库
+</span></span><span class="line"><span class="cl">	git remote add origin https:/xxx	# 关联远程仓库
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	ps：关联两个仓库
+</span></span><span class="line"><span class="cl">	git remote add 名字自取 https:/xxx
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 7、如果初见
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="7git上传拉取">7、git上传，拉取</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 1、创始者如上
+</span></span><span class="line"><span class="cl"># 2、项目开发者，参与者把代码拉下来继续开发
+</span></span><span class="line"><span class="cl">	git close https://gitee.com/khwcloud/kehongwei.git
+</span></span><span class="line"><span class="cl">	可以看到完整的版本和日志控制
+</span></span><span class="line"><span class="cl">	可以回复到任意版本
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 3、本地新增c.txt文件
+</span></span><span class="line"><span class="cl">	提交到暂存区
+</span></span><span class="line"><span class="cl">		git add c.txt
+</span></span><span class="line"><span class="cl">	提交到版本库
+</span></span><span class="line"><span class="cl">		git commit -m &#34;提交c&#34;
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	拉代码
+</span></span><span class="line"><span class="cl">		git pull origin master
+</span></span><span class="line"><span class="cl">	提交到远程
+</span></span><span class="line"><span class="cl">		git push origin  master
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 4、让文件夹中的代码成为最新的
+</span></span><span class="line"><span class="cl">	git pull origin master	# 将远程仓库代码拉下来
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 5、重点，每次提交代码之前要先拉下来，然后再提交到远程
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps：发现提交不了可能是 本地没有ReadMe文件，那么就在本地生成一个：
+</span></span><span class="line"><span class="cl">git pull --rebase origin master     本地生成ReadMe文件
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="8ssh连接">8、ssh连接</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 1、公司内部大部分使用ssh连接
+</span></span><span class="line"><span class="cl">	- 公司给个git地址(项目地址)
+</span></span><span class="line"><span class="cl">	- 然后我们 git clone 地址到本地
+</span></span><span class="line"><span class="cl">	- 改代码，改完了--》提交(禁止)
+</span></span><span class="line"><span class="cl">	- ssh配置，以后都不用输密码了
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl"># 2、配置如何做
+</span></span><span class="line"><span class="cl">	- 对称加密 (加密和解密用同一套密码)
+</span></span><span class="line"><span class="cl">	- 非堆成加密，公钥加密，私钥解密
+</span></span><span class="line"><span class="cl">	- 生成一套密钥(用命令)
+</span></span><span class="line"><span class="cl">		ssh-keygen -t rsa -C &#34;lqz@qq.com&#34;	生成到用户家目录的.ssh文件夹下(一个公钥，一个私钥)
+</span></span><span class="line"><span class="cl">	- 把公钥复制出来，在码云上配置
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-11-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          <a href="/tags/git/">git</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday11django/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day11,django</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday9%E6%95%B0%E6%8D%AE%E5%BA%93/">
+            <span class="next-text nav-default">python,day9,数据库</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

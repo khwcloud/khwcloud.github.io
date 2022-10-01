@@ -1,0 +1,2560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day14,复习 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="基础复习
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday14%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day14,复习" />
+<meta property="og:description" content="基础复习" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday14%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-04-28T11:06:25+08:00" />
+<meta property="article:modified_time" content="2022-04-28T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day14,复习">
+<meta itemprop="description" content="基础复习"><meta itemprop="datePublished" content="2022-04-28T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2022-04-28T11:06:25+08:00" />
+<meta itemprop="wordCount" content="10559">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day14,复习"/>
+<meta name="twitter:description" content="基础复习"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day14,复习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-04-28 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 10559 words </span>
+          <span class="more-meta"> 22 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#作业">作业</a></li>
+            <li><a href="#对象">对象</a></li>
+            <li><a href="#深浅copy">深浅copy</a></li>
+            <li><a href="#可变类型与不可变类型">可变类型与不可变类型</a></li>
+            <li><a href="#字符编码">字符编码</a></li>
+            <li><a href="#闭包函数与装饰器">闭包函数与装饰器</a></li>
+            <li><a href="#python中的魔法方法">python中的魔法方法</a></li>
+            <li><a href="#cookiesessiontoken">cookie，session，token</a></li>
+            <li><a href="#django中的session底层原理">django中的session底层原理</a></li>
+            <li><a href="#异常处理">异常处理</a></li>
+            <li><a href="#pymysql的使用">pymysql的使用</a></li>
+            <li><a href="#面试">面试</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>基础复习</p>
+<h3 id="作业">作业</h3>
+<h4 id="中间件作业">中间件作业</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">需求:请求来了之后，在request里面的data属性，我post提交过来的数据，都可以从request.data取出来使用
+</span></span><span class="line"><span class="cl">为什么呢？
+</span></span><span class="line"><span class="cl">因为原生的django他是不支持jason格式转码的，要取很麻烦要从body里面取出来转，所以可以写一个中间件来完成该需求
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">==============================================
+</span></span><span class="line"><span class="cl">&lt;body&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;form action=&#34;&#34; method=&#34;post&#34;&gt;
+</span></span><span class="line"><span class="cl">    用户名：&lt;input type=&#34;text&#34; name=&#34;name&#34; id=&#34;name&#34;&gt;
+</span></span><span class="line"><span class="cl">    密码：&lt;input type=&#34;text&#34; name=&#34;pwd&#34; id=&#34;pwd&#34;&gt;
+</span></span><span class="line"><span class="cl">{#    &lt;input type=&#34;submit&#34; value=&#34;提交&#34; id=&#34;submit&#34;&gt;#}
+</span></span><span class="line"><span class="cl">    &lt;input type=&#34;button&#34; value=&#34;提交&#34; id=&#34;submit&#34;&gt;
+</span></span><span class="line"><span class="cl">    &lt;input type=&#34;submit&#34; value=&#34;form表单提交&#34; id=&#34;submit&#34;&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;/form&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;/body&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;script&gt;
+</span></span><span class="line"><span class="cl">    $(&#39;#submit&#39;).click(function () {
+</span></span><span class="line"><span class="cl">        $.ajax({
+</span></span><span class="line"><span class="cl">            url:&#39;/home/&#39;,
+</span></span><span class="line"><span class="cl">            type:&#39;post&#39;,
+</span></span><span class="line"><span class="cl">            contentType:&#39;application/json&#39;,
+</span></span><span class="line"><span class="cl">            data:JSON.stringify({&#39;name&#39;:$(&#39;#name&#39;).val(), &#39;pwd&#39;:$(&#39;#pwd&#39;).val()}),
+</span></span><span class="line"><span class="cl">            success:function (data){
+</span></span><span class="line"><span class="cl">                console.log(data)
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">        })
+</span></span><span class="line"><span class="cl">    })
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;/script&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">==============================================
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def home(request):
+</span></span><span class="line"><span class="cl">    if request.method == &#39;POST&#39;:
+</span></span><span class="line"><span class="cl">        print(request.POST)
+</span></span><span class="line"><span class="cl">        # &lt;class &#39;django.http.request.QueryDict&#39;&gt;
+</span></span><span class="line"><span class="cl">        print(type(request.POST))
+</span></span><span class="line"><span class="cl">        print(&#39;body的内容&#39;,request.body)
+</span></span><span class="line"><span class="cl">        print(request.data)
+</span></span><span class="line"><span class="cl">        print(request.data.get(&#39;name&#39;))
+</span></span><span class="line"><span class="cl">        return HttpResponse(&#39;OK&#39;)
+</span></span><span class="line"><span class="cl">    return render(request, &#39;home.html&#39;)
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"> ==============================================
+</span></span><span class="line"><span class="cl">中间件：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># django.utils.deprecation.MiddlewareMixin
+</span></span><span class="line"><span class="cl">from django.utils.deprecation import MiddlewareMixin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import json
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class JsonMiddel(MiddlewareMixin):
+</span></span><span class="line"><span class="cl">    def process_request(self, request):
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        1、第一种jsaon格式数据，直接loads
+</span></span><span class="line"><span class="cl">        2、第二种urlencode格式数据，交给post
+</span></span><span class="line"><span class="cl">        3、第三种文件格式数据，交给post
+</span></span><span class="line"><span class="cl">        :param request:
+</span></span><span class="line"><span class="cl">        :return:
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        try:
+</span></span><span class="line"><span class="cl">            request.data = json.loads(request.body)
+</span></span><span class="line"><span class="cl">        except Exception as e:
+</span></span><span class="line"><span class="cl">            request.data = request.POST
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">关注的问题：
+</span></span><span class="line"><span class="cl">1、form表单和ajax提交的重复，form表单中input的submit类型和button
+</span></span><span class="line"><span class="cl">按钮都会触发两次(有ajax的情况)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、from django.http.request import QueryDict
+</span></span><span class="line"><span class="cl">    本质是一个字典，比字典强大。不能修改值，一改就报错
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">3、CommonMiddleware中间件控制了是否重定向到带/的地址
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="类作业">类作业</h4>
+<p><strong>1、写一个类，有个name属性，如果name赋值为非字符串，就不让放</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class NotStrException(BaseException):
+</span></span><span class="line"><span class="cl">    def __init__(self,msg):
+</span></span><span class="line"><span class="cl">        self.msg = msg
+</span></span><span class="line"><span class="cl">    def __str__(self):
+</span></span><span class="line"><span class="cl">        return self.msg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Person():
+</span></span><span class="line"><span class="cl">    def __setattr__(self, key, value):
+</span></span><span class="line"><span class="cl">        if isinstance(value,str):
+</span></span><span class="line"><span class="cl">            # isinstance：value是不是str的对象
+</span></span><span class="line"><span class="cl">            # issubclass：value是不是str的子类
+</span></span><span class="line"><span class="cl">            # setattr(self,key,value) # self.key = value
+</span></span><span class="line"><span class="cl">            self.__dict__[key] = value
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            print(&#39;你不能放&#39;)
+</span></span><span class="line"><span class="cl">            raise NotStrException(&#39;不是字符串异常&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">person = Person()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">try:
+</span></span><span class="line"><span class="cl">    person.name = &#39;asdasd&#39;
+</span></span><span class="line"><span class="cl">    person.sname = 123
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">except NotStrException as e:
+</span></span><span class="line"><span class="cl">    print(e)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(person.name)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>2、通过上下文管理器写一个mysql的连接，通过with管理</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import pymysql
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Mysql():
+</span></span><span class="line"><span class="cl">    def __enter__(self):
+</span></span><span class="line"><span class="cl">        self.conn = pymysql.connect(host=&#39;127.0.0.1&#39;, user=&#39;root&#39;, password=&#39;123456&#39;,
+</span></span><span class="line"><span class="cl">                               database=&#39;mytest&#39;,port=3306
+</span></span><span class="line"><span class="cl">                               )
+</span></span><span class="line"><span class="cl">        return self.conn
+</span></span><span class="line"><span class="cl">    def __exit__(self, exc_type, exc_val, exc_tb):
+</span></span><span class="line"><span class="cl">        self.conn.close()
+</span></span><span class="line"><span class="cl">        pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">with Mysql() as mysql:
+</span></span><span class="line"><span class="cl">    mysql.cursor()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="对象">对象</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># type和object的关系
+</span></span><span class="line"><span class="cl">    1、type是object的类
+</span></span><span class="line"><span class="cl">    2、type继承了object
+</span></span><span class="line"><span class="cl">    3、type是type自己的类
+</span></span><span class="line"><span class="cl">    4、object也是由type实例化所得
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"> # 一切皆对象的好处
+</span></span><span class="line"><span class="cl">    不同类型之间的变量可以赋值
+</span></span><span class="line"><span class="cl">    a = 100
+</span></span><span class="line"><span class="cl">    a = &#39;xxx&#39;
+</span></span><span class="line"><span class="cl">    其实本质，变量都是指向了一个内存地址
+</span></span><span class="line"><span class="cl">    出现了深浅copy问题
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>链式调用</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
+</div>
+</div><h3 id="深浅copy">深浅copy</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">l = [1,2,3,[4,5,6]]
+</span></span><span class="line"><span class="cl"># l2 = l  # 赋值
+</span></span><span class="line"><span class="cl"># print(l2 is l)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from copy import copy
+</span></span><span class="line"><span class="cl">from copy import deepcopy
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># l3 = copy(l)    # 浅copy
+</span></span><span class="line"><span class="cl"># # 系统新开辟一个内存地址x11存放的是数组的内存地址
+</span></span><span class="line"><span class="cl"># print(l)
+</span></span><span class="line"><span class="cl"># print(l3)
+</span></span><span class="line"><span class="cl"># print(l is l3)  # 由于是新开辟的地址，所以和l3不同
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># l3[3][1] = 999  # 因为l3内存地址中存放的是数组的地址，所以也可以操作原数组
+</span></span><span class="line"><span class="cl"># print(l)
+</span></span><span class="line"><span class="cl"># print(l3)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">l4 = deepcopy(l)    # 深copy
+</span></span><span class="line"><span class="cl"># 系统新开辟一个内存空间x12，同时也新开一篇空间x13存放数组，然后x12指向x13
+</span></span><span class="line"><span class="cl">l4[3][1] = 666  # 修改只修改x13的数组，x12不受影响
+</span></span><span class="line"><span class="cl">print(l)
+</span></span><span class="line"><span class="cl">print(l4)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="可变类型与不可变类型">可变类型与不可变类型</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 字典、列表、集合      可变类型
+</span></span><span class="line"><span class="cl"># 数字，字符串，元组     不可变类型
+</span></span><span class="line"><span class="cl"># 字典的key必须用不可变类型，可以hash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">python中参数传递都是copy一份过去，由于一切皆对象，传过去都是地址，理论上
+</span></span><span class="line"><span class="cl">是都可以修改的，但是python中加了可变和不可变类型，所以可变类型在函数中修改会
+</span></span><span class="line"><span class="cl">影响原来的，不可变类型则不会影响到原来的
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="字符编码">字符编码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># ASCII码
+</span></span><span class="line"><span class="cl">	计算机内部用啦标识字母的，每一个状态对应一个符号
+</span></span><span class="line"><span class="cl"># 非 ASCII 编码
+</span></span><span class="line"><span class="cl">    英语用128个符号编码就够了，但是用来表示其他语言，128个符号是不够的。
+</span></span><span class="line"><span class="cl">    其他国家的符号用128--255这一段标识
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Unicode
+</span></span><span class="line"><span class="cl">    Unicode统一了字符和数字对应的关系
+</span></span><span class="line"><span class="cl">    需要注意的是，Unicode 只是一个符号集，它只规定了符号的二进制代码，
+</span></span><span class="line"><span class="cl">    却没有规定这个二进制代码应该如何存储。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># UTF-8
+</span></span><span class="line"><span class="cl">    UTF-8 就是在互联网上使用最广的一种 Unicode 的实现方式
+</span></span><span class="line"><span class="cl">    它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的
+</span></span><span class="line"><span class="cl">    符号而变化字节长度。
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"># encoding：
+</span></span><span class="line"><span class="cl">    编码，例如使用utf-8来编码，一个字符串&#34;hello&#34;，我们写到磁盘中并不是hello，二十经过一层编码操作，以字节的方式或者二进制的方式落在磁盘
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"># decoding
+</span></span><span class="line"><span class="cl">解码，将我们看不懂的字节或二进制转化为我们看得懂的文本
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="闭包函数与装饰器">闭包函数与装饰器</h3>
+<h4 id="闭包概念">闭包概念</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">闭包概念，定义在函数内部，该函数对外部作用域有应用
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">例子：函数func调用a
+</span></span><span class="line"><span class="cl">def index():
+</span></span><span class="line"><span class="cl">    a = 2
+</span></span><span class="line"><span class="cl">    def func():
+</span></span><span class="line"><span class="cl">        b = a
+</span></span><span class="line"><span class="cl">        print(b)
+</span></span><span class="line"><span class="cl">    return func()
+</span></span><span class="line"><span class="cl">index()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="装饰器">装饰器</h4>
+<p><strong>推导一：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 创建一个统计函数运行时间的功能
+</span></span><span class="line"><span class="cl"># 推导方案一：失败
+</span></span><span class="line"><span class="cl">    # 没有修改被装饰对象调用方式，但是修改了其源代码
+</span></span><span class="line"><span class="cl">    import time
+</span></span><span class="line"><span class="cl">    def index(x, y):
+</span></span><span class="line"><span class="cl">        start = time.time()
+</span></span><span class="line"><span class="cl">        print(&#39;index  %s  %s&#39; %(x,y))
+</span></span><span class="line"><span class="cl">        stop = time.time()
+</span></span><span class="line"><span class="cl">        t = stop - start
+</span></span><span class="line"><span class="cl">        print(&#39;函数index运行的时间为%s&#39;%t,)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    index(111,222)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导二：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 推导方案二：
+</span></span><span class="line"><span class="cl">    没有修改被装饰对象的调用方式，也没有修改源码，但是代码重复
+</span></span><span class="line"><span class="cl">    def index(x, y):
+</span></span><span class="line"><span class="cl">    	print(&#39;index  %s  %s&#39; % (x, y))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    start = time.time()
+</span></span><span class="line"><span class="cl">    index(1,2)
+</span></span><span class="line"><span class="cl">    stop = time.time()
+</span></span><span class="line"><span class="cl">    t = stop - start
+</span></span><span class="line"><span class="cl">    print(&#39;函数index运行的时间为%s&#39;%t)
+</span></span><span class="line"><span class="cl">    # 如果多次调用则代码重复
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导三：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 推导方案三：
+</span></span><span class="line"><span class="cl">    解决了方案二的代码冗余，但新问题是函数的调用方式改变
+</span></span><span class="line"><span class="cl">    def index(x, y):
+</span></span><span class="line"><span class="cl">        print(&#39;index  %s  %s&#39; % (x, y))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def wrapper():
+</span></span><span class="line"><span class="cl">        start = time.time()
+</span></span><span class="line"><span class="cl">        index(1,2)
+</span></span><span class="line"><span class="cl">        stop = time.time()
+</span></span><span class="line"><span class="cl">        t = stop - start
+</span></span><span class="line"><span class="cl">        print(&#39;函数index运行的时间为%s&#39;%t)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    wrapper()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    但是上述的wrapper里的index的参数写死了
+</span></span><span class="line"><span class="cl">    优化1： index参数写死了，将index参数写活
+</span></span><span class="line"><span class="cl">        def index(x, y):
+</span></span><span class="line"><span class="cl">            print(&#39;index  %s  %s&#39; % (x, y))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        def wrapper(a,b):
+</span></span><span class="line"><span class="cl">            start = time.time()
+</span></span><span class="line"><span class="cl">            index(a,b)  # index(333,444)
+</span></span><span class="line"><span class="cl">            stop = time.time()
+</span></span><span class="line"><span class="cl">            t = stop - start
+</span></span><span class="line"><span class="cl">            print(&#39;函数index运行的时间为%s&#39;%t)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        wrapper(333,444)
+</span></span><span class="line"><span class="cl">    优化2： 由于优化1index参数不好随意修改，基于优化2可以随意修改index参数
+</span></span><span class="line"><span class="cl">        def index(x, y, z):
+</span></span><span class="line"><span class="cl">            print(&#39;index  %s  %s  %s&#39; % (x, y, z))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        def wrapper(*args,**kwargs):
+</span></span><span class="line"><span class="cl">            start = time.time()
+</span></span><span class="line"><span class="cl">            index(*args,**kwargs)   # index(333,444,555)
+</span></span><span class="line"><span class="cl">            stop = time.time()
+</span></span><span class="line"><span class="cl">            t = stop - start
+</span></span><span class="line"><span class="cl">            print(&#39;函数index运行的时间为%s&#39;%t)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        wrapper(333,444,555)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    优化3：    由于优化2只能装饰index，优化了可以装饰其他函数
+</span></span><span class="line"><span class="cl">        ps：通过闭包
+</span></span><span class="line"><span class="cl">        def index(x, y, z):
+</span></span><span class="line"><span class="cl">            print(&#39;index  %s  %s %s&#39; % (x, y, z))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        def outter(func):
+</span></span><span class="line"><span class="cl">            # func = index    # 为wrapper里面包一个func，但是这里写死了,可以直接给outter加参数写活
+</span></span><span class="line"><span class="cl">            # 但是这个时候外面就拿不到wrapper了，所以要return一个wrapper
+</span></span><span class="line"><span class="cl">            # 这样调用outter就是调用wrapper
+</span></span><span class="line"><span class="cl">            def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">                # func = index的内存地址
+</span></span><span class="line"><span class="cl">                start = time.time()
+</span></span><span class="line"><span class="cl">                res = (*args, **kwargs)  # index()
+</span></span><span class="line"><span class="cl">                stop = time.time()
+</span></span><span class="line"><span class="cl">                t = stop - start
+</span></span><span class="line"><span class="cl">                return res
+</span></span><span class="line"><span class="cl">            return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        f = outter(index)   # f = outer(index的内存地址)
+</span></span><span class="line"><span class="cl">        # f=当初那个wrapper函数的内存地址
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        f(x=1,y=2,z=3)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导四：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 推导方案四：如何在方案三的基础上不改变函数的调用
+</span></span><span class="line"><span class="cl">import time
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def index(x, y, z):
+</span></span><span class="line"><span class="cl">        print(&#39;index  %s  %s %s&#39; % (x, y, z))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def outter(func):
+</span></span><span class="line"><span class="cl">        def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">            start = time.time()
+</span></span><span class="line"><span class="cl">            res = func(*args, **kwargs)  # index()
+</span></span><span class="line"><span class="cl">            stop = time.time()
+</span></span><span class="line"><span class="cl">            t = stop - start
+</span></span><span class="line"><span class="cl">            return res
+</span></span><span class="line"><span class="cl">        return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    print(index)    # 这代表index函数的内存地址
+</span></span><span class="line"><span class="cl">    index = outter(index)   # index = outer(index的内存地址)
+</span></span><span class="line"><span class="cl">    # index=当初那个wrapper函数的内存地址
+</span></span><span class="line"><span class="cl">    print(index)    # 这代表outter里面的wrapper里的index
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	# 这样以来，就实现了不改调用方法，不改源码来给函数添加功能
+</span></span><span class="line"><span class="cl">	index(1,2,3)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="装饰器补充">装饰器补充</h4>
+<p><strong>问题描述</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 偷梁换柱之后
+</span></span><span class="line"><span class="cl"># index的参数什么样子，wrapper的参数就应该什么样子
+</span></span><span class="line"><span class="cl"># index的返回值什么样子，wrapper的返回值就应该什么样子
+</span></span><span class="line"><span class="cl"># index的属性什么样子，wrapper的属性就应该什么样子 ==&gt;from functools import wraps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def outter(func):
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;这个是wrapper的文档注释&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@outter
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;这个是index的帮助信息&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    print(x,y)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">index(1,2)  # 相当于wrapper(1,2)
+</span></span><span class="line"><span class="cl">print(index,index.__name__) # wrapper的内存地址和 wrapper
+</span></span><span class="line"><span class="cl">print(help(index))  # 显示的也是wrapper的文档注释
+</span></span><span class="line"><span class="cl">print(index.__doc__)    # 上面的help其实就是通过doc来实现的
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 通过以上案例index(wrapper)的内部没有伪装成真正的index
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导一：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">如何实现index的内部也伪装成真正的index呢？
+</span></span><span class="line"><span class="cl">思路：使wrapper的属性也等于原函数的内部属性
+</span></span><span class="line"><span class="cl">    index.__name__ = 原函数.__name__
+</span></span><span class="line"><span class="cl">    index.__doc__ = 原函数.__doc__
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 优化一：这么做太麻烦，原函数的属性太多
+</span></span><span class="line"><span class="cl">def outter(func):
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;这个是wrapper的文档注释&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res
+</span></span><span class="line"><span class="cl">    # index.__name__ = 原函数.__name__
+</span></span><span class="line"><span class="cl">    # index.__doc__ = 原函数.__doc__
+</span></span><span class="line"><span class="cl">    wrapper.__name__ = func.__name__
+</span></span><span class="line"><span class="cl">    wrapper.__doc__ = func.__doc__
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@outter
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;这个是index的帮助信息&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    print(x,y)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(index,index.__name__)
+</span></span><span class="line"><span class="cl">print(index.__doc__)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导二：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 优化2:  通过wraps模块，将模块装饰给wrapper
+</span></span><span class="line"><span class="cl"># 这样以来装饰器和被装饰对象内部属性也就一样了
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">from functools import wraps
+</span></span><span class="line"><span class="cl">def outter(func):
+</span></span><span class="line"><span class="cl">    # 给wrapper装饰上这个功能
+</span></span><span class="line"><span class="cl">    @wraps(func)
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;这个是wrapper的文档注释&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@outter
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    &#34;&#34;&#34;这个是index的帮助信息&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">    print(x,y)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(index,index.__name__)
+</span></span><span class="line"><span class="cl">print(index.__doc__)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="有参装饰器">有参装饰器</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 思考场景，如果wrapper内还需要传参数，那么只能往outter里面传
+</span></span><span class="line"><span class="cl"># 但是由于语法糖的限制，outter函数只能有一个参数，并且该参数只接收被装饰对象内存地址
+</span></span><span class="line"><span class="cl"># 那么该如何传参呢？
+</span></span><span class="line"><span class="cl">def outter(func):
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@outter # index  = outter(index)
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    print(x,y)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导一：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 通过登录案例一推导：山炮玩法，不用语法糖通过普通方式传参
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def outter(func, db_type):
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        name = input(&#39;username:&#39;).strip()
+</span></span><span class="line"><span class="cl">        password = input(&#39;password:&#39;).strip()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        if db_type == &#39;file&#39;:
+</span></span><span class="line"><span class="cl">            print(&#39;基于文件的验证&#39;)
+</span></span><span class="line"><span class="cl">            if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                return res
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        elif db_type == &#39;mysql&#39;:
+</span></span><span class="line"><span class="cl">            print(&#39;基于mysql的验证&#39;)
+</span></span><span class="line"><span class="cl">            if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                return res
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        elif db_type == &#39;ldap&#39;:
+</span></span><span class="line"><span class="cl">            print(&#39;基于ldap的验证&#39;)
+</span></span><span class="line"><span class="cl">            if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                return res
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        else:
+</span></span><span class="line"><span class="cl">            print(&#39;不支持该db_type&#39;)
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    print(&#39;index--&gt;&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 山炮玩法，虽然可以多传一个参数，但是这样就无法使用语法糖了
+</span></span><span class="line"><span class="cl">index = outter(index, &#39;mysql&#39;)
+</span></span><span class="line"><span class="cl">index(1,2)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导二：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 通过语法糖传参
+</span></span><span class="line"><span class="cl"># 山炮二：装饰方法太麻烦
+</span></span><span class="line"><span class="cl"># 思路outter内部需要db_type，所以只要在outter外部将db_type包给outter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def auth(db_type = &#39;file&#39;):
+</span></span><span class="line"><span class="cl">    def outter(func):
+</span></span><span class="line"><span class="cl">        def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">            name = input(&#39;username:&#39;).strip()
+</span></span><span class="line"><span class="cl">            password = input(&#39;password:&#39;).strip()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            if db_type == &#39;file&#39;:
+</span></span><span class="line"><span class="cl">                print(&#39;基于文件的验证&#39;)
+</span></span><span class="line"><span class="cl">                if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                    res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                    return res
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                    print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            elif db_type == &#39;mysql&#39;:
+</span></span><span class="line"><span class="cl">                print(&#39;基于mysql的验证&#39;)
+</span></span><span class="line"><span class="cl">                if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                    res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                    return res
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                    print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            elif db_type == &#39;ldap&#39;:
+</span></span><span class="line"><span class="cl">                print(&#39;基于ldap的验证&#39;)
+</span></span><span class="line"><span class="cl">                if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                    res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                    return res
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                    print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                print(&#39;不支持该db_type&#39;)
+</span></span><span class="line"><span class="cl">        return wrapper
+</span></span><span class="line"><span class="cl">    return outter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">deco = auth(db_type=&#39;file&#39;)
+</span></span><span class="line"><span class="cl">@deco
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    print(&#39;index--&gt;&#39;)
+</span></span><span class="line"><span class="cl">index(1,2)  # 这样验证是file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">deco = auth(db_type=&#39;mysql&#39;)
+</span></span><span class="line"><span class="cl">@deco
+</span></span><span class="line"><span class="cl">def home(x,y):
+</span></span><span class="line"><span class="cl">    print(&#39;home--&gt;&#39;)
+</span></span><span class="line"><span class="cl">home(1,2)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>推导三：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 推导三:
+</span></span><span class="line"><span class="cl"># 思路outter内部需要db_type，所以只要在outter外部将db_type包给outter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def auth(db_type = &#39;file&#39;):
+</span></span><span class="line"><span class="cl">    def outter(func):
+</span></span><span class="line"><span class="cl">        def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">            name = input(&#39;username:&#39;).strip()
+</span></span><span class="line"><span class="cl">            password = input(&#39;password:&#39;).strip()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            if db_type == &#39;file&#39;:
+</span></span><span class="line"><span class="cl">                print(&#39;基于文件的验证&#39;)
+</span></span><span class="line"><span class="cl">                if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                    res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                    return res
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                    print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            elif db_type == &#39;mysql&#39;:
+</span></span><span class="line"><span class="cl">                print(&#39;基于mysql的验证&#39;)
+</span></span><span class="line"><span class="cl">                if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                    res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                    return res
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                    print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            elif db_type == &#39;ldap&#39;:
+</span></span><span class="line"><span class="cl">                print(&#39;基于ldap的验证&#39;)
+</span></span><span class="line"><span class="cl">                if name ==&#39;egon&#39;  and password == &#39;123&#39;:
+</span></span><span class="line"><span class="cl">                    res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">                    return res
+</span></span><span class="line"><span class="cl">                else:
+</span></span><span class="line"><span class="cl">                    print(&#39;密码错误&#39;)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                print(&#39;不支持该db_type&#39;)
+</span></span><span class="line"><span class="cl">        return wrapper
+</span></span><span class="line"><span class="cl">    return outter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">deco = auth(db_type=&#39;file&#39;)
+</span></span><span class="line"><span class="cl">@deco
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    print(&#39;index--&gt;&#39;)
+</span></span><span class="line"><span class="cl">index(1,2)  # 这样验证是file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># deco = auth(db_type=&#39;mysql&#39;)
+</span></span><span class="line"><span class="cl">@auth(db_type=&#39;mysql&#39;)  # @deco -&gt; index=deco(index)
+</span></span><span class="line"><span class="cl">def home(x,y):
+</span></span><span class="line"><span class="cl">    print(&#39;home--&gt;&#39;)
+</span></span><span class="line"><span class="cl">home(1,2)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># outter = auth(db_type=&#39;file&#39;)   #将autter放回到全局，然后就可以语法糖调用
+</span></span><span class="line"><span class="cl">@auth(db_type=&#39;mysql&#39;)
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">1、先执行auth(db_type=&#39;mysql&#39;),然后执行auth函数体return outter得到outter，
+</span></span><span class="line"><span class="cl">将其放在@后面，得到func = outter(func)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、得到func = outter(func)后，再进一步解析，outter(fun)执行函数体得到wrapper,
+</span></span><span class="line"><span class="cl">从而得到func = wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、func(1,2) 相当于 func = wrapper,相当于调用wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、将1，2传入wrapper中执行wrapper体代码，然后从中得到返回值
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">def func(x, y):
+</span></span><span class="line"><span class="cl">    print(&#39;%d,%d&#39; % (x, y))
+</span></span><span class="line"><span class="cl">func(1, 2)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="装饰器模板"><strong>装饰器模板</strong></h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 无参装饰器模板
+</span></span><span class="line"><span class="cl">from functools import wraps
+</span></span><span class="line"><span class="cl">def outter(func):
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        # 调用原函数
+</span></span><span class="line"><span class="cl">        # 添加新功能
+</span></span><span class="line"><span class="cl">        res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@outter  # func=outter(func)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 有参装饰器模板
+</span></span><span class="line"><span class="cl">def 有参装饰器(x, y, z):
+</span></span><span class="line"><span class="cl">    x = 111
+</span></span><span class="line"><span class="cl">    def outter(func):
+</span></span><span class="line"><span class="cl">        def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">            # 调用原函数
+</span></span><span class="line"><span class="cl">            # 添加新功能
+</span></span><span class="line"><span class="cl">            res = func(*args, **kwargs)
+</span></span><span class="line"><span class="cl">            return res
+</span></span><span class="line"><span class="cl">        return wrapper()
+</span></span><span class="line"><span class="cl">    return outter
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@有参装饰器(x, y, z)
+</span></span><span class="line"><span class="cl">def 被装饰对象():
+</span></span><span class="line"><span class="cl">    pass
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="语法糖">语法糖</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">语法糖:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import time
+</span></span><span class="line"><span class="cl">def outter(func):
+</span></span><span class="line"><span class="cl">    def wrapper(*args, **kwargs):
+</span></span><span class="line"><span class="cl">        # func = index的内存地址
+</span></span><span class="line"><span class="cl">        start = time.time()
+</span></span><span class="line"><span class="cl">        res = func(*args, **kwargs)  # index()
+</span></span><span class="line"><span class="cl">        stop = time.time()
+</span></span><span class="line"><span class="cl">        t = stop - start
+</span></span><span class="line"><span class="cl">        print(&#39;函数index运行的时间为%s&#39; % t)
+</span></span><span class="line"><span class="cl">        return res
+</span></span><span class="line"><span class="cl">    return wrapper
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@outter # home=outter(name)
+</span></span><span class="line"><span class="cl">def home(name):
+</span></span><span class="line"><span class="cl">    time.sleep(2)
+</span></span><span class="line"><span class="cl">    print(&#39;name is %s&#39; %name)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">home(&#39;asd&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="叠加多个装饰">叠加多个装饰</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 叠加多个装饰分析运行顺序
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def deco1(func1):
+</span></span><span class="line"><span class="cl">    def wrapper1(*args,**kwargs):
+</span></span><span class="line"><span class="cl">        print(&#39;正在运行==&gt;deco1.wrapper1&#39;)
+</span></span><span class="line"><span class="cl">        res1 = func1(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res1
+</span></span><span class="line"><span class="cl">    return wrapper1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def deco2(func2):   # func2 = wrapper3的内存地址
+</span></span><span class="line"><span class="cl">    def wrapper2(*args,**kwargs):
+</span></span><span class="line"><span class="cl">        print(&#39;正在运行==&gt;deco2.wrapper1&#39;)
+</span></span><span class="line"><span class="cl">        res2 = func2(*args, **kwargs)
+</span></span><span class="line"><span class="cl">        return res2
+</span></span><span class="line"><span class="cl">    return wrapper2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def deco3(x):
+</span></span><span class="line"><span class="cl">    def outter3(func3): # func3 = 被装饰对象index函数的内存地址
+</span></span><span class="line"><span class="cl">        def wrapper3(*args,**kwargs):
+</span></span><span class="line"><span class="cl">            print(&#39;正在运行==&gt;deco3.outter3.wrapper3&#39;)
+</span></span><span class="line"><span class="cl">            res3 = func3(*args, **kwargs)
+</span></span><span class="line"><span class="cl">            return res3
+</span></span><span class="line"><span class="cl">        return wrapper3
+</span></span><span class="line"><span class="cl">    return outter3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl"># 加载顺序自下而上，所以从deco3开始看
+</span></span><span class="line"><span class="cl">@deco1 
+</span></span><span class="line"><span class="cl">    # index = deco1(wrapper2的内存地址),老规矩函数加括号先执行
+</span></span><span class="line"><span class="cl">    返回wrapper1，相当于 index = wrapper1的内存地址
+</span></span><span class="line"><span class="cl">    @deco1 ==&gt; index = deco1(wrapper2的内存地址) ==&gt; index = wrapper1的内存地址
+</span></span><span class="line"><span class="cl">    ps: func1 = wrapper2的内存地址
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">@deco2
+</span></span><span class="line"><span class="cl">    相当于 index = deco2(wrapper3的内存地址),老规矩函数加括号先执行函数体
+</span></span><span class="line"><span class="cl">    返回得到wrapper2，相当于index = wrapper2的内存地址
+</span></span><span class="line"><span class="cl">    @deco2 ==&gt; index=deco2(wrapper3的内存地址) ==&gt;index = wrapper2的内存地址
+</span></span><span class="line"><span class="cl">    ps: # func2 = wrapper3的内存地址
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">@deco3(111):
+</span></span><span class="line"><span class="cl">    看到函数加括号就先执行，执行deco3的函数体返回得到outter3
+</span></span><span class="line"><span class="cl">    @outter3 相当于 index=outter3(index),看到函数加括号则先执行
+</span></span><span class="line"><span class="cl">    执行outter3(index)返回wrapper3的内存地址
+</span></span><span class="line"><span class="cl">    @deco3(111) ==&gt; @index=outter3(index) ==&gt; index=wrapper3的内存地址
+</span></span><span class="line"><span class="cl">    ps: # func3 = 被装饰对象index函数的内存地址
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">执行顺序 自下而上：
+</span></span><span class="line"><span class="cl">index(1,2)  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">先调用的是wrapper1(1,2),在运行wrapper1的过程中运行到了res1这条函数
+</span></span><span class="line"><span class="cl">res1 = func1(*args, **kwargs)  # res1 = wrapper2(1,2)
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">调用wrapper2(1,2) 过程中遇到了
+</span></span><span class="line"><span class="cl">res2 = func2(*args, **kwargs)   # res2 = wrapper3(1,2)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">然后接着调用wrapper3(1,2)，然后遇到了
+</span></span><span class="line"><span class="cl">res3 = func3(*args, **kwargs)   # res3 = index(1,2)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">然后index(1,2)结束后，wrapper3(1,2)结束返回res3
+</span></span><span class="line"><span class="cl">wrapper3(1,2)结束后，wrapper2(1,2)结束返回res2
+</span></span><span class="line"><span class="cl">wrapper2(1,2)结束后，wrapper1(1,2)结束返回res1
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">@deco1
+</span></span><span class="line"><span class="cl">@deco2
+</span></span><span class="line"><span class="cl">@deco3(111)
+</span></span><span class="line"><span class="cl">def index(x,y):
+</span></span><span class="line"><span class="cl">    print(&#39;from index %s:%s&#39; %(x,y))
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">index(1,2)
+</span></span><span class="line"><span class="cl">print(index)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">总结：
+</span></span><span class="line"><span class="cl">加载顺序 自下而上
+</span></span><span class="line"><span class="cl">执行顺序 自上而下
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="python中的魔法方法">python中的魔法方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.cnblogs.com/liuqingzheng/articles/9949568.html#_label3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># __init__: 类实例化会触发
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># __str__: 答应对象会触发
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#__call__:对象()触发，类也是对象的类(),类实例化过程调用元类的__call__
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># __new__:在类实例化会触发,它比__init__早(造出裸体的人，__init__穿衣服)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#__del__:del对象，对象回收的时候触发
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#__setattr__,__getattr__:(.拦截方法)，当对象.属性--&gt;赋值会调用setattr，如果是取值会调用getattr
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># __getitem__,__setitem__:([]拦截)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># __enter__和__exit__ :上下文管理器类似与操作文件对象的时候的with
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#__eq__：拥有__eq__方法的对象支持相等的比较操作
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="cookiesessiontoken">cookie，session，token</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># http协议：无状态，无连接，基于请求响应，基于tcp/ip，应用层协议
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># mysql：c/s架构；底层基于socket，自己封装的协议，mysql的客户端：novacate(c++图形化界面，实现了请求和响应协议)，pymysql(用python语言实现了请求和响应协议)
+</span></span><span class="line"><span class="cl"># redis：c/s架构：底层基于socket，自己封装的协议
+</span></span><span class="line"><span class="cl"># docker：c/s架构，基于http协议，使用restfull规范
+</span></span><span class="line"><span class="cl"># elasticseach：c/s架构，基于http协议，使用restfull规范
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># cookie是用于存放在浏览器上的键值对，向服务端发送请求，携带他过去(不安全)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># session：存在于服务端的键值对(放在哪？内存中，文件，mysql，redis)
+</span></span><span class="line"><span class="cl">缺陷：如果用户量很大，存储需要耗费服务器资源
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># token：就是个字符串(即安全，又存个人信息)，加密字符串，会有个人信息
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># token：现在应用非常广泛，契合了前后端分离
+</span></span><span class="line"><span class="cl"># JWT：json web token
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="django中的session底层原理">django中的session底层原理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 在中间件中，请求走的时候，process_response，取出request.session的modify属性，判断是否是true，如果是true，标识在视图函数中修改过session，数据库同步修改，如果是false，就不修改，返回给前端
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sessionid：随机字符串
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 请求来了通过sessionid，取出随机字符串--》去数据库中查--》把表的数据
+</span></span><span class="line"><span class="cl">转为字典，赋值给request.session，后面视图函数中就可以操作他了 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="异常处理">异常处理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">try:
+</span></span><span class="line"><span class="cl">    print(&#39;xxx&#39;)
+</span></span><span class="line"><span class="cl">    print(1/0)
+</span></span><span class="line"><span class="cl">except Exception as e:
+</span></span><span class="line"><span class="cl">	print(异常触发)
+</span></span><span class="line"><span class="cl">else:
+</span></span><span class="line"><span class="cl">	print(&#39;没有异常会走&#39;)
+</span></span><span class="line"><span class="cl">finally:
+</span></span><span class="line"><span class="cl">	print(&#39;无论有异常都会走&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pymysql的使用">pymysql的使用</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">支持python代码操作数据库MySQL
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import pymysql
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">conn = pymysql.connect(
+</span></span><span class="line"><span class="cl">    host=&#34;127.0.0.1&#34;,
+</span></span><span class="line"><span class="cl">    port=3306,
+</span></span><span class="line"><span class="cl">    user=&#39;root&#39;,
+</span></span><span class="line"><span class="cl">    password=&#39;Huawei12#$&#39;,
+</span></span><span class="line"><span class="cl">    database=&#39;goods_management&#39;,
+</span></span><span class="line"><span class="cl">)  # 连接数据库
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">cursor = conn.cursor(cursor=pymysql.cursors.DictCursor)  # 产生一个游标对象(就是用来执行命令的)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sql = &#39;select * from client;&#39;
+</span></span><span class="line"><span class="cl">res = cursor.execute(sql)
+</span></span><span class="line"><span class="cl">print(res)  # execute 返回当前sql语句影响的行数
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(cursor.fetchone())  # 只拿一条
+</span></span><span class="line"><span class="cl">print(cursor.fetchall())  # 拿所有
+</span></span><span class="line"><span class="cl">print(cursor.fetchmany(2))  # 指定拿2条
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 读取数据类似于文件光标的移动
+</span></span><span class="line"><span class="cl">cursor.scroll(1, &#39;relative&#39;)  # 相对于光标所在位置继续往后移动一位
+</span></span><span class="line"><span class="cl">cursor.scroll(1, &#39;absolute&#39;)  # 相对于数据的开头往后移动一位
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="面试">面试</h3>
+<h4 id="cmdb实现">cmdb实现</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、为什么要开发cmdb?
+</span></span><span class="line"><span class="cl">	目的是想要搭建运维自动化平台，减少人工干预，降低人员成本。
+</span></span><span class="line"><span class="cl">	构建自动化平台要以资产为核心，之前服务器资产信息都是保存在excel中，不便于管理，所以希望开发一套自动资产采集的系统。
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、cmdb如何实现?
+</span></span><span class="line"><span class="cl">    三部分组成：资产管理平台，api接口部分，中控机部分。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    1)中控机部分：通过paramiko模块(基于ssh创建的连接执行命令)，获取服务器资产信息，然后再进行资产信息的删选(数据的请求方式，获取那些数据等)。然后将资产信息通过requests调用api接口保存到数据库中，并在开发插件的过程中，基于反射和工厂模式实现插件定制的可扩展
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    2)api接口：获取中控机提交的资产数据并进行资产变更处理，它还可以为其他第三方应用提供数据接口
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">    3)资产管理平台：为运维或运维主管提供资产管理，数据报表统计等
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">3、为什么不直接连接数据库？而是使用API呢？
+</span></span><span class="line"><span class="cl">	直接连接数据库导致数据不安全，搭建API的平台专门用于提供API服务
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">4、用到的技术点
+</span></span><span class="line"><span class="cl">	1) 类的继承做约束,约束的子类中必须要实现某个方法
+</span></span><span class="line"><span class="cl">	2) 线程池
+</span></span><span class="line"><span class="cl">	3) 反射
+</span></span><span class="line"><span class="cl">		- 1 什么是反射：通过字符串的形式去操作对象中的成员
+</span></span><span class="line"><span class="cl">		- 2 应用场景：CMDB插件的可扩展性使用到了
+</span></span><span class="line"><span class="cl">	4) 工厂模式
+</span></span><span class="line"><span class="cl">		- 1 简单工厂
+</span></span><span class="line"><span class="cl">		- 2 工厂方法
+</span></span><span class="line"><span class="cl">		- 3 抽象工厂
+</span></span><span class="line"><span class="cl">	5) paramiko模块
+</span></span><span class="line"><span class="cl">	6) csrftoken认证(装饰器实现的)
+</span></span><span class="line"><span class="cl">	7) content-type请求头
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">5、项目亮点？记忆深刻？遇到的问题？如何解决？
+</span></span><span class="line"><span class="cl">	插件
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">6、项目缺点？
+</span></span><span class="line"><span class="cl">基于ssh，采集慢，适用于少量的服务器
+</span></span><span class="line"><span class="cl">如果想要处理的多，需要在每台服务器上放一个agent(代码放在服务器上)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">7、采集的信息？
+</span></span><span class="line"><span class="cl">	采集的都是物理机的信息，云里面的虚拟机可以通过现成的api接口采集
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">8、采集资产的时候用到了那些命令？
+</span></span><span class="line"><span class="cl">	基于定时任务：每天采集一次。
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">9、资产采集有几张表
+</span></span><span class="line"><span class="cl">	业务线表
+</span></span><span class="line"><span class="cl">	服务器表
+</span></span><span class="line"><span class="cl">	idc机房表
+</span></span><span class="line"><span class="cl">	硬盘
+</span></span><span class="line"><span class="cl">	内存
+</span></span><span class="line"><span class="cl">	网卡
+</span></span><span class="line"><span class="cl">	变更记录
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	用户表(使用了django的auth认证模块)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="装饰器-1">装饰器</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">什么是装饰器 ，以及应用场景？
+</span></span><span class="line"><span class="cl">csrf用到，inclusion_tag
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">手写带参装饰器?
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="celery">celery</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">celery的作用
+</span></span><span class="line"><span class="cl">用于那些方面
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="request">request</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">request. 后面的一些参数
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="你了解的http请求头">你了解的Http请求头？</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">content-type
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">user-agent
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">connection:keep-alive  可以保持长连接，假如我网站图片比较多，我每访问一个就要重新发一个请求，但有了这个之后，我直接保持一个长链接，就不用每次都重新发请求，减少请求时间
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">host:主机明
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="什么是反射以及应用场景">什么是反射以及应用场景？</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">根据字符串的形式操作对象中的属性(成员)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">应用场景：
+</span></span><span class="line"><span class="cl">	django中间件的处理
+</span></span><span class="line"><span class="cl">	可扩展插件
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="可扩展插件是如何实现的">可扩展插件是如何实现的？</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1、把所有插件都定义到类中，并且基类加异常进行约束，约束他们必须包含process方法
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">2、将类的路径注册到配置文件中。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">3、根据字符串的形式(importlib)，导入模块，并且基于反射找到类，然后实例化并执行它的process方法
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">工厂模式
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="单例模式">单例模式</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">是什么？
+</span></span><span class="line"><span class="cl">这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的对象。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">为什么要用单例模式？
+</span></span><span class="line"><span class="cl">	- 永远想要一个对象操作
+</span></span><span class="line"><span class="cl">	- 维护全局变量
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">import time
+</span></span><span class="line"><span class="cl">import threading
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Singleton(object):
+</span></span><span class="line"><span class="cl">    instance = None # 静态字段、类变量
+</span></span><span class="line"><span class="cl">    lock = threading.RLock()
+</span></span><span class="line"><span class="cl">    def __init__(self,name):
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;初始化对象&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        self.name = name
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    def __new__(cls, *args, **kwargs):
+</span></span><span class="line"><span class="cl">        &#34;&#34;&#34;创建对象&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">        if cls.instance:
+</span></span><span class="line"><span class="cl">            return cls.instance
+</span></span><span class="line"><span class="cl">        with cls.lock:
+</span></span><span class="line"><span class="cl">            if not cls.instance:
+</span></span><span class="line"><span class="cl">                time.sleep(0.2)     # 如果没加锁，所有进程都在这停住
+</span></span><span class="line"><span class="cl">                cls.instance = object.__new__(cls)
+</span></span><span class="line"><span class="cl">            return cls.instance
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl"># 先执行new，创建一个对象，然后再去执行init把对象传进去
+</span></span><span class="line"><span class="cl"># new方法返回的是什么？
+</span></span><span class="line"><span class="cl"># 返回的是一个兑现，但还没有进行初始化(__init__)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 有了new还要init干什么？
+</span></span><span class="line"><span class="cl"># new只管创建对象，不管初始化，init初始化对象
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">obj1 = Singleton(&#39;khw&#39;)
+</span></span><span class="line"><span class="cl">obj2 = Singleton(&#39;khw&#39;)
+</span></span><span class="line"><span class="cl">print(obj1,obj2)    # 这两个对象的地址还是一样的
+</span></span><span class="line"><span class="cl">&#34;&#34;&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">def func():
+</span></span><span class="line"><span class="cl">    obj = Singleton(&#39;xx&#39;)
+</span></span><span class="line"><span class="cl">    print(obj)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">for i in range(10):
+</span></span><span class="line"><span class="cl">    t = threading.Thread(target=func)
+</span></span><span class="line"><span class="cl">    t.start()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">time.sleep(60)
+</span></span><span class="line"><span class="cl">obj2 = Singleton(&#39;xx&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>通过模块导入的形式也可以实现单例模式</p>
+<ul>
+<li>
+<p>文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># zz.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">class Foo(object):
+</span></span><span class="line"><span class="cl">	pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">site = Foo()
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">from xx import zz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(site)
+</span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="面向对象的理解">面向对象的理解</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">继承：
+</span></span><span class="line"><span class="cl">封装：数据封装到BaseResponse，以后再进行获取
+</span></span><span class="line"><span class="cl">多态：
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="字典的使用">字典的使用</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">def login():
+</span></span><span class="line"><span class="cl">	pass
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">def logout():
+</span></span><span class="line"><span class="cl">	pass
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">def index():
+</span></span><span class="line"><span class="cl">	pass
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">func_dict = {&#39;1&#39;:login,&#39;2&#39;,logout,&#39;3&#39;:index}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">num = input(&#39;请输入序号&#39;)
+</span></span><span class="line"><span class="cl">func_dict[num]()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="进程线程协程的区别">进程线程协程的区别？</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">进程，是计算机中资源分配的最小单位
+</span></span><span class="line"><span class="cl">线程，计算机中cpu调度的最小单位
+</span></span><span class="line"><span class="cl">协程，又称为微线程，在计算机中不是真时存在，而是程序员通过代码伪造出来，一个进程中可以有多个线程，一个线程中又可以创造多个协程，在cpython中还有个GIL，全局解释器锁(同一时刻一个进程中只有一个线程可以被cpu调度)，由于GIL的存在，导致python中：计算密集型用进程、IO密集型用线程(协程)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="https">https</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">什么是http协议？
+</span></span><span class="line"><span class="cl">	超文本传输协议
+</span></span><span class="line"><span class="cl">	基于tcp协议之上创建的一个协议，此协议无状态短连接，http可以通过两方面去解释。
+</span></span><span class="line"><span class="cl">	- 短连接，一次请求一次响应之后断开连接
+</span></span><span class="line"><span class="cl">	- 数据传输格式：
+</span></span><span class="line"><span class="cl">		浏览器输入 url:www.baidu.com/index/
+</span></span><span class="line"><span class="cl">		socket.send(&#34;POST /index/http1.1\r\nhost:www.baidu.com\r\n\r\nuser=alex&amp;age=18&#34;)
+</span></span><span class="line"><span class="cl">		浏览器收到的数据：
+</span></span><span class="line"><span class="cl">		&#34;200 OK\r\n响应头\r\n\r\n(响应体)&lt;html&gt;&lt;html&gt;&#34;
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		传输的数据格式由请求头个请求体两部分组成，请求头个请求头之间1个\r\n分隔，请求头和请求体之间通过2个\r\n分割
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	- http明文传输
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">什么是https？
+</span></span><span class="line"><span class="cl">	对传输的数据进行了加密
+</span></span><span class="line"><span class="cl">	- 对称加密
+</span></span><span class="line"><span class="cl">		双方的密钥相同，可以进行加密和解密
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">	- 非对称加密
+</span></span><span class="line"><span class="cl">		公钥加密
+</span></span><span class="line"><span class="cl">		私钥解密
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">	- 默认端口：443
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>第一阶段(谁都可以获取到服务器的密钥，先获取密钥，然后截取数据则可以破解)</li>
+</ul>
+<p>​	<img src="C:/Users/86186/AppData/Roaming/Typora/typora-user-images/image-20220407170904693.png" alt="image-20220407170904693"></p>
+<ul>
+<li>第二阶段(浏览器请求密钥的时候会被劫持，然后黑客获取到字符串，再将数据发送给服务器，这样后面的数据被截获后可以通过字符串进行解密)</li>
+</ul>
+<p>​	<img src="C:/Users/86186/AppData/Roaming/Typora/typora-user-images/image-20220407170938937.png" alt="image-20220407170938937"></p>
+<ul>
+<li>第三阶段<img src="C:/Users/86186/AppData/Roaming/Typora/typora-user-images/image-20220407171016217.png" alt="image-20220407171016217"></li>
+</ul>
+<h4 id="跨域问题">跨域问题</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">是什么？
+</span></span><span class="line"><span class="cl">	由于浏览器具有同源策略的限制
+</span></span><span class="line"><span class="cl">	限制：在发送ajax请求时，如果当前浏览器的url是a.com，页面向b.com发送ajax请求，请求可以正常发送但数据回到浏览器时，浏览器就会阻止。
+</span></span><span class="line"><span class="cl">	
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">解决跨域 CORS
+</span></span><span class="line"><span class="cl">	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="面试-1">面试</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ORM表查询
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">DRF框架
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-04-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/cloudday1docker/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">cloud,day1,docker</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/pythonday13cmdb/">
+            <span class="next-text nav-default">python,day13,cmdb</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

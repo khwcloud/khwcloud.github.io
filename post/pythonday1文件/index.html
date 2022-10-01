@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>python,day1,文件 - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="python文件操作。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/pythonday1%E6%96%87%E4%BB%B6/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="python,day1,文件" />
+<meta property="og:description" content="python文件操作。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/pythonday1%E6%96%87%E4%BB%B6/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-09-07T11:06:25+08:00" />
+<meta property="article:modified_time" content="2021-09-07T11:06:25+08:00" />
+
+<meta itemprop="name" content="python,day1,文件">
+<meta itemprop="description" content="python文件操作。"><meta itemprop="datePublished" content="2021-09-07T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2021-09-07T11:06:25+08:00" />
+<meta itemprop="wordCount" content="1763">
+<meta itemprop="keywords" content="," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="python,day1,文件"/>
+<meta name="twitter:description" content="python文件操作。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">python,day1,文件</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-09-07 </span>
+        <div class="post-category">
+            <a href="/categories/python/"> python </a>
+            </div>
+          <span class="more-meta"> 1763 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>python文件操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">文件</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">open</span><span class="p">()</span><span class="n">功能的使用</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="err">、</span><span class="n">模式介绍</span>
+</span></span><span class="line"><span class="cl">        <span class="n">控制文件读写内容的模式</span>
+</span></span><span class="line"><span class="cl">            <span class="n">t文本</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">1</span><span class="err">、</span><span class="n">读写都以str</span><span class="err">（</span><span class="n">unicode</span><span class="err">）</span><span class="n">为单位的</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">2</span><span class="err">、</span><span class="n">只针对文本文件</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">3</span><span class="err">、</span><span class="n">必须指定encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">4</span><span class="err">、</span><span class="n">t模式会将读出来的内容解码成unicode</span><span class="err">（</span><span class="n">更方便</span><span class="err">）</span>
+</span></span><span class="line"><span class="cl">            <span class="n">b二进制</span><span class="o">/</span><span class="nb">bytes</span>
+</span></span><span class="line"><span class="cl">            	<span class="mi">1</span><span class="err">、</span><span class="n">读写都是以bytes为单位</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">2</span><span class="err">、</span><span class="n">可以针对所有文件</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">3</span><span class="err">、</span><span class="n">一定不能指定字符编码</span>
+</span></span><span class="line"><span class="cl">        <span class="n">控制文件读写操作的模式</span>
+</span></span><span class="line"><span class="cl">            <span class="n">r只读模式</span>
+</span></span><span class="line"><span class="cl">            <span class="n">w只写模式</span>
+</span></span><span class="line"><span class="cl">            <span class="n">a只追加写模式</span>
+</span></span><span class="line"><span class="cl">            <span class="o">+</span><span class="err">：</span><span class="n">r</span><span class="o">+</span><span class="err">、</span><span class="n">w</span><span class="o">+</span><span class="err">、</span><span class="n">a</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">            
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="err">、</span><span class="n">基本操作流程</span>
+</span></span><span class="line"><span class="cl">        <span class="n">打开文件</span>
+</span></span><span class="line"><span class="cl">        <span class="n">读写文件</span>
+</span></span><span class="line"><span class="cl">        <span class="n">关闭文件</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="mi">3</span><span class="err">、</span><span class="n">资源回收与with语法</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="mi">4</span><span class="err">、</span><span class="n">详细介绍文件模式</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="mi">5</span><span class="err">、</span><span class="n">文件操作方法其他方法</span>
+</span></span><span class="line"><span class="cl">    	<span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1">#读取所有内容，执行操作后，文件指针移动到文件末尾</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span> <span class="c1">#读取一行内容，指针移动到第二行首部</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span> <span class="c1">#读取每一行内容，存放到列表中</span>
+</span></span><span class="line"><span class="cl">        <span class="n">读操作参见后文读操作案例</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    	
+</span></span><span class="line"><span class="cl">    <span class="mi">6</span><span class="err">、</span><span class="n">文件的高级操作</span><span class="err">：</span><span class="n">控制文件指针的移动</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    	
+</span></span><span class="line"><span class="cl">    <span class="mi">7</span><span class="err">、</span><span class="n">文件修改的两种方式</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#以t模式为基础进行内存操作</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#1、r（默认的操作模式）：只读模式 ,当文件不存在会报错,当文件存在时，文件指针跳到最开始位置</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r+t&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#res = f.read()      #读出硬盘的二进制&gt;t模式将二进制换成字符unicode(解码的过程，需要指定一个原来的字符编码格式来解码)&gt;再由unicode将其转换成字符</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;1&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#2、w：只写模式，当文件不存在时会常见空文件，当文件存在会清空文件，指针位于开始位置</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;d.txt&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;wt&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#f.read()    #不可读</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;hahahaa</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#3、a：只追加写，在文件不存在时会创建空文档，当文件存在时指针直接跳到末尾</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;e.txt&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;at&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#f.read()报错不会读</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;猛&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">指针移动的单位都是以bytes</span><span class="o">/</span><span class="n">字节为单位</span>
+</span></span><span class="line"><span class="cl"><span class="n">只有一种情况特殊</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl">           <span class="n">t模式下read</span><span class="err">（</span><span class="n">n</span><span class="err">），</span><span class="n">n代表的是字符个数</span>
+</span></span><span class="line"><span class="cl">           
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">模式</span><span class="p">)</span><span class="err">：</span><span class="n">n指的是指针移动的字节个数</span>
+</span></span><span class="line"><span class="cl">   <span class="n">模式0</span><span class="err">：</span><span class="n">参照物是文件开头位置</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#3</span>
+</span></span><span class="line"><span class="cl">   <span class="n">模式1</span><span class="p">:</span><span class="n">参照物是当前指针所在位置</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#12</span>
+</span></span><span class="line"><span class="cl">   <span class="n">模式2</span><span class="p">:</span><span class="n">参照物是文件末尾</span><span class="err">，</span><span class="n">应该倒着移动</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#3</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#9</span>
+</span></span><span class="line"><span class="cl"><span class="n">强调</span><span class="err">：</span><span class="n">只有0模式可以在t下使用</span><span class="err">，</span><span class="mi">1</span><span class="err">，</span><span class="mi">2</span><span class="n">必须在b模式下用</span>
+</span></span><span class="line"><span class="cl">		<span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span> <span class="c1">#获取文件当前指针位置</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#示范</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#3</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#案例：w模式用实现copy功能</span>
+</span></span><span class="line"><span class="cl"><span class="n">src_file</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;源文件路径：&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">dis_file</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;源文件路径&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">src_file</span><span class="p">),</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">,</span>\
+</span></span><span class="line"><span class="cl">    <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dis_file</span><span class="p">),</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;wt&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f1</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">f2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">f2</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#案例：a模式实现注册功能</span>
+</span></span><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;your name:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;your name:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;at&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">:</span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">password</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#案例r模式实现登录</span>
+</span></span><span class="line"><span class="cl"><span class="n">inp_username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;your name:&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">inp_password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;your password:&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">username</span><span class="p">,</span><span class="n">password</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">inp_username</span> <span class="o">==</span> <span class="n">username</span> <span class="ow">and</span> <span class="n">inp_password</span> <span class="o">==</span> <span class="n">password</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;登录成功&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;账号或密码错误&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#读相关操作案例      </span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#方式一：自己控制每次读取数据的数据量</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">res</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">break</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">),</span><span class="n">res</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#方式二:以行为单位读，当一行内容过长时会导致一次性读入内容的数据量过大</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rt&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#二：写相关操作</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#f.writelines():  将列表中数据写入文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="sa">b</span><span class="s1">&#39;asd&#39;</span><span class="p">,</span><span class="sa">b</span><span class="s1">&#39;ccc&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#f.write(&#39;111\n222\n3333\n4444\n&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#补充1：如果纯英文字符，可以直接加前缀b得到bytes类型</span>
+</span></span><span class="line"><span class="cl"><span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="sa">b</span><span class="s1">&#39;asd&#39;</span><span class="p">,</span><span class="sa">b</span><span class="s1">&#39;ccc&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#补充2：&#39;上&#39;.encode(&#39;utf-8&#39;)等同于bytes（&#39;上&#39;，encoding=&#39;utf-8&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="nb">bytes</span><span class="p">(</span><span class="s1">&#39;一&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span><span class="nb">bytes</span><span class="p">(</span><span class="s1">&#39;二&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">writelines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#补充3：flush将内存中的数据刷到硬盘中</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;123&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#f.seek的应用，实现tail -f查看日志功能</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span>  <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#1、将指针跳到文件末尾</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#f.read() #错误</span>
+</span></span><span class="line"><span class="cl">    <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#方式一:浪费内存空间，没浪费硬盘空间
+</span></span><span class="line"><span class="cl">with open(&#39;file&#39;,mode=&#39;rt&#39;,encoding=&#39;utf-8&#39;)as f:
+</span></span><span class="line"><span class="cl">    res=f.read()
+</span></span><span class="line"><span class="cl">    data=res.replace(&#39;abc&#39;,&#39;大宝贝&#39;)
+</span></span><span class="line"><span class="cl">    print(data)
+</span></span><span class="line"><span class="cl">with open(&#39;file1&#39;,mode=&#39;wt&#39;,encoding=&#39;utf-8&#39;)as f:
+</span></span><span class="line"><span class="cl">    f.write(data)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">#方式二：浪费硬盘空间，没浪费内存空间
+</span></span><span class="line"><span class="cl">import os
+</span></span><span class="line"><span class="cl">with open(&#39;file&#39;,mode=&#39;rt&#39;,encoding=&#39;utf-8&#39;)as f,\
+</span></span><span class="line"><span class="cl">    open(&#39;file.swap&#39;,mode=&#39;wt&#39;,encoding=&#39;utf-8&#39;)as f1:
+</span></span><span class="line"><span class="cl">    for line in f:
+</span></span><span class="line"><span class="cl">        f1.write(line.replace(&#39;abc&#39;,&#39;宝贝大&#39;))
+</span></span><span class="line"><span class="cl">os.remove(&#39;file&#39;)
+</span></span><span class="line"><span class="cl">os.rename(&#39;file.swap&#39;,&#39;file&#39;)
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-09-07
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/pythonday2%E5%87%BD%E6%95%B0/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">python,day2,函数</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/huaweicloudday7%E5%AE%B9%E7%81%BE/">
+            <span class="next-text nav-default">huaweicloud,day7,容灾</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
