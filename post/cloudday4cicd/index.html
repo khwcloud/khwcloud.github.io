@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>cloud,day4,cicd - blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="khw" /><meta name="description" content="GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的Web服务。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.1 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/cloudday4cicd/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.8c3cbcb0324c2bb4875ceccba4007cbad4b4ac8377f33af9953c3e7684534a50.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="cloud,day4,cicd" />
+<meta property="og:description" content="GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的Web服务。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/cloudday4cicd/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-28T11:06:25+08:00" />
+<meta property="article:modified_time" content="2022-09-28T11:06:25+08:00" />
+
+<meta itemprop="name" content="cloud,day4,cicd">
+<meta itemprop="description" content="GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的Web服务。"><meta itemprop="datePublished" content="2022-09-28T11:06:25+08:00" />
+<meta itemprop="dateModified" content="2022-09-28T11:06:25+08:00" />
+<meta itemprop="wordCount" content="2438">
+<meta itemprop="keywords" content="gitlab,jenkins,cicd," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="cloud,day4,cicd"/>
+<meta name="twitter:description" content="GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的Web服务。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">类别</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">类别</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">cloud,day4,cicd</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-09-28 </span>
+        <div class="post-category">
+            <a href="/categories/%E4%BA%91/"> 云 </a>
+            </div>
+          <span class="more-meta"> 2438 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一gitlab">一、gitlab</a>
+      <ul>
+        <li><a href="#1-安装-gitlab">1 安装 Gitlab</a>
+          <ul>
+            <li><a href="#11-查看gitlab版本">1.1 查看Gitlab版本</a></li>
+            <li><a href="#12-gitlab-配置登录链接">1.2 Gitlab 配置登录链接</a></li>
+            <li><a href="#1-3-初始化-gitlab">1. 3 初始化 Gitlab</a></li>
+            <li><a href="#14-启动-gitlab-服务">1.4 启动 Gitlab 服务</a></li>
+            <li><a href="#15-gitlab-设置-https-方式-缺少配置">1.5 Gitlab 设置 HTTPS 方式 （缺少配置）</a></li>
+            <li><a href="#16-gitlab-添加smtp邮件功能">1.6 Gitlab 添加smtp邮件功能</a></li>
+            <li><a href="#17-gitlab-发送邮件测试">1.7 Gitlab 发送邮件测试</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-gitlab-的使用">2 Gitlab 的使用</a>
+          <ul>
+            <li><a href="#21-gitlab-命令行修改密码">2.1 Gitlab 命令行修改密码</a></li>
+            <li><a href="#22-gitlab服务管理">2.2 Gitlab服务管理</a></li>
+            <li><a href="#33-使用流程">3.3 使用流程</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-gitlab-备份与恢复">3 Gitlab 备份与恢复</a>
+          <ul>
+            <li><a href="#31-查看系统版本和软件版本">3.1 查看系统版本和软件版本</a></li>
+            <li><a href="#32-数据备份">3.2 数据备份</a></li>
+            <li><a href="#33-数据恢复">3.3 数据恢复</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的Web服务。</p>
+<h1 id="一gitlab">一、gitlab</h1>
+<h2 id="1-安装-gitlab">1 安装 Gitlab</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># yum -y install gitlab-ce                    # 自动安装最新版</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># yum -y install gitlab-ce-x.x.x				# 安装指定版本Gitlab</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="11-查看gitlab版本">1.1 查看Gitlab版本</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># head -1 /opt/gitlab/version-manifest.txt</span>
+</span></span><span class="line"><span class="cl">gitlab-ce 10.1.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="12-gitlab-配置登录链接">1.2 Gitlab 配置登录链接</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#设置登录链接</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">***
+</span></span><span class="line"><span class="cl"><span class="c1">## GitLab URL</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##! URL on which GitLab will be reachable.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##! For more details on configuring external_url see:</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 没有域名，可以设置为本机IP地址</span>
+</span></span><span class="line"><span class="cl">external_url <span class="s1">&#39;http://172.17.0.61&#39;</span>
+</span></span><span class="line"><span class="cl">***
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># grep &#34;^external_url&#34; /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">external_url <span class="s1">&#39;http://172.17.0.61&#39;</span>     <span class="c1">#绑定监听的域名或IP</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="1-3-初始化-gitlab">1. 3 初始化 Gitlab</h3>
+<p><strong>配置语言环境</strong></p>
+<p>gitlab要求语言环境为英文环境，必须切换，切换方法如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">注意：可以先尝试以下方案
+</span></span><span class="line"><span class="cl">	语言环境问题：如果碰到之后的解决方案如下，需要重新登录
+</span></span><span class="line"><span class="cl"> 	[root@wing ~]# echo &#34;export LC_ALL=en_US.UTF-8&#34;  &gt;&gt;  /etc/profile 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果上面的方案不可以，再使用下面的方案： 	
+</span></span><span class="line"><span class="cl"># yum install langpacks-zh_CN langpacks-en langpacks-en_GB -y
+</span></span><span class="line"><span class="cl"># cat &gt; /etc/profile.d/locale.sh&lt;&lt;-EOF
+</span></span><span class="line"><span class="cl"> export LANG=en_US.UTF-8
+</span></span><span class="line"><span class="cl"> export LANGUAGE=en_US.UTF-8
+</span></span><span class="line"><span class="cl"> export LC_COLLATE=C
+</span></span><span class="line"><span class="cl"> export LC_CTYPE=en_US.UTF-8
+</span></span><span class="line"><span class="cl"> EOF
+</span></span><span class="line"><span class="cl"># source /etc/profile.d/locale.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">退出终端重新登陆
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第一次使用配置时间较长</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl reconfigure   </span>
+</span></span><span class="line"><span class="cl">.....
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="14-启动-gitlab-服务">1.4 启动 Gitlab 服务</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl start</span>
+</span></span><span class="line"><span class="cl">ok: run: gitaly: <span class="o">(</span>pid 22896<span class="o">)</span> 2922s
+</span></span><span class="line"><span class="cl">ok: run: gitlab-monitor: <span class="o">(</span>pid 22914<span class="o">)</span> 2921s
+</span></span><span class="line"><span class="cl">ok: run: gitlab-workhorse: <span class="o">(</span>pid 22882<span class="o">)</span> 2922s
+</span></span><span class="line"><span class="cl">ok: run: logrotate: <span class="o">(</span>pid 22517<span class="o">)</span> 2987s
+</span></span><span class="line"><span class="cl">ok: run: nginx: <span class="o">(</span>pid 22500<span class="o">)</span> 2993s
+</span></span><span class="line"><span class="cl">ok: run: node-exporter: <span class="o">(</span>pid 22584<span class="o">)</span> 2974s
+</span></span><span class="line"><span class="cl">ok: run: postgres-exporter: <span class="o">(</span>pid 22946<span class="o">)</span> 2919s
+</span></span><span class="line"><span class="cl">ok: run: postgresql: <span class="o">(</span>pid 22250<span class="o">)</span> 3047s
+</span></span><span class="line"><span class="cl">ok: run: prometheus: <span class="o">(</span>pid 22931<span class="o">)</span> 2920s
+</span></span><span class="line"><span class="cl">ok: run: redis: <span class="o">(</span>pid 22190<span class="o">)</span> 3053s
+</span></span><span class="line"><span class="cl">ok: run: redis-exporter: <span class="o">(</span>pid 22732<span class="o">)</span> 2962s
+</span></span><span class="line"><span class="cl">ok: run: sidekiq: <span class="o">(</span>pid 22472<span class="o">)</span> 3005s
+</span></span><span class="line"><span class="cl">ok: run: unicorn: <span class="o">(</span>pid 22433<span class="o">)</span> 3011s
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>git@qfedu.com ~<span class="o">]</span><span class="c1"># lsof -i:80  ram</span>
+</span></span><span class="line"><span class="cl">COMMAND   PID       USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+</span></span><span class="line"><span class="cl">nginx   <span class="m">22500</span>       root    7u  IPv4  <span class="m">50923</span>      0t0  TCP *:http <span class="o">(</span>LISTEN<span class="o">)</span>
+</span></span><span class="line"><span class="cl">nginx   <span class="m">22501</span> gitlab-www    7u  IPv4  <span class="m">50923</span>      0t0  TCP *:http <span class="o">(</span>LISTEN<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="15-gitlab-设置-https-方式-缺少配置">1.5 Gitlab 设置 HTTPS 方式 （缺少配置）</h3>
+<ul>
+<li>如果想要以上的 https 方式正常生效使用，则需要把 letsencrypt 自动生成证书的配置打开，这样在执行重新让配置生效命令 (gitlab-ctl reconfigure) 的时候会自动给域名生成免费的证书并自动在 gitlab 自带的 nginx 中加上相关的跳转配置，都是全自动的，非常方便。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">letsencrypt<span class="o">[</span><span class="s1">&#39;enable&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="nb">true</span> //如果因为这行报错，改成false即可
+</span></span><span class="line"><span class="cl">letsencrypt<span class="o">[</span><span class="s1">&#39;contact_emails&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;276267003@qq.com&#39;</span><span class="o">]</span>     <span class="c1"># 添加联系人的电子邮件地址</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="16-gitlab-添加smtp邮件功能">1.6 Gitlab 添加smtp邮件功能</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>git@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">postfix 并非必须的；根据具体情况配置，以 SMTP 的为例配置邮件服务器来实现通知；参考配置如下： 
+</span></span><span class="line"><span class="cl"><span class="c1">### Email Settings</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;gitlab_email_enabled&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;gitlab_email_from&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;276267003@qq.com&#39;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;gitlab_email_display_name&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;gitlab&#39;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;gitlab_email_reply_to&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;276267003@qq.com&#39;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;gitlab_email_subject_suffix&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;[gitlab]&#39;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_enable&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_address&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;smtp.qq.com&#34;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_port&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="m">465</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_user_name&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;276267003@qq.com&#34;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_password&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;kktohrvdryglbjjh&#34;</span> <span class="c1">#这是我的qq邮箱授权码</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_domain&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;smtp.qq.com&#34;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_authentication&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;login&#34;</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_enable_starttls_auto&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;smtp_tls&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#修改配置后需要初始化配置，先关掉服务再重新初始化</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>git@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl stop</span>
+</span></span><span class="line"><span class="cl">ok: down: gitaly: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: gitlab-monitor: 1s, normally up
+</span></span><span class="line"><span class="cl">ok: down: gitlab-workhorse: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: logrotate: 1s, normally up
+</span></span><span class="line"><span class="cl">ok: down: nginx: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: node-exporter: 1s, normally up
+</span></span><span class="line"><span class="cl">ok: down: postgres-exporter: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: postgresql: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: prometheus: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: redis: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: redis-exporter: 1s, normally up
+</span></span><span class="line"><span class="cl">ok: down: sidekiq: 0s, normally up
+</span></span><span class="line"><span class="cl">ok: down: unicorn: 1s, normally up
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>git@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl reconfigure  </span>
+</span></span><span class="line"><span class="cl">......
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>git@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl start</span>
+</span></span><span class="line"><span class="cl">ok: run: gitaly: <span class="o">(</span>pid 37603<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: gitlab-monitor: <span class="o">(</span>pid 37613<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: gitlab-workhorse: <span class="o">(</span>pid 37625<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: logrotate: <span class="o">(</span>pid 37631<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: nginx: <span class="o">(</span>pid 37639<span class="o">)</span> 1s
+</span></span><span class="line"><span class="cl">ok: run: node-exporter: <span class="o">(</span>pid 37644<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: postgres-exporter: <span class="o">(</span>pid 37648<span class="o">)</span> 1s
+</span></span><span class="line"><span class="cl">ok: run: postgresql: <span class="o">(</span>pid 37652<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: prometheus: <span class="o">(</span>pid 37660<span class="o">)</span> 1s
+</span></span><span class="line"><span class="cl">ok: run: redis: <span class="o">(</span>pid 37668<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: redis-exporter: <span class="o">(</span>pid 37746<span class="o">)</span> 0s
+</span></span><span class="line"><span class="cl">ok: run: sidekiq: <span class="o">(</span>pid 37750<span class="o">)</span> 1s
+</span></span><span class="line"><span class="cl">ok: run: unicorn: <span class="o">(</span>pid 37757<span class="o">)</span> 0s
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="17-gitlab-发送邮件测试">1.7 Gitlab 发送邮件测试</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>git@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-rails console </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@wing ~<span class="o">]</span><span class="c1"># gitlab-rails console</span>
+</span></span><span class="line"><span class="cl">---------------------------------------------------------------------
+</span></span><span class="line"><span class="cl"> GitLab:       12.10.1 <span class="o">(</span>e658772bd63<span class="o">)</span> FOSS
+</span></span><span class="line"><span class="cl"> GitLab Shell: 12.2.0
+</span></span><span class="line"><span class="cl"> PostgreSQL:   11.7
+</span></span><span class="line"><span class="cl">---------------------------------------------------------------------
+</span></span><span class="line"><span class="cl">Loading production environment <span class="o">(</span>Rails 6.0.2<span class="o">)</span>
+</span></span><span class="line"><span class="cl">irb<span class="o">(</span>main<span class="o">)</span>:003:0&gt; 
+</span></span><span class="line"><span class="cl">irb<span class="o">(</span>main<span class="o">)</span>:004:0&gt; Notify.test_email<span class="o">(</span><span class="s1">&#39;1066411471@qq.com&#39;</span>, <span class="s1">&#39;Message Subject&#39;</span>, <span class="s1">&#39;hello gitlab&#39;</span><span class="o">)</span>.deliver_now  //输入测试命令，回车
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Notify#test_email: processed outbound mail in 5.2ms
+</span></span><span class="line"><span class="cl">Delivered mail 5eafceaa250a_1d063fb777add9a08601a@wing.mail <span class="o">(</span>1430.1ms<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Date: Mon, <span class="m">04</span> May <span class="m">2020</span> 16:13:30 +0800
+</span></span><span class="line"><span class="cl">From: gitlab &lt;276267003@qq.com&gt;
+</span></span><span class="line"><span class="cl">Reply-To: gitlab &lt;276267003@qq.com&gt;
+</span></span><span class="line"><span class="cl">To: 276267003@qq.com
+</span></span><span class="line"><span class="cl">Message-ID: &lt;5eafceaa250a_1d063fb777add9a08601a@wing.mail&gt;
+</span></span><span class="line"><span class="cl">Subject: Message Subject
+</span></span><span class="line"><span class="cl">Mime-Version: 1.0
+</span></span><span class="line"><span class="cl">Content-Type: text/html<span class="p">;</span>
+</span></span><span class="line"><span class="cl"> <span class="nv">charset</span><span class="o">=</span>UTF-8
+</span></span><span class="line"><span class="cl">Content-Transfer-Encoding: 7bit
+</span></span><span class="line"><span class="cl">Auto-Submitted: auto-generated
+</span></span><span class="line"><span class="cl">X-Auto-Response-Suppress: All
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&lt;!DOCTYPE html PUBLIC <span class="s2">&#34;-//W3C//DTD HTML 4.0 Transitional//EN&#34;</span> <span class="s2">&#34;http://www.w3.org/TR/REC-html40/loose.dtd&#34;</span>&gt;
+</span></span><span class="line"><span class="cl">&lt;html&gt;&lt;body&gt;&lt;p&gt;Message Body&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">=</span>&gt; <span class="c1">#&lt;Mail::Message:70056859616080, Multipart: false, Headers: &lt;Date: Mon, 04 May 2020 16:13:30 +0800&gt;, &lt;From: gitlab &lt;276267003@qq.com&gt;&gt;, &lt;Reply-To: gitlab &lt;276267003@qq.com&gt;&gt;, &lt;To: 276267003@qq.com&gt;, &lt;Message-ID: &lt;5eafceaa250a_1d063fb777add9a08601a@wing.mail&gt;&gt;, &lt;Subject: Message Subject&gt;, &lt;Mime-Version: 1.0&gt;, &lt;Content-Type: text/html; charset=UTF-8&gt;, &lt;Content-Transfer-Encoding: 7bit&gt;, &lt;Auto-Submitted: auto-generated&gt;, &lt;X-Auto-Response-Suppress: All&gt;&gt;</span>
+</span></span><span class="line"><span class="cl">irb<span class="o">(</span>main<span class="o">)</span>:005:0&gt; 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="2-gitlab-的使用">2 Gitlab 的使用</h2>
+<p>登录地址http://192.168.101.42/users/sign_in</p>
+<h3 id="21-gitlab-命令行修改密码">2.1 Gitlab 命令行修改密码</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-rails console production</span>
+</span></span><span class="line"><span class="cl">irb<span class="o">(</span>main<span class="o">)</span>:001:0&gt;user <span class="o">=</span> User.where<span class="o">(</span>id: 1<span class="o">)</span>.first      <span class="c1"># id为1的是超级管理员</span>
+</span></span><span class="line"><span class="cl">irb<span class="o">(</span>main<span class="o">)</span>:002:0&gt;user.password <span class="o">=</span> <span class="s1">&#39;yourpassword&#39;</span>      <span class="c1"># 密码必须至少8个字符</span>
+</span></span><span class="line"><span class="cl">irb<span class="o">(</span>main<span class="o">)</span>:003:0&gt;user.save!                          <span class="c1"># 如没有问题 返回true</span>
+</span></span><span class="line"><span class="cl"><span class="nb">exit</span> 												<span class="c1"># 退出</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="22-gitlab服务管理">2.2 Gitlab服务管理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl start                        # 启动所有 gitlab 组件；</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl stop                         # 停止所有 gitlab 组件；</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl restart                      # 重启所有 gitlab 组件；</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl status                       # 查看服务状态；</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl reconfigure                  # 初始化服务；</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb               # 修改默认的配置文件；</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl tail                         # 查看日志；</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="33-使用流程">3.3 使用流程</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 1 登录上去，首先创建组，然后创建projects(项目)，然后项目关联组
+</span></span><span class="line"><span class="cl"># 2 然后创建用户，用户关联组
+</span></span><span class="line"><span class="cl"># 3 然后在projects(项目)里面创建代码仓库
+</span></span><span class="line"><span class="cl"># 4 用户把公钥放在gitlab上就可以使用代码仓库进行开发了
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="3-gitlab-备份与恢复">3 Gitlab 备份与恢复</h2>
+<h3 id="31-查看系统版本和软件版本">3.1 查看系统版本和软件版本</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com gitlab<span class="o">]</span><span class="c1"># cat /etc/redhat-release </span>
+</span></span><span class="line"><span class="cl">CentOS Linux release 7.3.1611 <span class="o">(</span>Core<span class="o">)</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com gitlab<span class="o">]</span><span class="c1"># cat /opt/gitlab/embedded/service/gitlab-rails/VERSION</span>
+</span></span><span class="line"><span class="cl">8.15.4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="32-数据备份">3.2 数据备份</h3>
+<h4 id="321-查看备份相关的配置项">3.2.1 查看备份相关的配置项</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;manage_backup_path&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;backup_path&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;/data/gitlab/backups&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该项定义了默认备份出文件的路径，可以通过修改该配置，并执行 <strong>gitlab-ctl reconfigure 或者 gitlab-ctl  restart</strong> 重启服务生效。</p>
+<h4 id="322-执行备份命令进行备份">3.2.2 执行备份命令进行备份</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># /opt/gitlab/bin/gitlab-rake gitlab:backup:create </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="323-添加到-crontab-中定时执行">3.2.3 添加到 crontab 中定时执行</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># crontab -e</span>
+</span></span><span class="line"><span class="cl"><span class="m">0</span> <span class="m">2</span> * * * bash /opt/gitlab/bin/gitlab-rake gitlab:backup:create
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>可以到/data/gitlab/backups找到备份包，解压查看，会发现备份的还是比较全面的，数据库、repositories、build、upload等分类还是比较清晰的。</p>
+<h4 id="324-设置备份保留时长">3.2.4 设置备份保留时长</h4>
+<p>防止每天执行备份，有目录被爆满的风险，打开/etc/gitlab/gitlab.rb配置文件，找到如下配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;backup_keep_time&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="m">604800</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>设置备份保留7天（7<em>3600</em>24=604800），秒为单位，如果想增大或减小，可以直接在该处配置，并通过gitlab-ctl restart 重启服务生效。</p>
+<p>备份完成，会在备份目录中生成一个当天日期的tar包。</p>
+<h3 id="33-数据恢复">3.3 数据恢复</h3>
+<h4 id="331-安装部署-gitlab-server">3.3.1 安装部署 gitlab server</h4>
+<p>具体步骤参见上面：gitlab server 搭建过程</p>
+<h4 id="332-恢复-gitlab">3.3.2 恢复 gitlab</h4>
+<h5 id="3321-查看备份相关的配置项">3.3.2.1 查看备份相关的配置项</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># vim /etc/gitlab/gitlab.rb</span>
+</span></span><span class="line"><span class="cl">gitlab_rails<span class="o">[</span><span class="s1">&#39;backup_path&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;/data/gitlab/backups&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>修改该配置，定义了默认备份出文件的路径，并执行 <strong>gitlab-ctl reconfigure 或者 gitlab-ctl  restart</strong> 重启服务生效。</p>
+<h5 id="3322-恢复前需要先停掉数据连接服务">3.3.2.2 恢复前需要先停掉数据连接服务</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl stop unicorn</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl stop sidekiq</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>如果是台新搭建的主机，不需要操作，理论上不停这两个服务也可以。停这两个服务是为了保证数据一致性。</li>
+</ul>
+<h5 id="3323-同步备份文件到新服务器">3.3.2.3 同步备份文件到新服务器</h5>
+<p>将老服务器/data/gitlab/backups目录下的备份文件拷贝到新服务器上的/data/gitlab/backups</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com gitlab<span class="o">]</span><span class="c1"># rsync -avz 1530773117_2019_03_05_gitlab_backup.tar 192.168.95.135:/data/gitlab/backups/ </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>注意权限：600权限是无权恢复的。 实验环境可改成了777，生产环境建议修改属主属组</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com backups<span class="o">]</span><span class="c1"># pwd</span>
+</span></span><span class="line"><span class="cl">/data/gitlab/backups
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com backups<span class="o">]</span><span class="c1"># chown -R git.git 1530773117_2019_03_05_gitlab_backup.tar </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com backups<span class="o">]</span><span class="c1"># ll</span>
+</span></span><span class="line"><span class="cl">total <span class="m">17328900</span>
+</span></span><span class="line"><span class="cl">-rwxrwxrwx <span class="m">1</span> git git <span class="m">17744793600</span> Jul  <span class="m">5</span> 14:47 1530773117_2018_07_05_gitlab_backup.tar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="3324-执行命令进行恢复">3.3.2.4 执行命令进行恢复</h5>
+<p>后面再输入两次 yes 就完成恢复了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-rake gitlab:backup:restore BACKUP=1530773117_2018_07_05_gitlab_backup.tar</span>
+</span></span><span class="line"><span class="cl">注意：backups 目录下保留一个备份文件可直接执行
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="3325-恢复完成启动服务">3.3.2.5 恢复完成启动服务</h5>
+<p>恢复完成后，启动刚刚的两个服务，或者重启所有服务，再打开浏览器进行访问，发现数据和之前的一致：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl start unicorn</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl start sidekiq</span>
+</span></span><span class="line"><span class="cl">或
+</span></span><span class="line"><span class="cl"><span class="o">[</span>root@qfedu.com ~<span class="o">]</span><span class="c1"># gitlab-ctl restart</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：通过备份文件恢复gitlab必须保证两台主机的gitlab版本一致，否则会提示版本不匹配</strong></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">khw</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-09-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/gitlab/">gitlab</a>
+          <a href="/tags/jenkins/">jenkins</a>
+          <a href="/tags/cicd/">cicd</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/cloudday3nginx/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">cloud,day3,nginx</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/cloudday2k8s/">
+            <span class="next-text nav-default">cloud,day2,k8s</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://gitee.com/khwcloud" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">khw</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.9e3db4166f5901c11faec00349b7b03ae36c12a6e820a208cf498f1aee812258.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>cloud,day4,cicd</title>
+      <link>http://localhost:1313/post/cloudday4cicd/</link>
+      <pubDate>Wed, 28 Sep 2022 11:06:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/cloudday4cicd/</guid>
+      <description>&lt;p&gt;GitLab 是一个用于仓库管理系统的开源项目，使用Git作为代码管理工具，并在此基础上搭建起来的Web服务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>cloud,day2,k8s</title>
       <link>http://localhost:1313/post/cloudday2k8s/</link>
       <pubDate>Sun, 15 May 2022 11:06:25 +0800</pubDate>
