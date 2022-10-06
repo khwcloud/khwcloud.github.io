@@ -50,7 +50,7 @@
 <meta itemprop="name" content="cloud,day3,nginx">
 <meta itemprop="description" content="Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。"><meta itemprop="datePublished" content="2022-09-28T11:06:25+08:00" />
 <meta itemprop="dateModified" content="2022-09-28T11:06:25+08:00" />
-<meta itemprop="wordCount" content="4287">
+<meta itemprop="wordCount" content="5557">
 <meta itemprop="keywords" content="nginx," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="cloud,day3,nginx"/>
 <meta name="twitter:description" content="Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了IMAP/POP3/SMTP服务。"/>
@@ -127,8 +127,8 @@
         <div class="post-category">
             <a href="/categories/%E4%BA%91/"> 云 </a>
             </div>
-          <span class="more-meta"> 4287 words </span>
-          <span class="more-meta"> 9 mins read </span>
+          <span class="more-meta"> 5557 words </span>
+          <span class="more-meta"> 12 mins read </span>
         
       </div>
     </header>
@@ -163,6 +163,9 @@
             <li><a href="#44-负载均衡">4.4 负载均衡</a></li>
             <li><a href="#45-nginx动静分离">4.5 nginx动静分离</a></li>
             <li><a href="#46-urlrewrite">4.6 URLRewrite</a></li>
+            <li><a href="#47-防盗链">4.7 防盗链</a></li>
+            <li><a href="#48-keepalived高可用">4.8 keepalived高可用</a></li>
+            <li><a href="#49-证书相关">4.9 证书相关</a></li>
           </ul>
         </li>
       </ul>
@@ -1278,6 +1281,347 @@
 </span></span><span class="line"><span class="cl">http://192.168.101.42/2.html   会跳转到 http://192.168.101.42/test.html
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="47-防盗链">4.7 防盗链</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 防止其他服务器来引用本地服务器的资源
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 客户端 --》 服务器index --》二次访问image，css等资源
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 例如我请求一个服务器的首页，这个时候是没有referers的，当二次请求index里面内链的其它资源的时候这个时候会有referers，referers会记录这个请求从哪一个页面来(第一次请求的完整域名)。
+</span></span><span class="line"><span class="cl">所以我二次访问的时候会判断它的referers是不是我当前服务器的域名，如果是就可以访问，如果不是就禁止访问
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="471-基本配置">4.7.1 基本配置</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 字段
+</span></span><span class="line"><span class="cl">	- none: 如果Header中的Referer为空，允许访问
+</span></span><span class="line"><span class="cl">	- blocked:在Header中的Referer不为空，但是该值被防火墙或代理进行伪装过，如不带&#34;http://&#34; 、&#34;https://&#34;等协议头的资源允许访问。
+</span></span><span class="line"><span class="cl">	- server_names,设置一个域或多个url，检测Referer头域值是否是这些url中的某一个
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 防盗链需要再location中配置
+</span></span><span class="line"><span class="cl">[root@localhost ~]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">location ~*/(www|image) {
+</span></span><span class="line"><span class="cl">			# 该处表示如果检测referers为空，或者为192.168.101.42的时候允许访问
+</span></span><span class="line"><span class="cl">            valid_referers none 192.168.101.42; # ps：这里的地址应该是域名
+</span></span><span class="line"><span class="cl">            if ($invalid_referer){
+</span></span><span class="line"><span class="cl">            return 403;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">            root   /data/;
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"># 重载服务
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 在其他服务器上测试
+</span></span><span class="line"><span class="cl">	- 不带referers可以访问
+</span></span><span class="line"><span class="cl">	curl -I http://192.168.101.42/www/  
+</span></span><span class="line"><span class="cl">    - 带有referers访问的时候referers不对，不能访问
+</span></span><span class="line"><span class="cl">	curl -e &#34;http://baidu.com&#34; -I http://192.168.101.42/www/	
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="472-curl测试防盗链">4.7.2 curl测试防盗链</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">参数：
+</span></span><span class="line"><span class="cl">	- I 表示不显示内容，只显示头信息
+</span></span><span class="line"><span class="cl">	- e 带引用
+</span></span><span class="line"><span class="cl">curl -I http://192.168.101.42/www/
+</span></span><span class="line"><span class="cl">curl -e &#34;http://baidu.com&#34; -I http://192.168.101.42/www/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="473-返回错误提示页面">4.7.3 返回错误提示页面</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 配置文件
+</span></span><span class="line"><span class="cl">[root@localhost logs]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">	location ~*/(www|image) {
+</span></span><span class="line"><span class="cl">            valid_referers none 192.168.101.42;
+</span></span><span class="line"><span class="cl">            if ($invalid_referer){
+</span></span><span class="line"><span class="cl">            return 401;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">            root   /data/;
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">	error_page   401  /401.html;	# 这是错误页面对应的location是401.html
+</span></span><span class="line"><span class="cl">        location = /401.html {
+</span></span><span class="line"><span class="cl">            root   html;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"># 重载服务
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 测试
+</span></span><span class="line"><span class="cl">[root@localhost ~]# curl -e &#34;http://baidu.com&#34;  http://192.168.101.42/www/
+</span></span><span class="line"><span class="cl">防盗链禁止拉
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="474-urlrewrite返回提示图片">4.7.4 URLRewrite返回提示图片</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 配置文件
+</span></span><span class="line"><span class="cl">[root@localhost logs]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">	location ~*/(www|image) {
+</span></span><span class="line"><span class="cl">            valid_referers none 192.168.101.42;
+</span></span><span class="line"><span class="cl">            if ($invalid_referer){
+</span></span><span class="line"><span class="cl">            rewrite ^/  /image/2.PNG break;
+</span></span><span class="line"><span class="cl">            # return 401;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">            root   /data/;
+</span></span><span class="line"><span class="cl">            index  index.html index.htm;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl"># 重载服务
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 测试
+</span></span><span class="line"><span class="cl">[root@localhost image]# curl -e &#34;http://baidu.com&#34;   http://192.168.101.42/image/1.PNG
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="48-keepalived高可用">4.8 keepalived高可用</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## 通过keepalived的vip实现，将vip绑定到两台nginx服务器上，服务器分为一主一备，主的挂掉了vip自动绑定到备的服务器上
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 用法，用过脚本检测进程是否存活，如果没有存活把keepalived进程杀死，则该vip自动漂移到另一台服务器上
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## 配置文件
+</span></span><span class="line"><span class="cl"># server1
+</span></span><span class="line"><span class="cl">global_defs{
+</span></span><span class="line"><span class="cl">	router_id lb111
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">vrrp_instance atguigu{
+</span></span><span class="line"><span class="cl">	state MASTER
+</span></span><span class="line"><span class="cl">	interface ens33		# 绑定的网卡
+</span></span><span class="line"><span class="cl">	virtual_router_id 51
+</span></span><span class="line"><span class="cl">	priority 100	# 选举优先级
+</span></span><span class="line"><span class="cl">	advert_int 1
+</span></span><span class="line"><span class="cl">	authentication(
+</span></span><span class="line"><span class="cl">		auth_type PASS
+</span></span><span class="line"><span class="cl">		auth_pass 1111
+</span></span><span class="line"><span class="cl">	)
+</span></span><span class="line"><span class="cl">	virtual_ipaddress{	# vip的地址，可以配置多个
+</span></span><span class="line"><span class="cl">		192.168.101.200
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># server2
+</span></span><span class="line"><span class="cl">global_defs{
+</span></span><span class="line"><span class="cl">	router_id lb110
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">vrrp_instance atguigu{
+</span></span><span class="line"><span class="cl">	state BACKUP
+</span></span><span class="line"><span class="cl">	interface ens33		# 绑定的网卡
+</span></span><span class="line"><span class="cl">	virtual_router_id 51
+</span></span><span class="line"><span class="cl">	priority 50	# 选举优先级
+</span></span><span class="line"><span class="cl">	advert_int 1
+</span></span><span class="line"><span class="cl">	authentication(
+</span></span><span class="line"><span class="cl">		auth_type PASS
+</span></span><span class="line"><span class="cl">		auth_pass 1111
+</span></span><span class="line"><span class="cl">	)
+</span></span><span class="line"><span class="cl">	virtual_ipaddress{	# vip的地址，可以配置多个
+</span></span><span class="line"><span class="cl">		192.168.101.200
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="49-证书相关">4.9 证书相关</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">购买域名--》备案--》配置域名解析到服务器--》购买证书绑定域名--》证书下载到服务器
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 下载到服务器后，证书安装
+</span></span><span class="line"><span class="cl">[root@localhost ~]# vim /usr/local/webserver/nginx/conf/nginx.conf
+</span></span><span class="line"><span class="cl">server{
+</span></span><span class="line"><span class="cl">	listen  443 ssl;
+</span></span><span class="line"><span class="cl">	server_name    localhost;
+</span></span><span class="line"><span class="cl">	ssl_certificate		/data/cert/server.crt;
+</span></span><span class="line"><span class="cl">	ssl_certificate_key   /data/cert/server.key;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 重载服务
+</span></span><span class="line"><span class="cl">[root@localhost ~]# systemctl reload nginx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 访问测试
+</span></span><span class="line"><span class="cl">https://xxx.com			# 会显示安全
+</span></span></code></pre></td></tr></table>
+</div>
 </div>
     </div>
 
@@ -1301,9 +1645,13 @@
           <a href="/tags/nginx/">nginx</a>
           </div>
       <nav class="post-nav">
-        
-        <a class="next" href="/post/cloudday4cicd/">
-            <span class="next-text nav-default">cloud,day4,cicd</span>
+        <a class="prev" href="/post/cloudday4cicd/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">cloud,day4,cicd</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/cloudday2k8s/">
+            <span class="next-text nav-default">cloud,day2,k8s</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
